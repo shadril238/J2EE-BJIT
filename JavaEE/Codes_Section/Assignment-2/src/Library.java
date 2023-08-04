@@ -10,7 +10,6 @@ public class Library {
         this.booksList.add(book);
     }
     public ArrayList<Book> getBooks(BookPredicate predicate){
-
         ArrayList<Book> getBooksList = new ArrayList<>();
         for(Book book : booksList){
             if(predicate.test(book)){
