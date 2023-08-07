@@ -81,7 +81,8 @@ public class FileHandling {
             e.printStackTrace();
         }
         finally {
-            fileWriter.close();
+            if(fileWriter != null)
+                fileWriter.close();
         }
     }
     // Read from the first file then write to a new Output file.
