@@ -1,0 +1,25 @@
+public class FileIO {
+
+    public static void main(String[] args) throws FileNotFoundException, IOException {
+
+        FileInputStream sourceStream = null;
+        FileOutputStream targetStream = null;
+  
+        try {
+            sourceStream = new FileInputStream("C:\\Users\\BJIT\\Input-File.txt");
+            targetStream = new FileOutputStream("C:\\Users\\BJIT\\Output-File.txt");
+  
+            // Reading source file and writing
+            // content to target file byte by byte
+            int temp;
+            while ((temp = sourceStream.read())!= -1)
+                targetStream.write((byte)temp);
+        }
+        finally {
+            if (sourceStream != null)
+                sourceStream.close();
+            if (targetStream != null)
+                targetStream.close();
+        }
+    }    
+}

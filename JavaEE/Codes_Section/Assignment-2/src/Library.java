@@ -23,9 +23,11 @@ public class Library {
     }
     public void displayBooks(ArrayList<Book> books){
         for (Book book : books){
-            System.out.println("Book Title : " + book.getTitle() + ", Book Author : " + book.getAuthor() + ", Book Genre : " + book.getGenre() + ", Publish Year : " + book.getYearPublished());
+            //System.out.println("Book Title : " + book.getTitle() + ", Book Author : " + book.getAuthor() + ", Book Genre : " + book.getGenre() + ", Publish Year : " + book.getYearPublished());
+            System.out.println(book);
         }
     }
+
     public void sortBooks(Comparator<Book> comparator) {
         Collections.sort(booksList, comparator);
     }

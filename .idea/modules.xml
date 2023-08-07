@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="ProjectModuleManager">
+    <modules>
+      <module fileurl="file://$PROJECT_DIR$/JavaEE/Codes_Section/Assignment-1/Assignment-1.iml" filepath="$PROJECT_DIR$/JavaEE/Codes_Section/Assignment-1/Assignment-1.iml" />
+      <module fileurl="file://$PROJECT_DIR$/JavaEE/Codes_Section/Assignment-2/Assignment-2.iml" filepath="$PROJECT_DIR$/JavaEE/Codes_Section/Assignment-2/Assignment-2.iml" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/J2EE-BJIT.iml" filepath="$PROJECT_DIR$/.idea/J2EE-BJIT.iml" />
+      <module fileurl="file://$PROJECT_DIR$/JavaEE/Codes_Section/LambdaExpressionsExample/LambdaExpressionsExample.iml" filepath="$PROJECT_DIR$/JavaEE/Codes_Section/LambdaExpressionsExample/LambdaExpressionsExample.iml" />
+      <module fileurl="file://$PROJECT_DIR$/JavaEE/Codes_Section/Playground/Playground.iml" filepath="$PROJECT_DIR$/JavaEE/Codes_Section/Playground/Playground.iml" />
+      <module fileurl="file://$PROJECT_DIR$/JavaEE/Codes_Section/StringBuilderExample/StringBuilderExample.iml" filepath="$PROJECT_DIR$/JavaEE/Codes_Section/StringBuilderExample/StringBuilderExample.iml" />
+      <module fileurl="file://$PROJECT_DIR$/JavaEE/Codes_Section/StringJava/StringJava.iml" filepath="$PROJECT_DIR$/JavaEE/Codes_Section/StringJava/StringJava.iml" />
+    </modules>
+  </component>
+</project>

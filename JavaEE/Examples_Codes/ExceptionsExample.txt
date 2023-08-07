@@ -1,0 +1,26 @@
+public class ExceptionhandlingTest {
+    
+        public static int divide(int[] array, int index) {
+		try {			
+			array[index + 2] = array[index]/array[index + 1];
+			// return array[index + 2];
+		} catch(ArithmeticException e) {
+			System.err.println(e.getMessage());
+			e.printStackTrace();
+		} catch(ArrayIndexOutOfBoundsException e) {
+			System.err.println("Index-out-of-bounds exception caught in divide()\n" 
+									+"\nMessage in exception object:\n\t" + e.getMessage());
+			System.err.println("\nStack trace output:\n");
+			e.printStackTrace();
+			System.out.println("\nEnd of stack trace output\n");
+		} finally {
+			return array[index + 2];
+		}    
+        
+        public static void main(String[] args){
+            
+            int[] numberArr = {10,5,0};            
+            int result = ExceptionhandlingTest.divide(numberArr, 0);            
+            System.out.println(result);
+        }
+}

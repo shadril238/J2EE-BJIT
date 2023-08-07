@@ -19,11 +19,13 @@ public class LibraryApplication {
         ArrayList<Book> booksByAuthor = library.getBooks(authorPredicate);
         System.out.println("Books by specific author - ");
         library.displayBooks(booksByAuthor);
+
         // Filter books published after a given year
         BookPredicate yearPredicate = book -> book.getYearPublished() > 2019;
         ArrayList<Book> booksPublishedAfterGivenYear = library.getBooks(yearPredicate);
         System.out.println("Books published after a given year - ");
         library.displayBooks(booksPublishedAfterGivenYear);
+
         // Filter books of a particular genre
         BookPredicate genrePredicate = book -> book.getGenre().equals("Mystery");
         ArrayList<Book> booksByGenre = library.getBooks(genrePredicate);

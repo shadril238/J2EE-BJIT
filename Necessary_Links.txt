@@ -1,0 +1,10 @@
+ZOOM
+-----
+Common Session : https://bjitgroup.zoom.us/j/82918935713?pwd=c1BPbU9MZ04zeStYMmVieDU1RnZGZz09
+J2EE : https://bjitgroup.zoom.us/j/85798707207?pwd=Rm9FcE1qNVMxNzhBNjVGQmxFdGpjdz09
+
+-----
+NextCloud
+---------
+Common Session : https://nextcloud.bjitgroup.com/index.php/s/XStPAEDYsmH53Pk
+J2EE : https://nextcloud.bjitgroup.com/index.php/s/c2pMRHgFy9D5eb4

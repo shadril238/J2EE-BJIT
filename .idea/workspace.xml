@@ -1,0 +1,56 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="ChangeListManager">
+    <list default="true" id="602d9b73-19e9-4b7c-a6b7-2514a0498be7" name="Changes" comment="">
+      <change beforePath="$PROJECT_DIR$/JavaEE/Codes_Section/Assignment-1/Assignment-1.iml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/JavaEE/Codes_Section/Assignment-2/Assignment-2.iml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/JavaEE/Codes_Section/Assignment-2/src/Book.java" beforeDir="false" afterPath="$PROJECT_DIR$/JavaEE/Codes_Section/Assignment-2/src/Book.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/JavaEE/Codes_Section/Assignment-2/src/Library.java" beforeDir="false" afterPath="$PROJECT_DIR$/JavaEE/Codes_Section/Assignment-2/src/Library.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/JavaEE/Codes_Section/Assignment-2/src/LibraryApplication.java" beforeDir="false" afterPath="$PROJECT_DIR$/JavaEE/Codes_Section/Assignment-2/src/LibraryApplication.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/JavaEE/Codes_Section/LambdaExpressionsExample/LambdaExpressionsExample.iml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/JavaEE/Codes_Section/Playground/Playground.iml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/JavaEE/Codes_Section/StringBuilderExample/StringBuilderExample.iml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/JavaEE/Codes_Section/StringJava/StringJava.iml" beforeDir="false" />
+    </list>
+    <option name="SHOW_DIALOG" value="false" />
+    <option name="HIGHLIGHT_CONFLICTS" value="true" />
+    <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
+    <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="Git.Settings">
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
+  </component>
+  <component name="MarkdownSettingsMigration">
+    <option name="stateVersion" value="1" />
+  </component>
+  <component name="ProjectCodeStyleSettingsMigration">
+    <option name="version" value="2" />
+  </component>
+  <component name="ProjectColorInfo"><![CDATA[{
+  "associatedIndex": 1
+}]]></component>
+  <component name="ProjectId" id="2TdqUjtocYDDFwyBbR8CRxcWJJ1" />
+  <component name="ProjectViewState">
+    <option name="hideEmptyMiddlePackages" value="true" />
+    <option name="showLibraryContents" value="true" />
+  </component>
+  <component name="PropertiesComponent"><![CDATA[{
+  "keyToString": {
+    "RunOnceActivity.OpenProjectViewOnStart": "true",
+    "RunOnceActivity.ShowReadmeOnStart": "true",
+    "git-widget-placeholder": "main",
+    "last_opened_file_path": "C:/Users/shadr/Desktop/J2EE-BJIT"
+  }
+}]]></component>
+  <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
+  <component name="TaskManager">
+    <task active="true" id="Default" summary="Default task">
+      <changelist id="602d9b73-19e9-4b7c-a6b7-2514a0498be7" name="Changes" comment="" />
+      <created>1691383322448</created>
+      <option name="number" value="Default" />
+      <option name="presentableId" value="Default" />
+      <updated>1691383322448</updated>
+    </task>
+    <servers />
+  </component>
+</project>
