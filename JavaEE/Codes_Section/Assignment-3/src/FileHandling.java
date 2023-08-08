@@ -32,7 +32,7 @@ public class FileHandling {
             else{
                 System.out.println("Directory already exist...");
             }
-        } catch (Exception e){
+        } catch (SecurityException e){
             System.out.println("An error occurred while handling files." + e.getMessage());
             e.printStackTrace();
         }
