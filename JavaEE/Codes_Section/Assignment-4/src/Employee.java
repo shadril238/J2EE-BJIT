@@ -10,7 +10,7 @@ public class Employee {
         this.salary = salary;
     }
 
-    // Setters and setters
+    // Setters and getters
     public String getName(){
         return this.name;
     }
