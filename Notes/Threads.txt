@@ -1,0 +1,5 @@
+*** Thread synchronization refers to the concept where only one thread is executed at a time while other threads are in the waiting state. 
+
+*** As in the case of notify() method, the notification is sent to a single thread among the multiple waiting threads, so it is sure that which of those waiting threads is going to receive the lock. On the other hand, notifyAll() sends a notification to all waiting threads.
+
+** Deadlock describes a condition in which two or more threads are blocked (hung) forever because they are waiting for each other. 
