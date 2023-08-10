@@ -8,7 +8,7 @@ public class MainClass {
         eatableAbstractObj.anotherFromAbstract();
         //eatableAbstractObj.food(); -->> not possible
 
-        Eatable eatableObj = new Food();
+        IEatable eatableObj = new Food();
         eatableObj.eat();
         eatableObj.other();
         eatableObj.anotherMethod();

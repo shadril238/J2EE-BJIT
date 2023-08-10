@@ -1,6 +1,6 @@
 package interfaceexample;
 
-public interface Drinkable {
+public interface IDrinkable {
     void drink();
     void sip();
 }

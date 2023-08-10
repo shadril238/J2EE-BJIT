@@ -1,6 +1,6 @@
 package interfaceexample;
 
-public interface Eatable {
+public interface IEatable {
     default void eat(){
         System.out.println("I am eating!");
     }

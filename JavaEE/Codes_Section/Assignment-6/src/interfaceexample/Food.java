@@ -1,6 +1,6 @@
 package interfaceexample;
 
-public class Food extends EatableAbstract implements Eatable, Drinkable{
+public class Food extends EatableAbstract implements IEatable, IDrinkable {
 
 //    private Food(){
 //
