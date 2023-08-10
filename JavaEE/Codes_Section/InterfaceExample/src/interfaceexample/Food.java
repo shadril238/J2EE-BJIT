@@ -1,6 +1,6 @@
 package interfaceexample;
 
-public class Food extends EatableAbstract implements Eatable{
+public class Food extends EatableAbstract implements Eatable, Drinkable{
 
 //    private Food(){
 //
@@ -26,20 +26,13 @@ public class Food extends EatableAbstract implements Eatable{
         System.out.println("Another method from interface!");
     }
 
-    public static void main(String[] args) {
-        EatableAbstract eatableAbstractObj = new Food();
-        eatableAbstractObj.eatingAbstract();
-        eatableAbstractObj.other();
-        eatableAbstractObj.anotherFromAbstract();
-        //eatableAbstractObj.food(); -->> not possible
+    @Override
+    public void drink() {
+        System.out.println("I am drinking!");
+    }
 
-        Eatable eatableObj = new Food();
-        eatableObj.eat();
-        eatableObj.other();
-        eatableObj.anotherMethod();
-        //eatableObj.food(); -->> not possible
-
-        Food foodObj = new Food();
-        foodObj.food();
+    @Override
+    public void sip() {
+        System.out.println("I am sipping!");
     }
 }

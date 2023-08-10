@@ -1,3 +1,5 @@
+package assignment;
+
 public class Employee {
     private String name;
     private int age;
@@ -37,7 +39,7 @@ public class Employee {
     }
     @Override
     public String toString() {
-        return String.format("Employee Name: %s, Employee Age: %d, Employee Department: %s, Employee Salary: %.2f",
+        return String.format("assignment.Employee Name: %s, assignment.Employee Age: %d, assignment.Employee Department: %s, assignment.Employee Salary: %.2f",
                 this.name, this.age, this.department, this.salary);
     }
 }

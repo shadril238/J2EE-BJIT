@@ -1,3 +1,5 @@
+package assignment;
+
 import java.util.ArrayList;
 import java.util.Comparator;
 import java.util.List;
@@ -34,7 +36,7 @@ public class EmployeeStreamOperations implements EmployeeOperations{
         Optional<Employee> highestPaidEmployee = empStreamOps.highestPaidEmployees(empStreamOps.employeeList);
         if(highestPaidEmployee.isPresent()){
             Employee employee = highestPaidEmployee.get();
-            System.out.println("\nHighest Paid Employee: ");
+            System.out.println("\nHighest Paid assignment.Employee: ");
             System.out.println(empStreamOps.getEmployeeDetails(employee));
         }
         else{
