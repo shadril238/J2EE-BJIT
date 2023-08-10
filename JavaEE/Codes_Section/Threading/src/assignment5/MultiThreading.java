@@ -17,10 +17,8 @@ class Producer implements Runnable {
                 while (buffer.size() == maxSize) {
                     try {
                         System.out.println("Buffer is full, waiting...");
-<<<<<<< HEAD
                         System.out.println("Buffer size : " + buffer.size());
-=======
->>>>>>> 55cf823e47fd601d040c7cb41a6cc3235ad9a610
+
                         buffer.wait();
                     } catch (InterruptedException e) {
                         e.printStackTrace();
@@ -45,10 +43,7 @@ class Consumer implements Runnable {
                 while (buffer.isEmpty()) {
                     try {
                         System.out.println("Buffer is empty, waiting...");
-<<<<<<< HEAD
                         System.out.println("Buffer size : " + buffer.size());
-=======
->>>>>>> 55cf823e47fd601d040c7cb41a6cc3235ad9a610
                         buffer.wait();
                     } catch (InterruptedException e) {
                         e.printStackTrace();
@@ -80,10 +75,7 @@ public class MultiThreading {
         consumerThread.start();
         //producerThread1.start();
         //producerThread.run();
-<<<<<<< HEAD
-        //consumerThread.run();git 
-=======
         //consumerThread.run();
->>>>>>> 55cf823e47fd601d040c7cb41a6cc3235ad9a610
+        //consumerThread.run();
     }
 }
