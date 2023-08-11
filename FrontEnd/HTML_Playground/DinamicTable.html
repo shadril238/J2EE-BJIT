@@ -1,0 +1,152 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Country Information</title>
+    <style>
+      table {
+        border-collapse: collapse;
+        width: 100%;
+      }
+      th, td {
+        text-align: left;
+        padding: 8px;
+      }
+      tr:nth-child(even) {
+        background-color: #D6EEEE;
+      }
+    </style>
+</head>
+
+<body>
+  <div>
+    <label for="searchCountry">Search Country:</label>
+    <input type="text" id="searchCountry" placeholder="Enter country name here">
+  </div>
+  <div style="overflow-x: auto;">
+    <table role="table" aria-label="Country Information">
+      <thead>
+        <tr>
+          <th scope="col" data-column="name">Country Name</th>
+          <th scope="col" data-column="population">Population</th>
+          <th scope="col" data-column="languages">Languages Spoken</th>
+        </tr>
+      </thead>
+      <tbody>
+        <!-- Data rows will be populated dynamically using JavaScript -->
+      </tbody>
+    </table>
+  </div>
+  <br>
+  <div>
+    <label for="cname">Country Name:</label>
+    <input type="text" id="cname" placeholder="Enter country name">
+    <label for="cpopulation">Population:</label>
+    <input type="number" id="cpopulation" placeholder="Enter population">
+    <label for="clanguages">Languages:</label>
+    <input type="text" id="clanguages" placeholder="Enter languages">
+    <button id="btn">Add Country</button>
+  </div>
+  <br>
+  <div>
+    <button id="btnStopRandomize">Stop Randomize Population</button>
+  </div>
+
+<script>
+  const countries = [
+    { name: "United States", population: 331002651, languages: "English" },
+    { name: "China", population: 1439323776, languages: "Chinese" },
+    { name: "India", population: 1380004385, languages: "Hindi, English" },
+    { name: "Brazil", population: 212559417, languages: "Portuguese" },
+    { name: "Russia", population: 145934462, languages: "Russian" },
+    { name: "Japan", population: 126476461, languages: "Japanese" },
+    { name: "Germany", population: 83783942, languages: "German" },
+    { name: "France", population: 65273511, languages: "French" },
+    { name: "Mexico", population: 128932753, languages: "Spanish" },
+    { name: "South Korea", population: 51269185, languages: "Korean" },
+    { name: "Turkey", population: 84339067, languages: "Turkish" },
+    // Add more countries here
+  ];
+
+  const tableBody = document.querySelector("tbody");
+  const tableHeader = document.querySelector("thead");
+  const searchInput = document.getElementById("searchCountry");
+  const btnAddCountry = document.getElementById("btn");
+  const btnStopRandomizePopulation = document.getElementById("btnStopRandomize");
+  let intervalId;
+
+  btnAddCountry.addEventListener("click", addCountry);
+  btnStopRandomizePopulation.addEventListener("click", stopRandomizePopulation);
+
+  function renderTable(searchTerm = "") {
+    tableBody.innerHTML = "";
+
+    const filteredCountry = countries.filter(c => c.name.toLowerCase().includes(searchTerm.toLowerCase()));
+
+    filteredCountry.forEach((country) => {
+      const row = document.createElement("tr");
+      row.innerHTML = `
+        <td>${country.name}</td>
+        <td>${country.population.toLocaleString()}</td>
+        <td>${country.languages}</td>
+      `;
+      tableBody.appendChild(row);
+    });
+  }
+
+  function sortTable(column) {
+    countries.sort((a, b) => a[column] > b[column] ? 1 : -1);
+    renderTable();
+  }
+
+  function randomizePopulation() {
+    countries.forEach((country) => {
+      const randomChange = Math.floor(Math.random() * 1000000) - 500000;
+      country.population += randomChange;
+    });
+    renderTable();
+  }
+
+  tableHeader.addEventListener("click", (event) => {
+    if (event.target.dataset.column) {
+      sortTable(event.target.dataset.column);
+    }
+  });
+  //Search by country name
+  searchInput.addEventListener("input", (event) => {
+    const searchTerm = event.target.value;
+    renderTable(searchTerm);
+  });
+
+  //Adding new country
+  function addCountry(){
+    const countryName = document.getElementById("cname").value
+    const population = document.getElementById("cpopulation").value
+    const languages = document.getElementById("clanguages").value
+    //console.log(population)
+    //debugger
+    if (countryName && !isNaN(population) && languages) {
+      countries.push({
+        name: countryName,
+        population: population,
+        languages: languages
+      });
+      renderTable();
+
+      document.getElementById("cname").value = "";
+      document.getElementById("cpopulation").value = "";
+      document.getElementById("clanguages").value = "";
+    }
+  }
+
+  // Stop randomize population function
+  function stopRandomizePopulation(){
+    clearInterval(intervalId)
+    alert("Randomize Population Stopped...")
+  } 
+  renderTable();
+  intervalId = setInterval(randomizePopulation, 3000); // Randomize population every 3 seconds
+</script>
+</body>
+</html>
