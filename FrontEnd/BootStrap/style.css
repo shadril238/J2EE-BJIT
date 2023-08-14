@@ -1,0 +1,11 @@
+/* shadril238 */
+
+.bg-description{
+    background-color: #4b4b4b75;
+}
+.modal-body {
+    font-weight: normal; /* Remove bold text from modal content */
+}
+footer {
+    font-weight: normal; /* Remove bold text from footer */
+}
