@@ -5,16 +5,7 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="87470b81-f651-47b3-9ed5-ec9c314102eb" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/../Assignment-4/.idea/uiDesigner.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../Assignment-4/src/teluskopractice/StreamAPI.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/interfaceexample/Drinkable.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/interfaceexample/MainClass.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/interfaceexample/Water.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../Assignment-4/src/Employee.java" beforeDir="false" afterPath="$PROJECT_DIR$/../Assignment-4/src/assignment/Employee.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../Assignment-4/src/EmployeeOperations.java" beforeDir="false" afterPath="$PROJECT_DIR$/../Assignment-4/src/assignment/EmployeeOperations.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../Assignment-4/src/EmployeeStreamOperations.java" beforeDir="false" afterPath="$PROJECT_DIR$/../Assignment-4/src/assignment/EmployeeStreamOperations.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/interfaceexample/Apple.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/interfaceexample/Apple.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/interfaceexample/Food.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/interfaceexample/Food.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../FrontEnd/BootStrap/Assignment-8.html" beforeDir="false" afterPath="$PROJECT_DIR$/../../../FrontEnd/BootStrap/Assignment-8.html" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
