@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Host: 127.0.0.1
--- Generation Time: Aug 16, 2023 at 12:57 PM
+-- Generation Time: Aug 16, 2023 at 09:44 PM
 -- Server version: 10.4.28-MariaDB
 -- PHP Version: 8.0.28
 
@@ -20,6 +20,8 @@ SET time_zone = "+00:00";
 --
 -- Database: `aiub_lms`
 --
+CREATE DATABASE IF NOT EXISTS `aiub_lms` DEFAULT CHARACTER SET utf8mb4 COLLATE utf8mb4_general_ci;
+USE `aiub_lms`;
 
 -- --------------------------------------------------------
 
@@ -27,24 +29,26 @@ SET time_zone = "+00:00";
 -- Table structure for table `books`
 --
 
+DROP TABLE IF EXISTS `books`;
 CREATE TABLE `books` (
   `id` int(11) NOT NULL,
   `title` varchar(100) NOT NULL,
   `author` varchar(50) NOT NULL,
   `genre` varchar(50) NOT NULL,
-  `publicationYear` int(4) NOT NULL
+  `publicationYear` int(4) NOT NULL,
+  `quantity` int(11) NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci;
 
 --
 -- Dumping data for table `books`
 --
 
-INSERT INTO `books` (`id`, `title`, `author`, `genre`, `publicationYear`) VALUES
-(1, 'Harry Potter and the Sorcerer\'s Stone', 'J.K. Rowling', 'Fantasy', 1997),
-(2, 'The Catcher in the Rye', 'J.D. Salinger', 'Fiction', 1951),
-(3, 'The Hobbit', 'J.R.R. Tolkien', 'Fantasy', 19371937),
-(4, 'The Kite Runner', 'Khaled Hosseini', 'Fiction', 2003),
-(5, 'Pride and Prejudice', 'Jane Austen', 'Fiction', 1813);
+INSERT INTO `books` (`id`, `title`, `author`, `genre`, `publicationYear`, `quantity`) VALUES
+(1, 'Harry Potter and the Sorcerer\'s Stone', 'J.K. Rowling', 'Fantasy', 1997, 10),
+(2, 'The Catcher in the Rye', 'J.D. Salinger', 'Fiction', 1951, 11),
+(3, 'The Hobbit', 'J.R.R. Tolkien', 'Fantasy', 19371937, 6),
+(4, 'The Kite Runner', 'Khaled Hosseini', 'Fiction', 2003, 21),
+(5, 'Pride and Prejudice', 'Jane Austen', 'Fiction', 1813, 16);
 
 -- --------------------------------------------------------
 
@@ -52,6 +56,7 @@ INSERT INTO `books` (`id`, `title`, `author`, `genre`, `publicationYear`) VALUES
 -- Table structure for table `members`
 --
 
+DROP TABLE IF EXISTS `members`;
 CREATE TABLE `members` (
   `id` int(11) NOT NULL,
   `name` varchar(50) NOT NULL,
@@ -75,6 +80,7 @@ INSERT INTO `members` (`id`, `name`, `email`, `type`) VALUES
 -- Table structure for table `transactions`
 --
 
+DROP TABLE IF EXISTS `transactions`;
 CREATE TABLE `transactions` (
   `id` int(11) NOT NULL,
   `transType` varchar(15) NOT NULL,
