@@ -1,0 +1,89 @@
+body {
+    background-color: #f2f2f2;
+    font-family: Arial, sans-serif;
+}
+
+form {
+    background-color: white;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    box-shadow: 0px 0px 5px 0px rgba(0,0,0,0.2);
+    margin: 0 auto;
+    padding: 20px;
+    max-width: 50%;
+}
+
+h1 {
+    text-align: center;
+}
+
+input[type="text"],
+input[type="number"],
+select,
+textarea {
+    width: 100%;
+    padding: 10px;
+    border-radius: 5px;
+    border: 1px solid #ccc;
+    box-sizing: border-box;
+    margin-bottom: 20px;
+    font-size: 16px;
+}
+
+input[type="submit"] {
+    background-color: #333333;
+    color: white;
+    padding: 12px 20px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 16px;
+    font-weight: bold;
+}
+
+input[type="button"] {
+    background-color: #333333;
+    color: white;
+    padding: 12px 20px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 16px;
+    font-weight: bold;
+}
+
+input[type="button"]:hover {
+    background-color: #fffff;
+}
+
+input[type="submit"]:hover {
+    background-color: #fffff;
+}
+
+label {
+    font-weight: bold;
+    margin-bottom: 10px;
+}
+
+table {
+    background-color: #FFFFFF;
+    width: 100%;
+    border-collapse: collapse;
+    border-spacing: 0;
+}
+
+th {
+    font-weight: bold;
+    text-align: left;
+    padding: 8px;
+    border-bottom: 1px solid #DDDDDD;
+}
+
+td {
+    padding: 8px;
+    border-bottom: 1px solid #DDDDDD;
+}
+
+tr:nth-child(even) {
+    background-color: #F4F4F4;
+}
