@@ -1,0 +1,15 @@
+1. Show all Docker Containers: sudo docker ps -a
+
+2. To stop a specific Docker Container: sudo docker stop container_id
+
+3. Start a Docker Container from an Docker Image: sudo docker run --name="python_shadril" -dit -p 80:80 python
+
+4. Pull Docker Image from Docker Hub Repo: sudo docker pull image_name
+
+5. Search for Docker images on the Docker Hub registry based on a specific keyword: sudo docker search keyword
+
+6. The Docker Run command is used to start a container from an image: sudo docker run hello-world
+
+7. The 'sudo docker start [container-ID | container-name]' command is used to start a stopped Docker container. 
+
+8. The 'sudo docker rm [container-ID | container-name]' command is used to remove Docker containers from the system.
