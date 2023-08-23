@@ -1,4 +1,5 @@
-1. Show all Docker Containers: sudo docker ps -a
+
+1. Show all Docker Containers: sudo docker ps -a (all images: sudo docker image ls)
 
 2. To stop a specific Docker Container: sudo docker stop container_id
 
@@ -13,3 +14,24 @@
 7. The 'sudo docker start [container-ID | container-name]' command is used to start a stopped Docker container. 
 
 8. The 'sudo docker rm [container-ID | container-name]' command is used to remove Docker containers from the system.
+
+9. To generate jar/war dependencies: mvn clean compile
+
+10. To generate jar/war : mvn clean install
+
+11. sudo docker login
+
+12. sudo docker tag imageid user_name/repository_name : tag
+
+13. sudo docker push  user_name/repository_name : tag (push)
+
+14. sudo docker exec -it container_id /bin/bash 
+
+15. sudo docker inspect container_id
+
+16. sudo docker logs container_name
+
+17. sudo docker save -o image_name.zip image_id
+
+18. 
+
