@@ -35,7 +35,8 @@
 
 18. Dockerfile: 
 FROM tomcat:8
-COPY /home/shadril238/Downloads/dockerDemoProject/target/dockerDemoProject-0.0.1-SNAPSHOT.war /usr/local/tomcat/webapps/
+COPY /target/dockerDemoProject-0.0.1-SNAPSHOT.war /usr/local/tomcat/webapps/custom_name.war
 
+then build using,
 sudo docker build -t new_image_name .
-
+docker pull shadril238/demospring:v1.0
