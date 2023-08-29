@@ -28,9 +28,16 @@ public class StudentController {
         return modelAndView;
     }
 
-    @DeleteMapping("/remove-student/{id}")
+    @GetMapping("/remove-student/{id}")
     public ModelAndView removeStudent(@PathVariable Integer id) {
-        studentService.removeStudent(id);
+        Student student = studentService.findById(id);
+        ModelAndView modelAndView = new ModelAndView("delete-student-page.html");
+        modelAndView.addObject("student", student);
+        return modelAndView;
+    }
+    @PostMapping("/remove-student")
+    public ModelAndView removeStudent(@ModelAttribute Student student) {
+        studentService.removeStudent(student);
         return new ModelAndView("redirect:/list-all-students");
     }
 

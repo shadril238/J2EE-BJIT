@@ -2,11 +2,11 @@
 <html xmlns="http://www.w3.org/1999/xhtml" xmlns:th="http://www.thymeleaf.org">
 <head>
     <meta charset="UTF-8">
-    <title>Update Student</title>
+    <title>Delete Student</title>
 </head>
 <body>
-<h1>Update Student Info</h1>
-<form th:action="@{/update-student}" th:object="${student}" method="post">
+<h1>Delete Student</h1>
+<form th:action="@{/remove-student}" th:object="${student}" method="post">
     <input type="hidden" th:field="*{id}"/>
 
     <label for="name">Student Name</label>
@@ -40,7 +40,7 @@
     <input type="number" th:field="*{cgpa}" step="any" id="cgpa"/>
 
     <br/><br/>
-    <input type="submit" value="Update Student"/>
+    <input type="submit" value="Remove Student"/>
 </form>
 </body>
 </html>

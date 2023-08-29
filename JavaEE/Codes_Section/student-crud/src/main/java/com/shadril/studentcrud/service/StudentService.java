@@ -33,8 +33,11 @@ public class StudentService {
     public void addStudent(Student student){
         studentList.add(student);
     }
-    public void removeStudent(Integer id){
-        studentList.removeIf(student -> Objects.equals(student.getId(), id));
+    public void removeStudent(Student student){
+        Student existingStudent = findById(student.getId());
+        if (existingStudent != null) {
+            studentList.remove(existingStudent);
+        }
     }
     public void updateStudent(Student updatedStudent) {
         Student existingStudent = findById(updatedStudent.getId());
