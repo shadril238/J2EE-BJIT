@@ -2,6 +2,7 @@ ZOOM
 -----
 Common Session : https://bjitgroup.zoom.us/j/82918935713?pwd=c1BPbU9MZ04zeStYMmVieDU1RnZGZz09
 J2EE : https://bjitgroup.zoom.us/j/85798707207?pwd=Rm9FcE1qNVMxNzhBNjVGQmxFdGpjdz09
+J2EE (Latest) : https://bjitgroup.zoom.us/j/85432768444?pwd=RFhGeXFmclBZT2JRSnZkYW5zZW1vdz09#success
 
 -----
 NextCloud
