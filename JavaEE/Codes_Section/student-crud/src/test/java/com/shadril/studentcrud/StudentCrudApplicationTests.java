@@ -1,10 +1,10 @@
-package com.shadril.studentmanagement;
+package com.shadril.studentcrud;
 
 import org.junit.jupiter.api.Test;
 import org.springframework.boot.test.context.SpringBootTest;
 
 @SpringBootTest
-class StudentManagementApplicationTests {
+class StudentCrudApplicationTests {
 
 	@Test
 	void contextLoads() {

@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml"
+      xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <title>Home Page</title>
+</head>
+<body>
+<div th:if="${message}" class="alert alert-success">
+    <p th:text="${message}"></p>
+</div>
+<h1>All Student Info</h1>
+
+<table>
+    <tr>
+        <th>Id</th>
+        <th>Name</th>
+        <th>Email</th>
+        <th>Date of Birth</th>
+        <th>Gender</th>
+        <th>Phone Number</th>
+        <th>Address</th>
+        <th>Major</th>
+        <th>Enrollment Date</th>
+        <th>Graduation Date</th>
+        <th>CGPA</th>
+        <th></th>
+        <th></th>
+    </tr>
+    <tr th:each="student : ${studentList}">
+        <td th:text="${student.id}"></td>
+        <td th:text="${student.name}"></td>
+        <td th:text="${student.email}"></td>
+        <td th:text="${student.dateOfBirth}"></td>
+        <td th:text="${student.gender}"></td>
+        <td th:text="${student.phoneNumber}"></td>
+        <td th:text="${student.address}"></td>
+        <td th:text="${student.major}"></td>
+        <td th:text="${student.enrollmentDate}"></td>
+        <td th:text="${student.graduationDate}"></td>
+        <td th:text="${student.cgpa}"></td>
+        <td><a th:href="@{/remove-student/{id}(id=${student.id})}">Delete</a></td>
+        <td><a th:href="@{/update-student/{id}(id=${student.id})}">Update</a></td>
+    </tr>
+</table>
+</body>
+</html>

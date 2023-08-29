@@ -1,13 +1,13 @@
-package com.shadril.studentmanagement;
+package com.shadril.studentcrud;
 
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
 
 @SpringBootApplication
-public class StudentManagementApplication {
+public class StudentCrudApplication {
 
 	public static void main(String[] args) {
-		SpringApplication.run(StudentManagementApplication.class, args);
+		SpringApplication.run(StudentCrudApplication.class, args);
 	}
 
 }

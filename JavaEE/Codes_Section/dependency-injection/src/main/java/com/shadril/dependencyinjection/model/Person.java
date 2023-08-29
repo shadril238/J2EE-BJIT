@@ -9,7 +9,7 @@ public class Person {
     private Calculation calculation;
 
     public Person() {
-
+        System.out.println("Person Bean is created.");
     }
 
     public Person(String name, Calculation calculation) {

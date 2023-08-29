@@ -1,6 +1,4 @@
-package com.shadril.studentmanagement.model;
-
-import java.time.LocalDate;
+package com.shadril.studentcrud.model;
 
 public class Student {
     private Integer id;

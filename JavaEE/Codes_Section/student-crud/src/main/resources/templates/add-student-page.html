@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml"
+      xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <title>Add Student</title>
+</head>
+<body>
+<h1>Add Student Info</h1>
+    <form action="/add-student" method="post">
+        <label for="id">Student Id</label>
+        <input type="number" name="id" id="id"/>
+
+        <label for="name">Student Name</label>
+        <input type="text" name="name" id="name"/>
+
+        <label for="email">Email</label>
+        <input type="text" name="email" id="email"/>
+
+        <label for="dateOfBirth">Date of Birth</label>
+        <input type="text" name="dateOfBirth" id="dateOfBirth"/>
+
+        <label for="gender">Gender</label>
+        <input type="text" name="gender" id="gender"/>
+
+        <label for="phoneNumber">Phone Number</label>
+        <input type="text" name="phoneNumber" id="phoneNumber"/>
+
+        <label for="address">Address</label>
+        <input type="text" name="address" id="address"/>
+
+        <label for="major">Major</label>
+        <input type="text" name="major" id="major"/>
+
+        <label for="enrollmentDate">Enrollment Date</label>
+        <input type="text" name="enrollmentDate" id="enrollmentDate"/>
+
+        <label for="graduationDate">Graduation Date</label>
+        <input type="text" name="graduationDate" id="graduationDate"/>
+
+        <label for="cgpa">CGPA</label>
+        <input type="number" name="cgpa" id="cgpa" step="any"/>
+
+        <br/><br/>
+        <input type="submit" value="Add Student"/>
+    </form>
+</body>
+</body>
+</html>
