@@ -13,7 +13,7 @@ public class StudentService {
     List<Student> studentList = new ArrayList<>();
     @PostConstruct
     public void init(){
-        studentList.add(new Student(101, "Shadril", "shadril@gmail.com", "10-09-2000", "Male", "01754402481", "Bashundhara R/A, Dhaka", "Information Systems", "20-01-2020", "04-09-2023", 3.94));
+        studentList.add(new Student(101, "Shadril", "shadril@gmail.com", "10-09-2000", "Male", "01754402481", "Bashundhara R/A, Dhaka", "Information Systems", "20-01-2020", "04-09-2023", 1.00));
         studentList.add(new Student(102, "Mery", "mery@gmail.com", "27-08-2000", "Female", "01754502683", "Khilkhet, Dhaka", "Software Engineering", "20-01-2020", "04-09-2023", 3.86));
         studentList.add(new Student(103, "Gourob", "gourob@gmail.com", "20-01-1999", "Male", "01977723500", "Uttara, Dhaka", "Computation Theory", "28-08-2019", "04-09-2023", 3.56));
         studentList.add(new Student(104, "Pritom", "pritom@gmail.com", "17-04-1998", "Male", "01874122344", "Savar, Dhaka", "Software Engineering", "28-08-2019", "04-09-2023", 3.92));
