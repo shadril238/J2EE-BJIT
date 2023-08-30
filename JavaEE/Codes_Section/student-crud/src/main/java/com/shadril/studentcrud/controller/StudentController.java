@@ -17,7 +17,7 @@ public class StudentController {
 
     @GetMapping("/")
     public ModelAndView homePage(){
-        return new ModelAndView("home-page.html");
+        return new ModelAndView("redirect:/list-all-students");
     }
 
     @GetMapping("/list-all-students")
@@ -47,7 +47,10 @@ public class StudentController {
 
     @PostMapping("/add-student")
     public ModelAndView addStudent(@ModelAttribute Student student){
-        studentService.addStudent(student);
+        Student existingStudent = studentService.findById(student.getId());
+        if(existingStudent == null){
+            studentService.addStudent(student);
+        }
         return new ModelAndView("redirect:/list-all-students");
     }
 

@@ -21,7 +21,7 @@
     <div class="bg-dark text-white py-3 text-center">
         <h1 class="m-0">Update Student</h1>
     </div>
-    <form th:action="@{/remove-student}" th:object="${student}" method="post" class="bordered-form">
+    <form th:action="@{/update-student}" th:object="${student}" method="post" class="bordered-form">
         <input type="hidden" th:field="*{id}"/>
 
         <div class="row mb-3">
@@ -30,7 +30,7 @@
                 <input type="text" th:field="*{name}" id="name" class="form-control"/>
 
                 <label for="email" class="font-weight-bold">Email</label>
-                <input type="text" th:field="*{email}" id="email" class="form-control"/>
+                <input type="text" th:field="*{email}" id="email" class="form-control" readonly/>
 
                 <label for="dateOfBirth" class="font-weight-bold">Date of Birth</label>
                 <input type="text" th:field="*{dateOfBirth}" id="dateOfBirth" class="form-control"/>
