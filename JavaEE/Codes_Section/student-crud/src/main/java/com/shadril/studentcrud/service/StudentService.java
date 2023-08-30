@@ -31,7 +31,10 @@ public class StudentService {
         return studentList;
     }
     public void addStudent(Student student){
-        studentList.add(student);
+        Student existingStudent = findById(student.getId());
+        if (existingStudent == null){
+            studentList.add(student);
+        }
     }
     public void removeStudent(Student student){
         Student existingStudent = findById(student.getId());

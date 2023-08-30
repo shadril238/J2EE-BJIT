@@ -47,10 +47,7 @@ public class StudentController {
 
     @PostMapping("/add-student")
     public ModelAndView addStudent(@ModelAttribute Student student){
-        Student existingStudent = studentService.findById(student.getId());
-        if(existingStudent == null){
-            studentService.addStudent(student);
-        }
+        studentService.addStudent(student);
         return new ModelAndView("redirect:/list-all-students");
     }
 
