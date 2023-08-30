@@ -2,45 +2,67 @@
 <html xmlns="http://www.w3.org/1999/xhtml" xmlns:th="http://www.thymeleaf.org">
 <head>
     <meta charset="UTF-8">
-    <title>Update Student</title>
+    <title>Delete Student</title>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css">
+    <style>
+        .form-group {
+            margin-bottom: 1.5rem;
+        }
+
+        .bordered-form {
+            border: 1px solid #dee2e6;
+            border-radius: 8px;
+            padding: 20px;
+        }
+    </style>
 </head>
-<body>
-<h1>Update Student Info</h1>
-<form th:action="@{/update-student}" th:object="${student}" method="post">
-    <input type="hidden" th:field="*{id}"/>
+<body style="background-color: white; color: black;">
+<div class="container-md mt-5">
+    <div class="bg-dark text-white py-3 text-center">
+        <h1 class="m-0">Update Student</h1>
+    </div>
+    <form th:action="@{/remove-student}" th:object="${student}" method="post" class="bordered-form">
+        <input type="hidden" th:field="*{id}"/>
 
-    <label for="name">Student Name</label>
-    <input type="text" th:field="*{name}" id="name"/>
+        <div class="row mb-3">
+            <div class="col-md-6">
+                <label for="name" class="font-weight-bold">Student Name</label>
+                <input type="text" th:field="*{name}" id="name" class="form-control"/>
 
-    <label for="email">Email</label>
-    <input type="text" th:field="*{email}" id="email"/>
+                <label for="email" class="font-weight-bold">Email</label>
+                <input type="text" th:field="*{email}" id="email" class="form-control"/>
 
-    <label for="dateOfBirth">Date of Birth</label>
-    <input type="text" th:field="*{dateOfBirth}" id="dateOfBirth"/>
+                <label for="dateOfBirth" class="font-weight-bold">Date of Birth</label>
+                <input type="text" th:field="*{dateOfBirth}" id="dateOfBirth" class="form-control"/>
 
-    <label for="gender">Gender</label>
-    <input type="text" th:field="*{gender}" id="gender"/>
+                <label for="gender" class="font-weight-bold">Gender</label>
+                <input type="text" th:field="*{gender}" id="gender" class="form-control" readonly/>
 
-    <label for="phoneNumber">Phone Number</label>
-    <input type="text" th:field="*{phoneNumber}" id="phoneNumber"/>
+                <label for="phoneNumber" class="font-weight-bold">Phone Number</label>
+                <input type="text" th:field="*{phoneNumber}" id="phoneNumber" class="form-control"/>
 
-    <label for="address">Address</label>
-    <input type="text" th:field="*{address}" id="address"/>
+            </div>
+            <div class="col-md-6">
+                <label for="address" class="font-weight-bold">Address</label>
+                <input type="text" th:field="*{address}" id="address" class="form-control"/>
+                <label for="major" class="font-weight-bold">Major</label>
 
-    <label for="major">Major</label>
-    <input type="text" th:field="*{major}" id="major"/>
+                <input type="text" th:field="*{major}" id="major" class="form-control"/>
 
-    <label for="enrollmentDate">Enrollment Date</label>
-    <input type="text" th:field="*{enrollmentDate}" id="enrollmentDate"/>
+                <label for="enrollmentDate" class="font-weight-bold">Enrollment Date</label>
+                <input type="text" th:field="*{enrollmentDate}" id="enrollmentDate" class="form-control"/>
 
-    <label for="graduationDate">Graduation Date</label>
-    <input type="text" th:field="*{graduationDate}" id="graduationDate"/>
+                <label for="graduationDate" class="font-weight-bold">Graduation Date</label>
+                <input type="text" th:field="*{graduationDate}" id="graduationDate" class="form-control"/>
 
-    <label for="cgpa">CGPA</label>
-    <input type="number" th:field="*{cgpa}" step="any" id="cgpa"/>
+                <label for="cgpa" class="font-weight-bold">CGPA</label>
+                <input type="number" th:field="*{cgpa}" step="any" id="cgpa" class="form-control"/>
 
-    <br/><br/>
-    <input type="submit" value="Update Student"/>
-</form>
+            </div>
+        </div>
+
+        <input type="submit" value="Confirm Update" class="btn btn-dark w-25"/>
+    </form>
+</div>
 </body>
 </html>

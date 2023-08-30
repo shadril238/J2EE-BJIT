@@ -1,47 +1,76 @@
 <!DOCTYPE html>
-<html xmlns="http://www.w3.org/1999/xhtml"
-      xmlns:th="http://www.thymeleaf.org">
+<html xmlns="http://www.w3.org/1999/xhtml" xmlns:th="http://www.thymeleaf.org">
 <head>
     <meta charset="UTF-8">
-    <title>Home Page</title>
+    <title>Student List</title>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css">
+    <style>
+        th {
+            background-color: #343a40;
+            color: white;
+        }
+
+        td a {
+            text-decoration: none;
+            padding: 0.2rem 0.5rem;
+            border-radius: 4px;
+        }
+
+        .delete-button {
+            background-color: #dc3545;
+            color: white;
+        }
+
+        .update-button {
+            background-color: black;
+            color: white;
+        }
+    </style>
 </head>
 <body>
-<div th:if="${message}" class="alert alert-success">
-    <p th:text="${message}"></p>
+<div class="container-md mt-5">
+    <div class="bg-dark text-white py-3 d-flex justify-content-between text-center">
+        <h1 class="mx-auto">Student List</h1>
+    </div>
+    <div class="text-end mt-3">
+        <a href="/add-student" class="btn btn-dark">Add Student</a>
+    </div>
+    <table class="table table-bordered table-striped mt-3">
+        <thead>
+        <tr>
+            <th>Id</th>
+            <th>Name</th>
+            <th>Email</th>
+            <th>Date of Birth</th>
+            <th>Gender</th>
+            <th>Phone Number</th>
+            <th>Address</th>
+            <th>Major</th>
+            <th>Enrollment Date</th>
+            <th>Graduation Date</th>
+            <th>CGPA</th>
+            <th></th>
+            <th></th>
+        </tr>
+        </thead>
+        <tbody>
+        <tr th:each="student : ${studentList}">
+            <td th:text="${student.id}"></td>
+            <td th:text="${student.name}"></td>
+            <td th:text="${student.email}"></td>
+            <td th:text="${student.dateOfBirth}"></td>
+            <td th:text="${student.gender}"></td>
+            <td th:text="${student.phoneNumber}"></td>
+            <td th:text="${student.address}"></td>
+            <td th:text="${student.major}"></td>
+            <td th:text="${student.enrollmentDate}"></td>
+            <td th:text="${student.graduationDate}"></td>
+            <td th:text="${student.cgpa}"></td>
+            <td><a th:href="@{'/remove-student/' + ${student.id}}" class="delete-button">Delete</a></td>
+            <td><a th:href="@{'/update-student/' + ${student.id}}" class="update-button">Update</a></td>
+        </tr>
+        </tbody>
+    </table>
 </div>
-<h1>All Student Info</h1>
-
-<table>
-    <tr>
-        <th>Id</th>
-        <th>Name</th>
-        <th>Email</th>
-        <th>Date of Birth</th>
-        <th>Gender</th>
-        <th>Phone Number</th>
-        <th>Address</th>
-        <th>Major</th>
-        <th>Enrollment Date</th>
-        <th>Graduation Date</th>
-        <th>CGPA</th>
-        <th></th>
-        <th></th>
-    </tr>
-    <tr th:each="student : ${studentList}">
-        <td th:text="${student.id}"></td>
-        <td th:text="${student.name}"></td>
-        <td th:text="${student.email}"></td>
-        <td th:text="${student.dateOfBirth}"></td>
-        <td th:text="${student.gender}"></td>
-        <td th:text="${student.phoneNumber}"></td>
-        <td th:text="${student.address}"></td>
-        <td th:text="${student.major}"></td>
-        <td th:text="${student.enrollmentDate}"></td>
-        <td th:text="${student.graduationDate}"></td>
-        <td th:text="${student.cgpa}"></td>
-        <td><a th:href="@{/remove-student/{id}(id=${student.id})}">Delete</a></td>
-        <td><a th:href="@{/update-student/{id}(id=${student.id})}">Update</a></td>
-    </tr>
-</table>
 </body>
 </html>

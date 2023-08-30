@@ -17,8 +17,7 @@ public class StudentController {
 
     @GetMapping("/")
     public ModelAndView homePage(){
-        ModelAndView modelAndView = new ModelAndView("home-page.html");
-        return modelAndView;
+        return new ModelAndView("home-page.html");
     }
 
     @GetMapping("/list-all-students")
