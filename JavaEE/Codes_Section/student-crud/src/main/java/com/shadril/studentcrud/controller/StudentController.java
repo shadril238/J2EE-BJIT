@@ -64,6 +64,4 @@ public class StudentController {
         studentService.updateStudent(student);
         return new ModelAndView("redirect:/list-all-students");
     }
-
-
 }
