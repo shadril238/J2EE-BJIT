@@ -1,5 +1,8 @@
 package com.shadril.globalexceptionhandling.controller;
 
+import com.shadril.globalexceptionhandling.exception.FactorialOutOfRangeException;
+import com.shadril.globalexceptionhandling.exception.InfinityException;
+import com.shadril.globalexceptionhandling.exception.SquareRootNegativeInputException;
 import com.shadril.globalexceptionhandling.service.CalculationService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.HttpStatus;
@@ -14,7 +17,17 @@ public class MainController {
     private CalculationService calculationService;
 
     @GetMapping("/divide")
-    public ResponseEntity<?> divide(@RequestParam Integer a, @RequestParam Integer b) throws ArithmeticException {
+    public ResponseEntity<?> divide(@RequestParam Integer a, @RequestParam Integer b) throws InfinityException {
         return new ResponseEntity<>(calculationService.divide(a, b), HttpStatus.OK);
+    }
+
+    @GetMapping("/factorial")
+    public ResponseEntity<?> factorial(@RequestParam Integer n) throws FactorialOutOfRangeException {
+        return new ResponseEntity<>(calculationService.factorial(n), HttpStatus.OK);
+    }
+
+    @GetMapping("/square-root")
+    public ResponseEntity<?> squareRoot(@RequestParam Double n) throws SquareRootNegativeInputException {
+        return new ResponseEntity<>(calculationService.squareRoot(n), HttpStatus.OK);
     }
 }
