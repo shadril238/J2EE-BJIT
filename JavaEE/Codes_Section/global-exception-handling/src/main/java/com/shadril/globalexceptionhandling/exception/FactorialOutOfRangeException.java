@@ -8,5 +8,4 @@ public class FactorialOutOfRangeException extends RuntimeException{
     public FactorialOutOfRangeException(String message){
         super(message);
     }
-
 }
