@@ -52,13 +52,17 @@ public class ExpenseRepository implements IExpenseRepository{
 
     @Override
     public void delete(Integer id) {
-        String query = "delete from expenses where id = ?";
-        jdbcTemplate.update(query, id);
+        if(getById(id).isPresent()){
+            String query = "delete from expenses where id = ?";
+            jdbcTemplate.update(query, id);
+        }
     }
 
     @Override
     public void update(Expense expense) {
-        String query = "update expenses set category = ?, name = ?, description = ?, amount = ?, date = ? where id = ?";
-        jdbcTemplate.update(query, expense.getCategory(), expense.getName(), expense.getDescription(), expense.getAmount(), expense.getDate(), expense.getId());
+        if(getById(expense.getId()).isPresent()){
+            String query = "update expenses set category = ?, name = ?, description = ?, amount = ?, date = ? where id = ?";
+            jdbcTemplate.update(query, expense.getCategory(), expense.getName(), expense.getDescription(), expense.getAmount(), expense.getDate(), expense.getId());
+        }
     }
 }

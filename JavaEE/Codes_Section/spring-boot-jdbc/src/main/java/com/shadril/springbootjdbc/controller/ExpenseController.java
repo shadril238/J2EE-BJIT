@@ -11,20 +11,37 @@ import java.util.List;
 import java.util.Optional;
 
 @RestController
-@RequestMapping("/expense")
 public class ExpenseController {
     @Autowired
     private IExpenseRepository expenseRepository;
 
-    @GetMapping("/all")
+    @GetMapping("/expense/all")
     public ResponseEntity<List<Expense>> getAllExpenses(){
         List<Expense> expenseList = expenseRepository.getAll();
         return new ResponseEntity<>(expenseList, HttpStatus.OK);
     }
 
-    @GetMapping("/{id}")
+    @GetMapping("/expense/{id}")
     public ResponseEntity<Expense> getExpenseById(@PathVariable Integer id){
         Optional<Expense> expense = expenseRepository.getById(id);
         return new ResponseEntity<>(expense.get(), HttpStatus.OK);
+    }
+
+    @PostMapping("/expense/add")
+    public ResponseEntity<Void> addExpense(@RequestBody Expense expense){
+        expenseRepository.add(expense);
+        return new ResponseEntity<>(null, HttpStatus.OK);
+    }
+
+    @PutMapping("/expense/update")
+    public ResponseEntity<Void> updateExpense(@RequestBody Expense expense){
+        expenseRepository.update(expense);
+        return new ResponseEntity<>(null, HttpStatus.OK);
+    }
+
+    @DeleteMapping("/expense/delete/{id}")
+    public ResponseEntity<Void> deleteExpense(@PathVariable Integer id){
+        expenseRepository.delete(id);
+        return new ResponseEntity<>(null, HttpStatus.OK);
     }
 }
