@@ -26,11 +26,6 @@ public class GlobalExceptionHandler {
         return new ResponseEntity<>(new FactorialOutOfRangeException().getMessage(), HttpStatus.BAD_REQUEST);
     }
 
-    @ExceptionHandler({ResourceNotFoundException.class})
-    public ResponseEntity<?> handleResourceNotFoundException(){
-        return new ResponseEntity<>(new ResourceNotFoundException(), HttpStatus.BAD_REQUEST);
-    }
-
     @ExceptionHandler({InfinityException.class})
     public ResponseEntity<?> handleInfinityException(){
         return new ResponseEntity<>(new InfinityException().getMessage(), HttpStatus.BAD_REQUEST);
