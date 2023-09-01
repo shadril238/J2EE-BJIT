@@ -9,3 +9,5 @@ NextCloud
 ---------
 Common Session : https://nextcloud.bjitgroup.com/index.php/s/XStPAEDYsmH53Pk
 J2EE : https://nextcloud.bjitgroup.com/index.php/s/c2pMRHgFy9D5eb4
+J2EE (JPA) : https://bjitgroup.zoom.us/rec/share/Z27XZjzQgIpopurLAEAZm1TC99LbCOvB8JnXam12g43olZBHOEZjOrPhd1ZrDwJ_.YRjO-wWgI5Ahb5Kl 
+	     Passcode: 5t$AnhS@
