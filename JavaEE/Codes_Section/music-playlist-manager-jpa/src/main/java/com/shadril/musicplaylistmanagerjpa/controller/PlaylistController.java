@@ -1,2 +1,4 @@
-package com.shadril.musicplaylistmanagerjpa.controller;public class PlaylistController {
+package com.shadril.musicplaylistmanagerjpa.controller;
+
+public class PlaylistController {
 }

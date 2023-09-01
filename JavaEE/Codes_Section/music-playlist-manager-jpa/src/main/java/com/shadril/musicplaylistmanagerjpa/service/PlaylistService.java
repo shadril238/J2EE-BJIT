@@ -1,2 +1,4 @@
-package com.shadril.musicplaylistmanagerjpa.service;public class PlaylistService {
+package com.shadril.musicplaylistmanagerjpa.service;
+
+public class PlaylistService {
 }

@@ -1,2 +1,4 @@
-package com.shadril.musicplaylistmanagerjpa.repository;public interface IPlaylistRepository {
+package com.shadril.musicplaylistmanagerjpa.repository;
+
+public interface IPlaylistRepository {
 }

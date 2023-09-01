@@ -1,2 +1,4 @@
-package com.shadril.musicplaylistmanagerjpa.repository;public class PlaylistRepository {
+package com.shadril.musicplaylistmanagerjpa.repository;
+
+public class PlaylistRepository {
 }
