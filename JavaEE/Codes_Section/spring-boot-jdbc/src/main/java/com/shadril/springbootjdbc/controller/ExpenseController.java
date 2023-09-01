@@ -28,20 +28,38 @@ public class ExpenseController {
     }
 
     @PostMapping("/expense/add")
-    public ResponseEntity<Void> addExpense(@RequestBody Expense expense){
-        expenseRepository.add(expense);
-        return new ResponseEntity<>(null, HttpStatus.OK);
+    public ResponseEntity<String> addExpense(@RequestBody Expense expense){
+        boolean status = expenseRepository.add(expense);
+
+        if (status){
+            return new ResponseEntity<>("Expense added successfully!", HttpStatus.OK);
+        }
+        else{
+            return new ResponseEntity<>("Expense add failed!", HttpStatus.INTERNAL_SERVER_ERROR);
+        }
     }
 
     @PutMapping("/expense/update")
-    public ResponseEntity<Void> updateExpense(@RequestBody Expense expense){
-        expenseRepository.update(expense);
-        return new ResponseEntity<>(null, HttpStatus.OK);
+    public ResponseEntity<String> updateExpense(@RequestBody Expense expense){
+        boolean status = expenseRepository.update(expense);
+
+        if (status){
+            return new ResponseEntity<>("Expense updated successfully!", HttpStatus.OK);
+        }
+        else{
+            return new ResponseEntity<>("Expense update failed!", HttpStatus.INTERNAL_SERVER_ERROR);
+        }
     }
 
     @DeleteMapping("/expense/delete/{id}")
-    public ResponseEntity<Void> deleteExpense(@PathVariable Integer id){
-        expenseRepository.delete(id);
-        return new ResponseEntity<>(null, HttpStatus.OK);
+    public ResponseEntity<String> deleteExpense(@PathVariable Integer id){
+        boolean status = expenseRepository.delete(id);
+
+        if (status){
+            return new ResponseEntity<>("Expense deleted successfully!", HttpStatus.OK);
+        }
+        else{
+            return new ResponseEntity<>("Expense delete failed!", HttpStatus.INTERNAL_SERVER_ERROR);
+        }
     }
 }

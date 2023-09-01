@@ -45,24 +45,23 @@ public class ExpenseRepository implements IExpenseRepository{
     }
 
     @Override
-    public void add(Expense expense) {
+    public Boolean add(Expense expense) {
         String query = "insert into expenses (category, name, description, amount, date) values (?, ?, ?, ?, ?)";
-        jdbcTemplate.update(query, expense.getCategory(), expense.getName(), expense.getDescription(), expense.getAmount(), expense.getDate());
+        int numOfRowsAffected = jdbcTemplate.update(query, expense.getCategory(), expense.getName(), expense.getDescription(), expense.getAmount(), expense.getDate());
+        return numOfRowsAffected > 0;
     }
 
     @Override
-    public void delete(Integer id) {
-        if(getById(id).isPresent()){
-            String query = "delete from expenses where id = ?";
-            jdbcTemplate.update(query, id);
-        }
+    public Boolean delete(Integer id) {
+        String query = "delete from expenses where id = ?";
+        int numOfRowsAffected = jdbcTemplate.update(query, id);
+        return numOfRowsAffected > 0;
     }
 
     @Override
-    public void update(Expense expense) {
-        if(getById(expense.getId()).isPresent()){
-            String query = "update expenses set category = ?, name = ?, description = ?, amount = ?, date = ? where id = ?";
-            jdbcTemplate.update(query, expense.getCategory(), expense.getName(), expense.getDescription(), expense.getAmount(), expense.getDate(), expense.getId());
-        }
+    public Boolean update(Expense expense) {
+        String query = "update expenses set category = ?, name = ?, description = ?, amount = ?, date = ? where id = ?";
+        int numOfRowsAffected = jdbcTemplate.update(query, expense.getCategory(), expense.getName(), expense.getDescription(), expense.getAmount(), expense.getDate(), expense.getId());
+        return numOfRowsAffected > 0;
     }
 }
