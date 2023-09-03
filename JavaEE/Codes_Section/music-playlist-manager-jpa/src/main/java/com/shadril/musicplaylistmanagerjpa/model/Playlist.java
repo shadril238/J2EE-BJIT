@@ -1,12 +1,13 @@
 package com.shadril.musicplaylistmanagerjpa.model;
 
 import jakarta.persistence.*;
+import org.springframework.stereotype.Component;
 
 import java.time.LocalDate;
 import java.util.List;
 
 @Entity
-
+@Component
 @Table(name = "playlists")
 public class Playlist {
     @Id
@@ -20,9 +21,9 @@ public class Playlist {
     @Column(nullable = false)
     private LocalDate createdDate;
 
-    @ManyToMany(cascade = CascadeType.MERGE, fetch = FetchType.EAGER)
+    @ManyToMany(cascade = CascadeType.PERSIST, fetch = FetchType.EAGER)
     @JoinTable(name = "music_playlists", joinColumns = @JoinColumn(name = "playlist_id"), inverseJoinColumns = @JoinColumn(name = "music_id"))
-    private List<Music> musicList;
+    private List<Music> musics;
 
     public Playlist() {
     }
@@ -32,7 +33,7 @@ public class Playlist {
         this.name = name;
         this.description = description;
         this.createdDate = createdDate;
-        this.musicList = musicList;
+        this.musics = musicList;
     }
 
     public Integer getId() {
@@ -67,4 +68,11 @@ public class Playlist {
         this.createdDate = createdDate;
     }
 
+    public List<Music> getMusics() {
+        return musics;
+    }
+
+    public void setMusics(List<Music> musics) {
+        this.musics = musics;
+    }
 }

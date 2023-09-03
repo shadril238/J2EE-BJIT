@@ -1,12 +1,14 @@
 package com.shadril.musicplaylistmanagerjpa.model;
 
 import jakarta.persistence.*;
+import org.springframework.stereotype.Component;
 
 
 import java.time.LocalDate;
 import java.util.List;
 
 @Entity
+@Component
 @Table(name = "musics")
 public class Music {
     @Id
@@ -23,6 +25,9 @@ public class Music {
     private String genre;
     @Column(nullable = false)
     private LocalDate releaseDate;
+
+    @ManyToMany(mappedBy = "musics")
+    private List<Playlist> playlists;
 
     public Music() {
     }
