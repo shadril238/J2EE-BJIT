@@ -1,40 +1,38 @@
 package com.shadril.musicplaylistmanagerjpa.model;
 
 import jakarta.persistence.*;
-import org.antlr.v4.runtime.misc.NotNull;
 
-import java.time.Duration;
+
 import java.time.LocalDate;
+import java.util.List;
+
 @Entity
-@Table(name = "music")
+@Table(name = "musics")
 public class Music {
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
-    @Column(name = "id", nullable = false)
+    @Column(name = "id", nullable = false, length = 10)
     private Integer id;
-    @Column(nullable = false)
+    @Column(nullable = false, length = 50)
     private String title;
-    @Column(nullable = false)
+    @Column(nullable = false, length = 50)
     private String artist;
-    @Column(nullable = false)
+    @Column(nullable = false, length = 50)
     private String album;
-    @Column(nullable = false)
+    @Column(nullable = false, length = 50)
     private String genre;
-    @Column(nullable = false)
-    private Duration duration;
     @Column(nullable = false)
     private LocalDate releaseDate;
 
     public Music() {
     }
 
-    public Music(Integer id, String title, String artist, String album, String genre, Duration duration, LocalDate releaseDate) {
+    public Music(Integer id, String title, String artist, String album, String genre, LocalDate releaseDate) {
         this.id = id;
         this.title = title;
         this.artist = artist;
         this.album = album;
         this.genre = genre;
-        this.duration = duration;
         this.releaseDate = releaseDate;
     }
 
@@ -78,32 +76,11 @@ public class Music {
         this.genre = genre;
     }
 
-    public Duration getDuration() {
-        return duration;
-    }
-
-    public void setDuration(Duration duration) {
-        this.duration = duration;
-    }
-
     public LocalDate getReleaseDate() {
         return releaseDate;
     }
 
     public void setReleaseDate(LocalDate releaseDate) {
         this.releaseDate = releaseDate;
-    }
-
-    @Override
-    public String toString() {
-        return "Music{" +
-                "id=" + id +
-                ", title='" + title + '\'' +
-                ", artist='" + artist + '\'' +
-                ", album='" + album + '\'' +
-                ", genre='" + genre + '\'' +
-                ", duration=" + duration +
-                ", releaseDate=" + releaseDate +
-                '}';
     }
 }
