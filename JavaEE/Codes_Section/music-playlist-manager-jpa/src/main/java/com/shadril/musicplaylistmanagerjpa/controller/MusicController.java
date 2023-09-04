@@ -1,5 +1,7 @@
 package com.shadril.musicplaylistmanagerjpa.controller;
 
+import com.shadril.musicplaylistmanagerjpa.exception.MusicAlreadyExistException;
+import com.shadril.musicplaylistmanagerjpa.exception.MusicNotFoundException;
 import com.shadril.musicplaylistmanagerjpa.model.Music;
 import com.shadril.musicplaylistmanagerjpa.model.Playlist;
 import com.shadril.musicplaylistmanagerjpa.service.MusicService;
@@ -9,8 +11,6 @@ import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.*;
 
 import java.util.List;
-import java.util.Optional;
-
 @RestController
 public class MusicController {
     @Autowired
@@ -23,26 +23,26 @@ public class MusicController {
     }
 
     @GetMapping("/api/music/get/{id}")
-    public ResponseEntity<Music> getMusicById(@PathVariable Integer id) {
-        Optional<Music> music = musicService.getMusicById(id);
-        return new ResponseEntity<>(music.get(), HttpStatus.OK);
+    public ResponseEntity<Music> getMusicById(@PathVariable Integer id) throws MusicNotFoundException {
+        Music music = musicService.getMusicById(id);
+        return new ResponseEntity<>(music, HttpStatus.OK);
     }
 
     @PostMapping("/api/music/add")
-    public ResponseEntity<Void> addMusic(@RequestBody Music music) {
+    public ResponseEntity<String> addMusic(@RequestBody Music music) throws MusicAlreadyExistException {
         musicService.addMusic(music);
-        return new ResponseEntity<>(null, HttpStatus.OK);
+        return new ResponseEntity<>("Success", HttpStatus.OK);
     }
 
     @PutMapping("/api/music/update")
-    public ResponseEntity<Void> updateMusic(@RequestBody Music music) {
+    public ResponseEntity<String> updateMusic(@RequestBody Music music) throws MusicNotFoundException{
         musicService.updateMusic(music);
-        return new ResponseEntity<>(null, HttpStatus.OK);
+        return new ResponseEntity<>("Success", HttpStatus.OK);
     }
 
     @DeleteMapping("/api/music/delete/{id}")
-    public ResponseEntity<Void> deleteMusic(@PathVariable Integer id) {
+    public ResponseEntity<String> deleteMusic(@PathVariable Integer id) throws MusicNotFoundException{
         musicService.deleteMusic(id);
-        return new ResponseEntity<>(null, HttpStatus.OK);
+        return new ResponseEntity<>("Success", HttpStatus.OK);
     }
 }

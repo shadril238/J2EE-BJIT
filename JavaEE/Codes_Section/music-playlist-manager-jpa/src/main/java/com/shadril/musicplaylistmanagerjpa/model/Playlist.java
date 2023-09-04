@@ -7,7 +7,6 @@ import java.time.LocalDate;
 import java.util.List;
 
 @Entity
-@Component
 @Table(name = "playlists")
 public class Playlist {
     @Id
