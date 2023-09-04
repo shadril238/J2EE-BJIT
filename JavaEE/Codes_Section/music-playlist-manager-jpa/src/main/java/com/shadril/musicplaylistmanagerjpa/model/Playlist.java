@@ -21,19 +21,19 @@ public class Playlist {
     @Column(nullable = false)
     private LocalDate createdDate;
 
-    @ManyToMany(cascade = CascadeType.PERSIST, fetch = FetchType.EAGER)
+    @ManyToMany(cascade = CascadeType.ALL, fetch = FetchType.EAGER)
     @JoinTable(name = "music_playlists", joinColumns = @JoinColumn(name = "playlist_id"), inverseJoinColumns = @JoinColumn(name = "music_id"))
     private List<Music> musics;
 
     public Playlist() {
     }
 
-    public Playlist(Integer id, String name, String description, LocalDate createdDate, List<Music> musicList) {
+    public Playlist(Integer id, String name, String description, LocalDate createdDate, List<Music> musics) {
         this.id = id;
         this.name = name;
         this.description = description;
         this.createdDate = createdDate;
-        this.musics = musicList;
+        this.musics = musics;
     }
 
     public Integer getId() {

@@ -1,10 +1,12 @@
 package com.shadril.musicplaylistmanagerjpa.service;
 
+import com.shadril.musicplaylistmanagerjpa.model.Music;
 import com.shadril.musicplaylistmanagerjpa.model.Playlist;
 import com.shadril.musicplaylistmanagerjpa.repository.IPlaylistRepository;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
+import java.util.ArrayList;
 import java.util.List;
 import java.util.Optional;
 
