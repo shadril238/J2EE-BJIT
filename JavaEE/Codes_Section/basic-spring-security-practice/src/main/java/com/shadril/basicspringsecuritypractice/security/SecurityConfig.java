@@ -18,6 +18,8 @@ public class SecurityConfig {
                 .sessionManagement(session -> session.sessionCreationPolicy(SessionCreationPolicy.STATELESS))
                 .authorizeHttpRequests(auth ->{
                     auth
+                            //.requestMatchers(HttpMethod.POST, "/users/login").permitAll()
+                            //.requestMatchers(HttpMethod.POST, "/users/registration").permitAll()
                             .requestMatchers(HttpMethod.GET, "/users/hello").hasRole("user")
                             .requestMatchers(HttpMethod.GET, "/users/**").hasRole("admin")
                             .anyRequest().authenticated();
