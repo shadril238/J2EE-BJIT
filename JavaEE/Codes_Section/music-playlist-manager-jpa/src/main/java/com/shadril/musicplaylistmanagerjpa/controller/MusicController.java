@@ -40,9 +40,9 @@ public class MusicController {
         return new ResponseEntity<>("Success", HttpStatus.OK);
     }
 
-    @DeleteMapping("/api/music/delete/{id}")
-    public ResponseEntity<String> deleteMusic(@PathVariable Integer id) throws MusicNotFoundException{
-        musicService.deleteMusic(id);
-        return new ResponseEntity<>("Success", HttpStatus.OK);
-    }
+//    @DeleteMapping("/api/music/delete/{id}")
+//    public ResponseEntity<String> deleteMusic(@PathVariable Integer id) throws MusicNotFoundException{
+//        musicService.deleteMusic(id);
+//        return new ResponseEntity<>("Success", HttpStatus.OK);
+//    }
 }

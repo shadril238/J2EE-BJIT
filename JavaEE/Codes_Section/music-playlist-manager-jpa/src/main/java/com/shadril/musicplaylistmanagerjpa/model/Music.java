@@ -25,8 +25,8 @@ public class Music {
     @Column(nullable = false)
     private LocalDate releaseDate;
 
-    @ManyToMany(mappedBy = "musics")
-    private List<Playlist> playlists;
+//    @ManyToMany(mappedBy = "musics")
+//    private List<Playlist> playlists;
 
     public Music() {
     }
@@ -88,11 +88,11 @@ public class Music {
         this.releaseDate = releaseDate;
     }
 
-    public List<Playlist> getPlaylists() {
-        return playlists;
-    }
-
-    public void setPlaylists(List<Playlist> playlists) {
-        this.playlists = playlists;
-    }
+//    public List<Playlist> getPlaylists() {
+//        return playlists;
+//    }
+//
+//    public void setPlaylists(List<Playlist> playlists) {
+//        this.playlists = playlists;
+//    }
 }

@@ -52,20 +52,20 @@ public class MusicService {
         }
     }
 
-    public void deleteMusic(Integer id) throws MusicNotFoundException{
-        Optional<Music> optionalMusic = musicRepository.findById(id);
-        if (optionalMusic.isPresent()) {
-            Music musicToDelete = optionalMusic.get();
-
-            List<Playlist> playlists = musicToDelete.getPlaylists();
-            for (Playlist playlist : playlists) {
-                playlist.getMusics().remove(musicToDelete);
-            }
-            playlistRepository.saveAll(playlists);
-
-            musicRepository.deleteById(id);
-        } else {
-            throw new MusicNotFoundException("Music with ID " + id + " not found.");
-        }
-    }
+//    public void deleteMusic(Integer id) throws MusicNotFoundException{
+//        Optional<Music> optionalMusic = musicRepository.findById(id);
+//        if (optionalMusic.isPresent()) {
+////            Music musicToDelete = optionalMusic.get();
+////
+////            List<Playlist> playlists = musicToDelete.getPlaylists();
+////            for (Playlist playlist : playlists) {
+////                playlist.getMusics().remove(musicToDelete);
+////            }
+////            playlistRepository.saveAll(playlists);
+//
+//            musicRepository.deleteById(id);
+//        } else {
+//            throw new MusicNotFoundException("Music with ID " + id + " not found.");
+//        }
+//    }
 }
