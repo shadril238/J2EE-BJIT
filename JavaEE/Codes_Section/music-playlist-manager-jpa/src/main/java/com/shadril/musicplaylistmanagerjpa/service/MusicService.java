@@ -20,52 +20,77 @@ public class MusicService {
     @Autowired
     private IPlaylistRepository playlistRepository;
 
+    public Boolean musicAlreadyExist(String title) {
+        return musicRepository.findMusicByTitle(title).isPresent();
+    }
+
     public List<Music> getAllMusics() {
         return musicRepository.findAll();
     }
 
-    public Music getMusicById(Integer id) throws MusicNotFoundException {
+    public Music getMusicById(Integer id)
+            throws MusicNotFoundException {
         Optional<Music> optionalMusic = musicRepository.findById(id);
         if(optionalMusic.isPresent()){
             return optionalMusic.get();
         }
         else{
-            throw new MusicNotFoundException("Music with ID " + id + " not found");
+            throw new MusicNotFoundException();
         }
     }
 
-    public void addMusic(Music music) throws MusicAlreadyExistException {
-        String musicTitle = music.getTitle();
-        if (musicRepository.musicAlreadyExistByTitle(musicTitle)) {
-            throw new MusicAlreadyExistException("Music with title '" + musicTitle + "' already exists.");
+    public Music getMusicByTitle(String title)
+            throws MusicNotFoundException{
+        Optional<Music> optionalMusic = musicRepository.findMusicByTitle(title);
+        if(optionalMusic.isPresent()) {
+            return optionalMusic.get();
         }
+        else {
+            throw new MusicNotFoundException();
+        }
+    }
 
+    public void addMusic(Music music)
+            throws MusicAlreadyExistException {
+        if (musicRepository.findMusicByTitle(music.getTitle()).isPresent()) {
+            throw new MusicAlreadyExistException();
+        }
         musicRepository.save(music);
     }
 
-    public void updateMusic(Music music) throws MusicNotFoundException{
+    public void updateMusic(Music music)
+            throws MusicNotFoundException, MusicAlreadyExistException{
+        if (musicRepository.findMusicByTitle(music.getTitle()).isPresent()) {
+            throw new MusicAlreadyExistException();
+        }
+
         Optional<Music> existingMusic = musicRepository.findById(music.getId());
         if (existingMusic.isPresent()) {
             musicRepository.save(music);
         } else {
-            throw new MusicNotFoundException("Music with ID " + music.getId() + " not found.");
+            throw new MusicNotFoundException();
         }
     }
 
-//    public void deleteMusic(Integer id) throws MusicNotFoundException{
-//        Optional<Music> optionalMusic = musicRepository.findById(id);
-//        if (optionalMusic.isPresent()) {
-////            Music musicToDelete = optionalMusic.get();
-////
-////            List<Playlist> playlists = musicToDelete.getPlaylists();
-////            for (Playlist playlist : playlists) {
-////                playlist.getMusics().remove(musicToDelete);
-////            }
-////            playlistRepository.saveAll(playlists);
-//
-//            musicRepository.deleteById(id);
-//        } else {
-//            throw new MusicNotFoundException("Music with ID " + id + " not found.");
-//        }
-//    }
+    public void deleteMusic(Integer id)
+            throws MusicNotFoundException{
+
+        Optional<Music> optionalMusic = musicRepository.findById(id);
+        if (optionalMusic.isPresent()) {
+            Music music = optionalMusic.get();
+
+            List<Playlist> playlists = playlistRepository.findAll();
+            boolean isMusicUsedInPlaylists = playlists.stream()
+                    .anyMatch(playlist -> playlist.getMusics().contains(music));
+
+            if (isMusicUsedInPlaylists) {
+                playlists.forEach(playlist -> playlist.getMusics().remove(music));
+                playlistRepository.saveAll(playlists);
+            }
+            musicRepository.delete(music);
+        } else {
+            throw new MusicNotFoundException();
+        }
+    }
+
 }

@@ -2,6 +2,7 @@ package com.shadril.musicplaylistmanagerjpa.controller;
 
 import com.shadril.musicplaylistmanagerjpa.exception.MusicAlreadyExistException;
 import com.shadril.musicplaylistmanagerjpa.exception.MusicNotFoundException;
+import com.shadril.musicplaylistmanagerjpa.exception.PlaylistAlreadyExistException;
 import com.shadril.musicplaylistmanagerjpa.exception.PlaylistNotFoundException;
 import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
@@ -23,6 +24,11 @@ public class GlobalExceptionHandler {
     @ExceptionHandler({PlaylistNotFoundException.class})
     public ResponseEntity<?> PlaylistNotFoundException(){
         return new ResponseEntity<>(new PlaylistNotFoundException().getMessage(), HttpStatus.BAD_REQUEST);
+    }
+
+    @ExceptionHandler({PlaylistAlreadyExistException.class})
+    public ResponseEntity<?> PlaylistAlreadyExistException() {
+        return new ResponseEntity<>(new PlaylistAlreadyExistException().getMessage(), HttpStatus.BAD_REQUEST);
     }
 
 }

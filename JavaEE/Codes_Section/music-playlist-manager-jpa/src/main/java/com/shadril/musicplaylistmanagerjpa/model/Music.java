@@ -1,12 +1,14 @@
 package com.shadril.musicplaylistmanagerjpa.model;
 
+import com.fasterxml.jackson.annotation.JsonBackReference;
 import jakarta.persistence.*;
-import org.springframework.stereotype.Component;
-
-
-import java.time.LocalDate;
+import lombok.*;
 import java.util.List;
 
+@Getter
+@Setter
+@NoArgsConstructor
+@AllArgsConstructor
 @Entity
 @Table(name = "musics")
 public class Music {
@@ -22,77 +24,9 @@ public class Music {
     private String album;
     @Column(nullable = false, length = 50)
     private String genre;
-    @Column(nullable = false)
-    private LocalDate releaseDate;
 
 //    @ManyToMany(mappedBy = "musics")
+//    @JsonBackReference
 //    private List<Playlist> playlists;
 
-    public Music() {
-    }
-
-    public Music(Integer id, String title, String artist, String album, String genre, LocalDate releaseDate) {
-        this.id = id;
-        this.title = title;
-        this.artist = artist;
-        this.album = album;
-        this.genre = genre;
-        this.releaseDate = releaseDate;
-    }
-
-    public Integer getId() {
-        return id;
-    }
-
-    public void setId(Integer id) {
-        this.id = id;
-    }
-
-    public String getTitle() {
-        return title;
-    }
-
-    public void setTitle(String title) {
-        this.title = title;
-    }
-
-    public String getArtist() {
-        return artist;
-    }
-
-    public void setArtist(String artist) {
-        this.artist = artist;
-    }
-
-    public String getAlbum() {
-        return album;
-    }
-
-    public void setAlbum(String album) {
-        this.album = album;
-    }
-
-    public String getGenre() {
-        return genre;
-    }
-
-    public void setGenre(String genre) {
-        this.genre = genre;
-    }
-
-    public LocalDate getReleaseDate() {
-        return releaseDate;
-    }
-
-    public void setReleaseDate(LocalDate releaseDate) {
-        this.releaseDate = releaseDate;
-    }
-
-//    public List<Playlist> getPlaylists() {
-//        return playlists;
-//    }
-//
-//    public void setPlaylists(List<Playlist> playlists) {
-//        this.playlists = playlists;
-//    }
 }
