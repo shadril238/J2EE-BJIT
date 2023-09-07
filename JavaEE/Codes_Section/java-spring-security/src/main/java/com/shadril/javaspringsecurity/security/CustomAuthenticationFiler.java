@@ -42,14 +42,39 @@ public class CustomAuthenticationFiler extends UsernamePasswordAuthenticationFil
         }
     }
 
+//    @Override
+//    protected void successfulAuthentication(HttpServletRequest request, HttpServletResponse response, FilterChain chain, Authentication authResult)
+//        throws IOException, ServletException {
+//        String user  = ((User)authResult.getPrincipal()).getUsername();
+//        String accessToken = JWTUtils.generateToken(user);
+//        UserService userService = (UserService) SpringApplicationContext.getBean("userService");
+//        UserDTO userDTO = userService.getUser(user);
+//        response.addHeader("userId", userDTO.getUserId());
+//        response.addHeader(AppConstants.HEADER_STRING, AppConstants.TOKEN_PREFIX + accessToken);
+//    }
+
     @Override
     protected void successfulAuthentication(HttpServletRequest request, HttpServletResponse response, FilterChain chain, Authentication authResult)
-        throws IOException, ServletException {
-        String user  = ((User)authResult.getPrincipal()).getUsername();
+            throws IOException, ServletException {
+        String user = ((User) authResult.getPrincipal()).getUsername();
         String accessToken = JWTUtils.generateToken(user);
         UserService userService = (UserService) SpringApplicationContext.getBean("userService");
         UserDTO userDTO = userService.getUser(user);
-        response.addHeader("userId", userDTO.getUserId());
-        response.addHeader(AppConstants.HEADER_STRING, AppConstants.TOKEN_PREFIX + accessToken);
+
+        response.setContentType("application/json");
+
+        response.getWriter().write("{\"accessToken\":\"" + AppConstants.TOKEN_PREFIX + accessToken + "\",\"userId\":\"" + userDTO.getUserId() + "\"}");
     }
+
+    @Override
+    protected void unsuccessfulAuthentication(HttpServletRequest request, HttpServletResponse response, AuthenticationException failed)
+            throws IOException, ServletException {
+        response.setStatus(HttpServletResponse.SC_UNAUTHORIZED);
+        response.setContentType("application/json");
+
+        String errorMessage = "Authentication failed: " + failed.getMessage();
+        response.getWriter().write(errorMessage);
+    }
+
+
 }
