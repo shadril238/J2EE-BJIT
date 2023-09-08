@@ -170,15 +170,10 @@ public class UserServiceImpl implements UserService {
             roles.add(defaultRole);
         } else {
             switch (stringRole) {
-                case "ROLE_CONTRIBUTOR" -> {
-                    Role trainerRole = roleRepository.findByName(RoleType.ROLE_CONTRIBUTOR)
-                            .orElseThrow(() -> new RoleNotFoundException(RoleType.ROLE_CONTRIBUTOR + " DOESN'T EXIST!"));
-                    roles.add(trainerRole);
-                }
                 case "ROLE_USER" -> {
-                    Role traineeRole = roleRepository.findByName(RoleType.ROLE_USER)
+                    Role role = roleRepository.findByName(RoleType.ROLE_USER)
                             .orElseThrow(() -> new RoleNotFoundException(RoleType.ROLE_USER + " DOESN'T EXIST!"));
-                    roles.add(traineeRole);
+                    roles.add(role);
                 }
             }
         }

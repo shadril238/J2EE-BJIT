@@ -11,6 +11,7 @@ import com.shadril.rolebasedauthjwt.exception.UserNotFoundException;
 import com.shadril.rolebasedauthjwt.security.jwt.JwtUtil;
 import com.shadril.rolebasedauthjwt.service.UserService;
 import com.shadril.rolebasedauthjwt.serviceImpl.UserDetailsImpl;
+import lombok.RequiredArgsConstructor;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
@@ -28,14 +29,12 @@ import java.util.stream.Collectors;
 
 @RestController
 @RequestMapping("/api")
+@RequiredArgsConstructor
 public class AuthController {
-    @Autowired
+
     private UserService userService;
-    @Autowired
     private BCryptPasswordEncoder encoder;
-    @Autowired
     private AuthenticationManager authenticationManager;
-    @Autowired
     private JwtUtil jwtUtil;
 
     @PostMapping("/sign-in")
