@@ -22,11 +22,11 @@ public class ReserveBook {
 
     @ManyToOne
     @JoinColumn(name = "user_id")
-    private User userEntity;
+    private User user;
 
     @ManyToOne
     @JoinColumn(name = "book_id")
-    private Book bookEntity;
+    private Book book;
 
     private String status;
 

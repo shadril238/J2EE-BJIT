@@ -64,7 +64,7 @@ public class BookServiceImplementation implements BookService {
     public void delete(Book book)
             throws BookNotFoundException{
         Optional<Book> existingBook = bookRepository.findById(book.getId());
-        if(existingBook.isPresent()) {
+        if(existingBook.isPresent() && existingBook.get().getIsActive().equals(true)) {
             book.setIsActive(false);
             bookRepository.save(book);
         }

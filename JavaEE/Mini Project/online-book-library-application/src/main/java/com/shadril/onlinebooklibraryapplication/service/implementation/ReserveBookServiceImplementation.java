@@ -23,7 +23,6 @@ import java.util.Optional;
 public class ReserveBookServiceImplementation implements ReserveBookService {
     @Autowired
     private UserRepository userRepository;
-
     @Autowired
     private BookRepository bookRepository;
     @Autowired
@@ -50,8 +49,8 @@ public class ReserveBookServiceImplementation implements ReserveBookService {
         if (Objects.equals(bookFromId.get().getStatus(), "AVAILABLE")) {
             throw new BookAlreadyExistsException("This book is already available, you can borrow this!");
         }
-        Optional<ReserveBook> reserveBook = reserveBookRepository.findByUserAndBook(userFromId.get(),bookFromId.get());
-        if (reserveBook.isPresent() && reserveBook.get().getStatus().equals("RESERVED")){
+        Optional<ReserveBook> reserveBook = reserveBookRepository.findByUserIdAndBookId(userFromId.get().getId(),bookFromId.get().getId());
+        if (!reserveBook.isEmpty()){
             throw new BookAlreadyReservedException("You already reserved the book before!");
         }
 
@@ -61,8 +60,8 @@ public class ReserveBookServiceImplementation implements ReserveBookService {
         }
 
         ReserveBook reserveBookToAdd = new ReserveBook();
-        reserveBookToAdd.setUserEntity(userFromId.get());
-        reserveBookToAdd.setBookEntity(bookFromId.get());
+        reserveBookToAdd.setUser(userFromId.get());
+        reserveBookToAdd.setBook(bookFromId.get());
         reserveBookToAdd.setReserveDate(LocalDate.now());
         reserveBookToAdd.setStatus("RESERVED");
 
@@ -86,10 +85,11 @@ public class ReserveBookServiceImplementation implements ReserveBookService {
         if (bookFromId.isEmpty() || !bookFromId.get().getIsActive()) {
             throw new BookNotFoundException("Book not found");
         }
-        Optional<ReserveBook> reserveBook = reserveBookRepository.findByUserAndBook(userFromId.get(),bookFromId.get());
+        Optional<ReserveBook> reserveBook = reserveBookRepository.findByUserIdAndBookId(userFromId.get().getId(),bookFromId.get().getId());
         if (reserveBook.isEmpty() || reserveBook.get().getStatus().equals("AVAILABLE")){
             throw new BookReserveNotFoundException("No reserve found...");
         }
+
 
         reserveBook.get().setStatus("CANCEL RESERVATION");
 
