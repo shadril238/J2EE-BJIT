@@ -23,4 +23,12 @@ public class Beans {
         return new AuthenticationTokenFilter();
     }
 
+    @Bean
+    public AuthenticationManager authenticationManager(AuthenticationConfiguration authenticationConfiguration)
+            throws Exception {
+        //System.out.println("Line:73: SecurityConfig class authenticationManager method");
+        // todo: by default DaoAuthenticationProvide is used
+        return authenticationConfiguration.getAuthenticationManager();
+    }
+
 }

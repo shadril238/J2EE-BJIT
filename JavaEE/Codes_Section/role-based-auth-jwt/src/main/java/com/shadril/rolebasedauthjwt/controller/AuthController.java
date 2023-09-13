@@ -29,12 +29,15 @@ import java.util.stream.Collectors;
 
 @RestController
 @RequestMapping("/api")
-@RequiredArgsConstructor
+//@RequiredArgsConstructor
 public class AuthController {
-
+    @Autowired
     private UserService userService;
+    @Autowired
     private BCryptPasswordEncoder encoder;
+    @Autowired
     private AuthenticationManager authenticationManager;
+    @Autowired
     private JwtUtil jwtUtil;
 
     @PostMapping("/sign-in")

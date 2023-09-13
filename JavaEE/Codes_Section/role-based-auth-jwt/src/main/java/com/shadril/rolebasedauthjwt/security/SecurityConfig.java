@@ -27,8 +27,8 @@ import org.springframework.web.cors.UrlBasedCorsConfigurationSource;
 import java.util.Arrays;
 import java.util.List;
 
-@EnableWebSecurity
 @Configuration
+@EnableWebSecurity
 public class SecurityConfig{
     @Autowired
     private UserDetailsServiceImpl userDetailsService;
@@ -39,13 +39,7 @@ public class SecurityConfig{
     @Autowired
     private JwtAuthEntryPoint jwtAuthEntryPoint;
 
-    @Bean
-    public AuthenticationManager authenticationManager(HttpSecurity http)
-            throws Exception {
-        System.out.println("Line:73: SecurityConfig class authenticationManager method");
-        // todo: by default DaoAuthenticationProvide is used
-        return http.getSharedObject(AuthenticationManagerBuilder.class).build();
-    }
+
 
     @Bean
     public SecurityFilterChain filterChain(HttpSecurity http) throws Exception {
@@ -55,8 +49,9 @@ public class SecurityConfig{
         http
                 .csrf(csrf -> csrf.disable())
                 .authorizeHttpRequests(auth -> auth
-                    .requestMatchers(HttpMethod.POST,"/api/sign-in","/api/sign-up").permitAll()
-                    .anyRequest().authenticated()
+                    .requestMatchers(HttpMethod.POST,"/api/sign-in").permitAll()
+                        .requestMatchers(HttpMethod.POST, "/api/sign-up").permitAll()
+                    .anyRequest().permitAll()
                 )
                 .exceptionHandling(exception -> exception
                         .authenticationEntryPoint(jwtAuthEntryPoint))
