@@ -1,0 +1,34 @@
+Section 4: The Scrum Team
+55. The Scrum Team
+56. Scrum Team Size
+57. The Product Owner
+58. What is VALUE?
+59. How is the Product Backlog ordered?
+60. The Developers
+61. The Scrum Master
+62. How is the Scrum Master serving the Scrum Team
+63. What is an impediment in Scrum?
+64. How is the Scrum Master serving the Product Owner
+65. How is the Scrum Master serving the Organization
+66. The Scrum Master in real-life
+67. Who is the Business Analyst?
+
+Section 6: Scaling Scrum
+76. Introduction to Scaling Scrum + 85. Conclusion - Scaling Scrum recap
+77. What happens when multiple Scrum Teams work on the same Product?
+78. Impact on velocity when scaling Scrum
+79. Integrated Product Increments
+80. The Definition of Done when multiple teams work on the same Product
+81. Must the Sprints be aligned? (same length, same start/end)
+82. How many Product Owners are there?
+83. Feature teams vs Component teams
+84. The importance of creating an integrated Increment
+
+Section 7: Terms and Tools used in Agile and Scrum projects
+86. The Velocity of the Scrum Team
+87. Technical debt
+88. Functional and non-functional requirements
+89. The process of emergence in Scrum
+90. Burn-down charts
+91. Burn-up charts
+92. The "cone of uncertainty"

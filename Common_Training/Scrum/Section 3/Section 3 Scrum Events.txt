@@ -1,0 +1,19 @@
+Section 3: Scrum Events
+35. What are the Scrum Events
+37. What is a time-box?
+38. The Sprint
+39. Sprint Planning
+40. Sprint Planning - Why is this Sprint valuable?
+41. Sprint Planning - What can be Done this Sprint?
+42. Sprint Planning - How will the chosen work get done?
+43. Sprint Planning - Who attends the meeting?
+44. Coherence among the Sprint Backlog Items
+45. Sprint Planning - Recap
+46. Daily Scrum
+47. Scrum Board
+49. What happens during the Sprint?
+50. Sprint Review
+51. Sprint Retrospective
+52. Sprint Retrospective in practice
+53. Special Sprints
+54. Cancelling a Sprint

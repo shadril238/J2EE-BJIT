@@ -1,0 +1,15 @@
+Section 2:
+14. What are Scrum Artifacts? + 34. Scrum Artifacts summary
+16. Organizational goals
+17. What is a Backlog?
+20. Defining the Product Goal and Product Backlog
+21. User Stories
+22. Managing the Product Backlog using Jira
+23. Product Backlog Refinement in Practice
+26. Sprint Backlog
+28. Sprint Scope vs. Sprint Goal
+29. Increment & Definition of Done
+30. The Definition of Done for Jack & Mary Organic Farm
+31. When is the Definition of Done created?
+32. Definition of Done vs. Acceptance criteria
+33. What is an epic?
