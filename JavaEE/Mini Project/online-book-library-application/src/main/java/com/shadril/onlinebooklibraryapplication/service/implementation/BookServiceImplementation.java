@@ -64,7 +64,7 @@ public class BookServiceImplementation implements BookService {
     public void delete(Book book)
             throws BookNotFoundException{
         Optional<Book> existingBook = bookRepository.findById(book.getId());
-        if(existingBook.isPresent() && existingBook.get().getIsActive().equals(true)) {
+        if(existingBook.isPresent() && existingBook.get().getIsActive().equals(true) && existingBook.get().getStatus().equals("AVAILABLE")) {
             book.setIsActive(false);
             bookRepository.save(book);
         }
@@ -174,6 +174,24 @@ public class BookServiceImplementation implements BookService {
         }
         List<BorrowBook> borrowBooks = borrowBookRepository.findByUserAndReturnDateIsNull(userFromId.get());
         return borrowBooks.stream().map(BorrowBook::getBook).collect(Collectors.toList());
+    }
+
+    @Override
+    public List<BorrowBook> borrowHistory(Long userId) {
+        Authentication authentication = SecurityContextHolder.getContext().getAuthentication();
+        Optional<User> user = userRepository.findByEmail(authentication.getName());
+        Long currUserId = user.orElseThrow(() -> new UserNotFoundException("User not found")).getId();
+        String currUserRole = user.get().getRole();
+
+        Optional<User> userFromId = userRepository.findById(userId);
+        if (userFromId.isEmpty()) {
+            throw new UserNotFoundException("User not found");
+        }
+        if (currUserRole.equals("CUSTOMER") && !currUserId.equals(userId)) {
+            throw new UserNotValidException("Not a valid customer...");
+        }
+
+        return borrowBookRepository.findByUser(userFromId.get());
     }
 
 }

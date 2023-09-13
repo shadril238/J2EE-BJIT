@@ -33,6 +33,9 @@ public class UserServiceImplementation implements UserService, UserDetailsServic
     @Autowired
     private BCryptPasswordEncoder bCryptPasswordEncoder;
 
+    public UserServiceImplementation() {
+    }
+
 
     @Override
     public UserDTO createUser(UserDTO user)

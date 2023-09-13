@@ -50,7 +50,7 @@ public class ReserveBookServiceImplementation implements ReserveBookService {
             throw new BookAlreadyExistsException("This book is already available, you can borrow this!");
         }
         Optional<ReserveBook> reserveBook = reserveBookRepository.findByUserIdAndBookId(userFromId.get().getId(),bookFromId.get().getId());
-        if (!reserveBook.isEmpty()){
+        if (reserveBook.isPresent() && reserveBook.get().getStatus().isEmpty()){
             throw new BookAlreadyReservedException("You already reserved the book before!");
         }
 
@@ -86,14 +86,11 @@ public class ReserveBookServiceImplementation implements ReserveBookService {
             throw new BookNotFoundException("Book not found");
         }
         Optional<ReserveBook> reserveBook = reserveBookRepository.findByUserIdAndBookId(userFromId.get().getId(),bookFromId.get().getId());
-        if (reserveBook.isEmpty() || reserveBook.get().getStatus().equals("AVAILABLE")){
+        if (reserveBook.isEmpty() || reserveBook.get().getStatus().equals("CANCEL RESERVATION")){
             throw new BookReserveNotFoundException("No reserve found...");
         }
-
-
         reserveBook.get().setStatus("CANCEL RESERVATION");
 
         reserveBookRepository.save(reserveBook.get());
-
     }
 }

@@ -4,10 +4,10 @@ import com.shadril.onlinebooklibraryapplication.constants.AppConstants;
 import com.shadril.onlinebooklibraryapplication.dto.UserDTO;
 import com.shadril.onlinebooklibraryapplication.dto.UserLoginRequestModelDTO;
 import com.shadril.onlinebooklibraryapplication.entity.Book;
+import com.shadril.onlinebooklibraryapplication.entity.BorrowBook;
 import com.shadril.onlinebooklibraryapplication.exception.UserNotFoundException;
 import com.shadril.onlinebooklibraryapplication.service.BookService;
 import com.shadril.onlinebooklibraryapplication.service.UserService;
-import com.shadril.onlinebooklibraryapplication.service.implementation.UserServiceImplementation;
 import com.shadril.onlinebooklibraryapplication.utils.JWTUtils;
 import jakarta.servlet.http.HttpServletResponse;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -16,11 +16,8 @@ import org.springframework.http.ResponseEntity;
 import org.springframework.security.authentication.AuthenticationManager;
 import org.springframework.security.authentication.BadCredentialsException;
 import org.springframework.security.authentication.UsernamePasswordAuthenticationToken;
-import org.springframework.security.core.Authentication;
-import org.springframework.security.core.userdetails.UsernameNotFoundException;
 import org.springframework.web.bind.annotation.*;
 
-import java.io.IOException;
 import java.util.HashMap;
 import java.util.List;
 import java.util.Map;
@@ -81,17 +78,23 @@ public class UserController {
         }
     }
 
-    @GetMapping("users/{userId}/books")
+    @GetMapping("/users/{userId}/books")
     public ResponseEntity<List<Book>> retrievedBooks(@PathVariable Long userId)
             throws UserNotFoundException {
         List<Book> bookList = bookService.retrievedBooks(userId);
         return new ResponseEntity<>(bookList, HttpStatus.OK);
     }
 
-    @GetMapping("users/{userId}/borrowed-books")
+    @GetMapping("/users/{userId}/borrowed-books")
     public ResponseEntity<List<Book>> retrievedBorrowedBooks(@PathVariable Long userId)
             throws UserNotFoundException {
         List<Book> bookList = bookService.retrievedBorrowedBooks(userId);
         return new ResponseEntity<>(bookList, HttpStatus.OK);
+    }
+
+    @GetMapping("/users/{userId}/history")
+    public ResponseEntity<List<BorrowBook>> borrowingHistory(@PathVariable Long userId)
+            throws UserNotFoundException{
+        return new ResponseEntity<>(bookService.borrowHistory(userId), HttpStatus.OK);
     }
 }

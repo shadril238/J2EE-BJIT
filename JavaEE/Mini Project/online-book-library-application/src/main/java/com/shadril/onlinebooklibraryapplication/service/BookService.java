@@ -1,6 +1,7 @@
 package com.shadril.onlinebooklibraryapplication.service;
 
 import com.shadril.onlinebooklibraryapplication.entity.Book;
+import com.shadril.onlinebooklibraryapplication.entity.BorrowBook;
 import com.shadril.onlinebooklibraryapplication.exception.BookAlreadyExistsException;
 
 import java.util.List;
@@ -14,5 +15,6 @@ public interface BookService {
     void returnBook(Long bookId);
     List<Book> retrievedBooks(Long userId);
     List<Book> retrievedBorrowedBooks(Long userId);
+    List<BorrowBook> borrowHistory(Long userId);
 
 }
