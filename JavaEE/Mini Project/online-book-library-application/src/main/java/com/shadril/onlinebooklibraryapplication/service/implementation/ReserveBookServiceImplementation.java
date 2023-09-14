@@ -50,7 +50,7 @@ public class ReserveBookServiceImplementation implements ReserveBookService {
             throw new BookAlreadyExistsException("This book is already available, you can borrow this!");
         }
         Optional<ReserveBook> reserveBook = reserveBookRepository.findByUserIdAndBookId(userFromId.get().getId(),bookFromId.get().getId());
-        if (reserveBook.isPresent() && reserveBook.get().getStatus().isEmpty()){
+        if (reserveBook.isPresent() && reserveBook.get().getStatus().equals("RESERVED")){
             throw new BookAlreadyReservedException("You already reserved the book before!");
         }
 
