@@ -1,0 +1,1 @@
+** Flatmap processes stream of stream of values. It performs mapping as well as flattening. Actually, It is one-to-many mappings.

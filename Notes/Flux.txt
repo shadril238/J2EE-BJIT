@@ -1,0 +1,13 @@
+** mergeWith: Merges two Flux sequences into one, interleaving their elements. This means that elements from both Fluxes can be mixed in the resulting sequence. It doesn't wait for one to complete before emitting elements from the other.
+
+** concatWith: Concatenates two Flux sequences, appending the second Flux to the end of the first. It ensures that elements from the first Flux are emitted before elements from the second Flux.
+
+** zipWith: Combines elements from two Flux sequences pairwise based on a provided function. It waits for both Fluxes to emit an element, pairs them using the function, and emits the result.
+
+Error:
+
+** mergeWith: If an error occurs in either of the source Fluxes, it will immediately propagate the error downstream. Any elements emitted before the error occurred will still be included in the output.
+
+** concatWith: If an error occurs in the first Flux (flux1), it will immediately propagate the error downstream. If an error occurs in the second Flux (flux2), it will not be propagated until the first Flux completes.
+
+** zipWith: If an error occurs in either of the source Fluxes (flux1 or flux2), it will immediately propagate the error downstream.
