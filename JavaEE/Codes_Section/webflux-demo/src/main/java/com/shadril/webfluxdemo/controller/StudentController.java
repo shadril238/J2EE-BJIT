@@ -36,5 +36,5 @@ public class StudentController {
     public Mono<Void> deleteStudentMono(@PathVariable UUID id) {
         return studentService.deleteStudentMono(id);
     }
-
+    
 }
