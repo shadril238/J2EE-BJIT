@@ -4,9 +4,8 @@
   <component name="GradleSettings">
     <option name="linkedExternalProjectsSettings">
       <GradleProjectSettings>
-        <option name="distributionType" value="LOCAL" />
         <option name="externalProjectPath" value="$PROJECT_DIR$/config-server" />
-        <option name="gradleHome" value="$USER_HOME$/gradle-8.2/gradle-8.2" />
+        <option name="gradleHome" value="$PROJECT_DIR$/../../../../../../../gradle-8.2" />
         <option name="gradleJvm" value="17" />
         <option name="modules">
           <set>
@@ -17,7 +16,7 @@
       <GradleProjectSettings>
         <option name="distributionType" value="LOCAL" />
         <option name="externalProjectPath" value="$PROJECT_DIR$/department-service" />
-        <option name="gradleHome" value="$USER_HOME$/gradle-8.2/gradle-8.2" />
+        <option name="gradleHome" value="$PROJECT_DIR$/../../../../../../../gradle-8.2" />
         <option name="gradleJvm" value="17" />
         <option name="modules">
           <set>
@@ -28,7 +27,7 @@
       <GradleProjectSettings>
         <option name="distributionType" value="LOCAL" />
         <option name="externalProjectPath" value="$PROJECT_DIR$/service-registry" />
-        <option name="gradleHome" value="$USER_HOME$/gradle-8.2/gradle-8.2" />
+        <option name="gradleHome" value="$PROJECT_DIR$/../../../../../../../gradle-8.2" />
         <option name="gradleJvm" value="17" />
         <option name="modules">
           <set>

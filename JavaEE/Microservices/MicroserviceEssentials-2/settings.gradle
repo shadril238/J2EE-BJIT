@@ -1,0 +1,6 @@
+include 'EurekaServiceDiscovery'
+include 'ConfigServer'
+include 'ProductApp'
+include 'OrderApp'
+include 'APIGateway'
+

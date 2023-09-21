@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="ProjectModuleManager">
+    <modules>
+      <module fileurl="file://$PROJECT_DIR$/.idea/modules/APIGateway/MicroserviceEssentials.APIGateway.main.iml" filepath="$PROJECT_DIR$/.idea/modules/APIGateway/MicroserviceEssentials.APIGateway.main.iml" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/modules/BookWormV2/MicroserviceEssentials.BookWormV2.main.iml" filepath="$PROJECT_DIR$/.idea/modules/BookWormV2/MicroserviceEssentials.BookWormV2.main.iml" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/modules/BookWormV2/MicroserviceEssentials.BookWormV2.test.iml" filepath="$PROJECT_DIR$/.idea/modules/BookWormV2/MicroserviceEssentials.BookWormV2.test.iml" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/modules/ConfigServer/MicroserviceEssentials.ConfigServer.main.iml" filepath="$PROJECT_DIR$/.idea/modules/ConfigServer/MicroserviceEssentials.ConfigServer.main.iml" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/modules/DiscountService/MicroserviceEssentials.DiscountService.main.iml" filepath="$PROJECT_DIR$/.idea/modules/DiscountService/MicroserviceEssentials.DiscountService.main.iml" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/modules/DiscountService/MicroserviceEssentials.DiscountService.test.iml" filepath="$PROJECT_DIR$/.idea/modules/DiscountService/MicroserviceEssentials.DiscountService.test.iml" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/modules/EurekaServiceDiscovery/MicroserviceEssentials.EurekaServiceDiscovery.main.iml" filepath="$PROJECT_DIR$/.idea/modules/EurekaServiceDiscovery/MicroserviceEssentials.EurekaServiceDiscovery.main.iml" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/modules/OrderApp/MicroserviceEssentials.OrderApp.main.iml" filepath="$PROJECT_DIR$/.idea/modules/OrderApp/MicroserviceEssentials.OrderApp.main.iml" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/modules/ProductApp/MicroserviceEssentials.ProductApp.main.iml" filepath="$PROJECT_DIR$/.idea/modules/ProductApp/MicroserviceEssentials.ProductApp.main.iml" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/modules/product/MicroserviceEssentials.product.main.iml" filepath="$PROJECT_DIR$/.idea/modules/product/MicroserviceEssentials.product.main.iml" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/modules/product/MicroserviceEssentials.product.test.iml" filepath="$PROJECT_DIR$/.idea/modules/product/MicroserviceEssentials.product.test.iml" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/modules/coreweb/com.ml.MicroserviceEssentials.coreweb.main.iml" filepath="$PROJECT_DIR$/.idea/modules/coreweb/com.ml.MicroserviceEssentials.coreweb.main.iml" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/modules/APIGateway/com.phoenix.MicroserviceEssentials.APIGateway.main.iml" filepath="$PROJECT_DIR$/.idea/modules/APIGateway/com.phoenix.MicroserviceEssentials.APIGateway.main.iml" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/modules/DiscountService/com.phoenix.MicroserviceEssentials.DiscountService.main.iml" filepath="$PROJECT_DIR$/.idea/modules/DiscountService/com.phoenix.MicroserviceEssentials.DiscountService.main.iml" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/modules/EurekaServiceDiscovery/com.phoenix.MicroserviceEssentials.EurekaServiceDiscovery.main.iml" filepath="$PROJECT_DIR$/.idea/modules/EurekaServiceDiscovery/com.phoenix.MicroserviceEssentials.EurekaServiceDiscovery.main.iml" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/modules/OrderApp/com.phoenix.MicroserviceEssentials.OrderApp.main.iml" filepath="$PROJECT_DIR$/.idea/modules/OrderApp/com.phoenix.MicroserviceEssentials.OrderApp.main.iml" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/modules/ProductApp/com.phoenix.MicroserviceEssentials.ProductApp.main.iml" filepath="$PROJECT_DIR$/.idea/modules/ProductApp/com.phoenix.MicroserviceEssentials.ProductApp.main.iml" />
+    </modules>
+  </component>
+</project>

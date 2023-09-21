@@ -5,16 +5,9 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="8fa607c8-eaac-42ec-9995-908a5f0c64cb" name="Changes" comment="removed exception template">
-      <change afterPath="$PROJECT_DIR$/OrderApp/src/main/java/phoenix/config/TransactionConfigListener.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/new fresh directory/OrderApp/src/main/java/phoenix/config/TransactionConfigListener.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/ConfigServer/src/main/resources/application.properties" beforeDir="false" afterPath="$PROJECT_DIR$/ConfigServer/src/main/resources/application.properties" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/OrderApp/src/main/java/phoenix/service/OrderServiceImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/OrderApp/src/main/java/phoenix/service/OrderServiceImpl.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/OrderApp/src/main/resources/application.properties" beforeDir="false" afterPath="$PROJECT_DIR$/OrderApp/src/main/resources/application.properties" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/configRepo/application.properties" beforeDir="false" afterPath="$PROJECT_DIR$/configRepo/application.properties" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/new fresh directory/ConfigServer/src/main/resources/application.properties" beforeDir="false" afterPath="$PROJECT_DIR$/new fresh directory/ConfigServer/src/main/resources/application.properties" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/new fresh directory/OrderApp/src/main/java/phoenix/service/OrderServiceImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/new fresh directory/OrderApp/src/main/java/phoenix/service/OrderServiceImpl.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/new fresh directory/OrderApp/src/main/resources/application.properties" beforeDir="false" afterPath="$PROJECT_DIR$/new fresh directory/OrderApp/src/main/resources/application.properties" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/new fresh directory/configRepo/application.properties" beforeDir="false" afterPath="$PROJECT_DIR$/new fresh directory/configRepo/application.properties" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../Codes_Section/spring-microservices/.idea/gradle.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../../Codes_Section/spring-microservices/.idea/gradle.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/vcs.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/vcs.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -57,7 +50,7 @@
         <entry key="$PROJECT_DIR$/ProductApp" value="feign-v2" />
       </map>
     </option>
-    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$/OrderApp" />
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$/../../.." />
     <option name="ROOT_SYNC" value="DONT_SYNC" />
   </component>
   <component name="MarkdownSettingsMigration">
@@ -68,19 +61,19 @@
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
-  <component name="PropertiesComponent"><![CDATA[{
-  "keyToString": {
-    "RunOnceActivity.OpenProjectViewOnStart": "true",
-    "RunOnceActivity.ShowReadmeOnStart": "true",
-    "git-widget-placeholder": "master",
-    "jdk.selected.JAVA_MODULE": "11 (2)",
-    "last_opened_file_path": "/home/rezaur/Downloads/MicroserviceEssentials/settings.gradle",
-    "project.structure.last.edited": "Modules",
-    "project.structure.proportion": "0.0",
-    "project.structure.side.proportion": "0.0",
-    "settings.editor.selected.configurable": "reference.settingsdialog.project.gradle"
+  <component name="PropertiesComponent">{
+  &quot;keyToString&quot;: {
+    &quot;RunOnceActivity.OpenProjectViewOnStart&quot;: &quot;true&quot;,
+    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
+    &quot;git-widget-placeholder&quot;: &quot;main&quot;,
+    &quot;jdk.selected.JAVA_MODULE&quot;: &quot;11 (2)&quot;,
+    &quot;last_opened_file_path&quot;: &quot;C:/Users/Asus/Desktop/J2EE-BJIT/JavaEE/Examples_Codes/MicroserviceEssentials&quot;,
+    &quot;project.structure.last.edited&quot;: &quot;Modules&quot;,
+    &quot;project.structure.proportion&quot;: &quot;0.0&quot;,
+    &quot;project.structure.side.proportion&quot;: &quot;0.0&quot;,
+    &quot;settings.editor.selected.configurable&quot;: &quot;reference.settingsdialog.project.gradle&quot;
   }
-}]]></component>
+}</component>
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
       <recent name="$PROJECT_DIR$/ConfigProps/src/main/resources" />

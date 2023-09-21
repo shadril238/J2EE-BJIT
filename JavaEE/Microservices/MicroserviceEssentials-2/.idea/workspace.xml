@@ -1,0 +1,420 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="AutoImportSettings">
+    <option name="autoReloadType" value="SELECTIVE" />
+  </component>
+  <component name="ChangeListManager">
+    <list default="true" id="8fa607c8-eaac-42ec-9995-908a5f0c64cb" name="Changes" comment="removed exception template">
+      <change afterPath="$PROJECT_DIR$/OrderApp/src/main/java/phoenix/config/TransactionConfigListener.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/new fresh directory/OrderApp/src/main/java/phoenix/config/TransactionConfigListener.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/APIGateway/build.gradle" beforeDir="false" afterPath="$PROJECT_DIR$/APIGateway/build.gradle" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/APIGateway/src/main/java/phoenix/APIGatewayApplication.java" beforeDir="false" afterPath="$PROJECT_DIR$/APIGateway/src/main/java/phoenix/APIGatewayApplication.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/APIGateway/src/main/resources/application.properties" beforeDir="false" afterPath="$PROJECT_DIR$/APIGateway/src/main/resources/application.properties" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/ConfigServer/src/main/resources/application.properties" beforeDir="false" afterPath="$PROJECT_DIR$/ConfigServer/src/main/resources/application.properties" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/OrderApp/src/main/java/phoenix/service/OrderServiceImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/OrderApp/src/main/java/phoenix/service/OrderServiceImpl.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/OrderApp/src/main/resources/application.properties" beforeDir="false" afterPath="$PROJECT_DIR$/OrderApp/src/main/resources/application.properties" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/configRepo/application.properties" beforeDir="false" afterPath="$PROJECT_DIR$/configRepo/application.properties" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/new fresh directory/ConfigServer/src/main/resources/application.properties" beforeDir="false" afterPath="$PROJECT_DIR$/new fresh directory/ConfigServer/src/main/resources/application.properties" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/new fresh directory/OrderApp/src/main/java/phoenix/service/OrderServiceImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/new fresh directory/OrderApp/src/main/java/phoenix/service/OrderServiceImpl.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/new fresh directory/OrderApp/src/main/resources/application.properties" beforeDir="false" afterPath="$PROJECT_DIR$/new fresh directory/OrderApp/src/main/resources/application.properties" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/new fresh directory/configRepo/application.properties" beforeDir="false" afterPath="$PROJECT_DIR$/new fresh directory/configRepo/application.properties" afterDir="false" />
+    </list>
+    <option name="SHOW_DIALOG" value="false" />
+    <option name="HIGHLIGHT_CONFLICTS" value="true" />
+    <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
+    <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="ExternalProjectsData">
+    <projectState path="$PROJECT_DIR$">
+      <ProjectState />
+    </projectState>
+  </component>
+  <component name="ExternalProjectsManager">
+    <system id="GRADLE">
+      <state>
+        <task path="$PROJECT_DIR$/EurekaServiceDiscovery">
+          <activation />
+        </task>
+        <projects_view>
+          <tree_state>
+            <expand>
+              <path>
+                <item name="" type="6a2764b6:ExternalProjectsStructure$RootNode" />
+                <item name="MicroserviceEssentials" type="f1a62948:ProjectNode" />
+              </path>
+              <path>
+                <item name="" type="6a2764b6:ExternalProjectsStructure$RootNode" />
+                <item name="MicroserviceEssentials" type="f1a62948:ProjectNode" />
+                <item name="EurekaServiceDiscovery" type="2d1252cf:ModuleNode" />
+              </path>
+              <path>
+                <item name="" type="6a2764b6:ExternalProjectsStructure$RootNode" />
+                <item name="MicroserviceEssentials" type="f1a62948:ProjectNode" />
+                <item name="EurekaServiceDiscovery" type="2d1252cf:ModuleNode" />
+                <item name="Tasks" type="e4a08cd1:TasksNode" />
+              </path>
+              <path>
+                <item name="" type="6a2764b6:ExternalProjectsStructure$RootNode" />
+                <item name="MicroserviceEssentials" type="f1a62948:ProjectNode" />
+                <item name="EurekaServiceDiscovery" type="2d1252cf:ModuleNode" />
+                <item name="Tasks" type="e4a08cd1:TasksNode" />
+                <item name="build" type="c8890929:TasksNode$1" />
+              </path>
+            </expand>
+            <select />
+          </tree_state>
+        </projects_view>
+      </state>
+    </system>
+  </component>
+  <component name="FileTemplateManagerImpl">
+    <option name="RECENT_TEMPLATES">
+      <list>
+        <option value="Class" />
+      </list>
+    </option>
+  </component>
+  <component name="Git.Settings">
+    <option name="RECENT_BRANCH_BY_REPOSITORY">
+      <map>
+        <entry key="$PROJECT_DIR$/OrderApp" value="feign-v1" />
+        <entry key="$PROJECT_DIR$/ProductApp" value="feign-v2" />
+      </map>
+    </option>
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$/OrderApp" />
+    <option name="ROOT_SYNC" value="DONT_SYNC" />
+  </component>
+  <component name="MarkdownSettingsMigration">
+    <option name="stateVersion" value="1" />
+  </component>
+  <component name="ProjectId" id="2KRPkudTkTCug2qhTtESdpdDH6U" />
+  <component name="ProjectViewState">
+    <option name="hideEmptyMiddlePackages" value="true" />
+    <option name="showLibraryContents" value="true" />
+  </component>
+  <component name="PropertiesComponent">{
+  &quot;keyToString&quot;: {
+    &quot;RunOnceActivity.OpenProjectViewOnStart&quot;: &quot;true&quot;,
+    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
+    &quot;git-widget-placeholder&quot;: &quot;master&quot;,
+    &quot;jdk.selected.JAVA_MODULE&quot;: &quot;11 (2)&quot;,
+    &quot;last_opened_file_path&quot;: &quot;/home/rezaur/Downloads/MicroserviceEssentials/settings.gradle&quot;,
+    &quot;project.structure.last.edited&quot;: &quot;Modules&quot;,
+    &quot;project.structure.proportion&quot;: &quot;0.0&quot;,
+    &quot;project.structure.side.proportion&quot;: &quot;0.0&quot;,
+    &quot;settings.editor.selected.configurable&quot;: &quot;reference.settingsdialog.project.gradle&quot;
+  }
+}</component>
+  <component name="RecentsManager">
+    <key name="CopyFile.RECENT_KEYS">
+      <recent name="$PROJECT_DIR$/ConfigProps/src/main/resources" />
+      <recent name="$PROJECT_DIR$" />
+      <recent name="$PROJECT_DIR$/configRepo" />
+      <recent name="$PROJECT_DIR$/OrderApp/src/main/java/phoenix" />
+      <recent name="$PROJECT_DIR$/OrderApp/src/main/resources" />
+    </key>
+    <key name="MoveFile.RECENT_KEYS">
+      <recent name="$PROJECT_DIR$/Zipkin" />
+      <recent name="$PROJECT_DIR$/EurekaServiceDiscovery/src/main/resources" />
+    </key>
+    <key name="CopyClassDialog.RECENTS_KEY">
+      <recent name="phoenix.config" />
+      <recent name="phoenix.dto" />
+    </key>
+  </component>
+  <component name="RunManager" selected="Gradle.MicroserviceEssentials:EurekaServiceDiscovery [build]">
+    <configuration name="APIGatewayApplication" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="phoenix.APIGatewayApplication" />
+      <module name="MicroserviceEssentials.APIGateway.main" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="phoenix.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="ConfigServerApplication" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="phoenix.ConfigServerApplication" />
+      <module name="MicroserviceEssentials.ConfigServer.main" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="phoenix.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="NetflixEurekaNamingServerApplication" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="phoenix.NetflixEurekaNamingServerApplication" />
+      <module name="MicroserviceEssentials.EurekaServiceDiscovery.main" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="phoenix.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="OrderApplication" type="Application" factoryName="Application" singleton="false" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="phoenix.OrderApplication" />
+      <module name="MicroserviceEssentials.OrderApp.main" />
+      <option name="PROGRAM_PARAMETERS" value="--server.port=8091" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="phoenix.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="MicroserviceEssentials:EurekaServiceDiscovery [build]" type="GradleRunConfiguration" factoryName="Gradle" temporary="true">
+      <ExternalSystemSettings>
+        <option name="executionName" />
+        <option name="externalProjectPath" value="$PROJECT_DIR$/EurekaServiceDiscovery" />
+        <option name="externalSystemIdString" value="GRADLE" />
+        <option name="scriptParameters" />
+        <option name="taskDescriptions">
+          <list />
+        </option>
+        <option name="taskNames">
+          <list>
+            <option value="build" />
+          </list>
+        </option>
+        <option name="vmOptions" />
+      </ExternalSystemSettings>
+      <ExternalSystemDebugServerProcess>true</ExternalSystemDebugServerProcess>
+      <ExternalSystemReattachDebugProcess>true</ExternalSystemReattachDebugProcess>
+      <DebugAllEnabled>false</DebugAllEnabled>
+      <ForceTestExec>false</ForceTestExec>
+      <method v="2" />
+    </configuration>
+    <configuration default="true" type="JetRunConfigurationType">
+      <module name="MicroserviceEssentials" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration default="true" type="KotlinStandaloneScriptRunConfigurationType">
+      <module name="MicroserviceEssentials" />
+      <option name="filePath" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <list>
+      <item itemvalue="Application.APIGatewayApplication" />
+      <item itemvalue="Application.ConfigServerApplication" />
+      <item itemvalue="Application.NetflixEurekaNamingServerApplication" />
+      <item itemvalue="Application.OrderApplication" />
+      <item itemvalue="Gradle.MicroserviceEssentials:EurekaServiceDiscovery [build]" />
+    </list>
+    <recent_temporary>
+      <list>
+        <item itemvalue="Gradle.MicroserviceEssentials:EurekaServiceDiscovery [build]" />
+        <item itemvalue="Application.APIGatewayApplication" />
+        <item itemvalue="Application.OrderApplication" />
+        <item itemvalue="Application.ConfigServerApplication" />
+        <item itemvalue="Application.NetflixEurekaNamingServerApplication" />
+      </list>
+    </recent_temporary>
+  </component>
+  <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
+  <component name="TaskManager">
+    <task active="true" id="Default" summary="Default task">
+      <changelist id="8fa607c8-eaac-42ec-9995-908a5f0c64cb" name="Changes" comment="" />
+      <created>1673934570626</created>
+      <option name="number" value="Default" />
+      <option name="presentableId" value="Default" />
+      <updated>1673934570626</updated>
+    </task>
+    <task id="LOCAL-00001" summary="Netflix Eureka Naming Server Setup">
+      <created>1673943916272</created>
+      <option name="number" value="00001" />
+      <option name="presentableId" value="LOCAL-00001" />
+      <option name="project" value="LOCAL" />
+      <updated>1673943916272</updated>
+    </task>
+    <task id="LOCAL-00002" summary="discount settings added">
+      <created>1674183796908</created>
+      <option name="number" value="00002" />
+      <option name="presentableId" value="LOCAL-00002" />
+      <option name="project" value="LOCAL" />
+      <updated>1674183796908</updated>
+    </task>
+    <task id="LOCAL-00003" summary="discount settings added">
+      <created>1674183971504</created>
+      <option name="number" value="00003" />
+      <option name="presentableId" value="LOCAL-00003" />
+      <option name="project" value="LOCAL" />
+      <updated>1674183971504</updated>
+    </task>
+    <task id="LOCAL-00004" summary="discount settings added">
+      <created>1674184108202</created>
+      <option name="number" value="00004" />
+      <option name="presentableId" value="LOCAL-00004" />
+      <option name="project" value="LOCAL" />
+      <updated>1674184108202</updated>
+    </task>
+    <task id="LOCAL-00005" summary="discount settings added">
+      <created>1674184255294</created>
+      <option name="number" value="00005" />
+      <option name="presentableId" value="LOCAL-00005" />
+      <option name="project" value="LOCAL" />
+      <updated>1674184255294</updated>
+    </task>
+    <task id="LOCAL-00006" summary="order module api exposed">
+      <created>1674303800075</created>
+      <option name="number" value="00006" />
+      <option name="presentableId" value="LOCAL-00006" />
+      <option name="project" value="LOCAL" />
+      <updated>1674303800075</updated>
+    </task>
+    <task id="LOCAL-00007" summary="renamed app name">
+      <created>1674305858450</created>
+      <option name="number" value="00007" />
+      <option name="presentableId" value="LOCAL-00007" />
+      <option name="project" value="LOCAL" />
+      <updated>1674305858450</updated>
+    </task>
+    <task id="LOCAL-00008" summary="added feign implementation for network call">
+      <created>1674308535600</created>
+      <option name="number" value="00008" />
+      <option name="presentableId" value="LOCAL-00008" />
+      <option name="project" value="LOCAL" />
+      <updated>1674308535600</updated>
+    </task>
+    <task id="LOCAL-00009" summary="update product controller">
+      <created>1674321325176</created>
+      <option name="number" value="00009" />
+      <option name="presentableId" value="LOCAL-00009" />
+      <option name="project" value="LOCAL" />
+      <updated>1674321325176</updated>
+    </task>
+    <task id="LOCAL-00010" summary="update product controller">
+      <created>1674321368992</created>
+      <option name="number" value="00010" />
+      <option name="presentableId" value="LOCAL-00010" />
+      <option name="project" value="LOCAL" />
+      <updated>1674321368992</updated>
+    </task>
+    <task id="LOCAL-00011" summary="update product controller">
+      <created>1674322208060</created>
+      <option name="number" value="00011" />
+      <option name="presentableId" value="LOCAL-00011" />
+      <option name="project" value="LOCAL" />
+      <updated>1674322208060</updated>
+    </task>
+    <task id="LOCAL-00012" summary="ProductFeignClient response type update">
+      <created>1674322287960</created>
+      <option name="number" value="00012" />
+      <option name="presentableId" value="LOCAL-00012" />
+      <option name="project" value="LOCAL" />
+      <updated>1674322287960</updated>
+    </task>
+    <task id="LOCAL-00013" summary="removed exception template">
+      <created>1674323719769</created>
+      <option name="number" value="00013" />
+      <option name="presentableId" value="LOCAL-00013" />
+      <option name="project" value="LOCAL" />
+      <updated>1674323719769</updated>
+    </task>
+    <task id="LOCAL-00014" summary="update db">
+      <created>1674325288044</created>
+      <option name="number" value="00014" />
+      <option name="presentableId" value="LOCAL-00014" />
+      <option name="project" value="LOCAL" />
+      <updated>1674325288044</updated>
+    </task>
+    <option name="localTasksCounter" value="15" />
+    <servers />
+  </component>
+  <component name="Vcs.Log.Tabs.Properties">
+    <option name="TAB_STATES">
+      <map>
+        <entry key="MAIN">
+          <value>
+            <State>
+              <option name="CUSTOM_BOOLEAN_PROPERTIES">
+                <map>
+                  <entry key="Show.Git.Branches" value="false" />
+                </map>
+              </option>
+            </State>
+          </value>
+        </entry>
+      </map>
+    </option>
+  </component>
+  <component name="VcsManagerConfiguration">
+    <MESSAGE value="Netflix Eureka Naming Server Setup" />
+    <MESSAGE value="discount settings added" />
+    <MESSAGE value="order module api exposed" />
+    <MESSAGE value="renamed app name" />
+    <MESSAGE value="added feign implementation for network call" />
+    <MESSAGE value="update product controller" />
+    <MESSAGE value="ProductFeignClient response type update" />
+    <MESSAGE value="removed exception template" />
+    <MESSAGE value="update db" />
+    <option name="LAST_COMMIT_MESSAGE" value="update db" />
+  </component>
+  <component name="XDebuggerManager">
+    <breakpoint-manager>
+      <breakpoints>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/ProductApp/src/main/java/phoenix/controller/ProductController.java</url>
+          <line>36</line>
+          <option name="timeStamp" value="1" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/ProductApp/src/main/java/phoenix/service/ProductServiceImpl.java</url>
+          <line>118</line>
+          <option name="timeStamp" value="23" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/OrderApp/src/main/java/phoenix/networkmanager/CallProductServiceImpl.java</url>
+          <line>35</line>
+          <option name="timeStamp" value="25" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/OrderApp/src/main/java/phoenix/service/OrderServiceImpl.java</url>
+          <line>57</line>
+          <option name="timeStamp" value="28" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/ProductApp/src/main/java/phoenix/ProductAppApplication.java</url>
+          <line>30</line>
+          <option name="timeStamp" value="30" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/OrderApp/src/main/java/phoenix/service/OrderServiceImpl.java</url>
+          <line>107</line>
+          <option name="timeStamp" value="31" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/ConfigProps/src/main/java/phoenix/ConfApplication.java</url>
+          <line>24</line>
+          <option name="timeStamp" value="32" />
+        </line-breakpoint>
+      </breakpoints>
+    </breakpoint-manager>
+    <pin-to-top-manager>
+      <pinned-members>
+        <PinnedItemInfo parentTag="com.phoenix.coreweb.response.ApiResponse" memberName="result" />
+      </pinned-members>
+    </pin-to-top-manager>
+  </component>
+  <component name="XSLT-Support.FileAssociations.UIState">
+    <expand />
+    <select />
+  </component>
+</project>

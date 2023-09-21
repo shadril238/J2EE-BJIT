@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="VcsDirectoryMappings">
+    <mapping directory="$PROJECT_DIR$/APIGateway" vcs="Git" />
+    <mapping directory="$PROJECT_DIR$/ConfigServer" vcs="Git" />
+    <mapping directory="$PROJECT_DIR$/EurekaServiceDiscovery" vcs="Git" />
+    <mapping directory="$PROJECT_DIR$/OrderApp" vcs="Git" />
+    <mapping directory="$PROJECT_DIR$/ProductApp" vcs="Git" />
+    <mapping directory="$PROJECT_DIR$/configRepo" vcs="Git" />
+    <mapping directory="$PROJECT_DIR$/new fresh directory/ConfigServer" vcs="Git" />
+    <mapping directory="$PROJECT_DIR$/new fresh directory/EurekaServiceDiscovery" vcs="Git" />
+    <mapping directory="$PROJECT_DIR$/new fresh directory/OrderApp" vcs="Git" />
+    <mapping directory="$PROJECT_DIR$/new fresh directory/ProductApp" vcs="Git" />
+    <mapping directory="$PROJECT_DIR$/new fresh directory/configRepo" vcs="Git" />
+  </component>
+</project>
