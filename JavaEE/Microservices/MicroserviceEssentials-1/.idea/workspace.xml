@@ -5,16 +5,29 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="8fa607c8-eaac-42ec-9995-908a5f0c64cb" name="Changes" comment="removed exception template">
-      <change afterPath="$PROJECT_DIR$/OrderApp/src/main/java/phoenix/config/TransactionConfigListener.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/new fresh directory/OrderApp/src/main/java/phoenix/config/TransactionConfigListener.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/ConfigServer/src/main/resources/application.properties" beforeDir="false" afterPath="$PROJECT_DIR$/ConfigServer/src/main/resources/application.properties" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/OrderApp/src/main/java/phoenix/service/OrderServiceImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/OrderApp/src/main/java/phoenix/service/OrderServiceImpl.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/OrderApp/src/main/resources/application.properties" beforeDir="false" afterPath="$PROJECT_DIR$/OrderApp/src/main/resources/application.properties" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/configRepo/application.properties" beforeDir="false" afterPath="$PROJECT_DIR$/configRepo/application.properties" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/new fresh directory/ConfigServer/src/main/resources/application.properties" beforeDir="false" afterPath="$PROJECT_DIR$/new fresh directory/ConfigServer/src/main/resources/application.properties" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/new fresh directory/OrderApp/src/main/java/phoenix/service/OrderServiceImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/new fresh directory/OrderApp/src/main/java/phoenix/service/OrderServiceImpl.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/new fresh directory/OrderApp/src/main/resources/application.properties" beforeDir="false" afterPath="$PROJECT_DIR$/new fresh directory/OrderApp/src/main/resources/application.properties" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/new fresh directory/configRepo/application.properties" beforeDir="false" afterPath="$PROJECT_DIR$/new fresh directory/configRepo/application.properties" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../bank-management-microservices/.idea/.gitignore" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../bank-management-microservices/.idea/bank-management-microservices.iml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../bank-management-microservices/.idea/misc.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../bank-management-microservices/.idea/modules.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../bank-management-microservices/.idea/vcs.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../bank-management-microservices/config-server/src/main/resources/config/department-service.properties" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../bank-management-microservices/department-service/src/main/java/com/shadril/departmentservice/controller/DepartmentController.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../bank-management-microservices/department-service/src/main/java/com/shadril/departmentservice/model/Department.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../bank-management-microservices/department-service/src/main/java/com/shadril/departmentservice/model/Employee.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../bank-management-microservices/department-service/src/main/java/com/shadril/departmentservice/repository/DepartmentRepository.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../bank-management-microservices/eureka-server-discovery/.gitignore" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../bank-management-microservices/eureka-server-discovery/build.gradle" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../bank-management-microservices/eureka-server-discovery/gradle/wrapper/gradle-wrapper.jar" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../bank-management-microservices/eureka-server-discovery/gradle/wrapper/gradle-wrapper.properties" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../bank-management-microservices/eureka-server-discovery/gradlew" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../bank-management-microservices/eureka-server-discovery/gradlew.bat" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../bank-management-microservices/eureka-server-discovery/settings.gradle" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../bank-management-microservices/eureka-server-discovery/src/main/java/com/shadril/eurekaserverdiscovery/EurekaServerDiscoveryApplication.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../bank-management-microservices/eureka-server-discovery/src/main/resources/application.properties" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../bank-management-microservices/eureka-server-discovery/src/test/java/com/shadril/eurekaserverdiscovery/EurekaServerDiscoveryApplicationTests.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/vcs.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/vcs.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -31,12 +44,7 @@
       <state>
         <projects_view>
           <tree_state>
-            <expand>
-              <path>
-                <item name="" type="6a2764b6:ExternalProjectsStructure$RootNode" />
-                <item name="MicroserviceEssentials" type="f1a62948:ProjectNode" />
-              </path>
-            </expand>
+            <expand />
             <select />
           </tree_state>
         </projects_view>
@@ -57,30 +65,34 @@
         <entry key="$PROJECT_DIR$/ProductApp" value="feign-v2" />
       </map>
     </option>
-    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$/OrderApp" />
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$/../../.." />
     <option name="ROOT_SYNC" value="DONT_SYNC" />
   </component>
   <component name="MarkdownSettingsMigration">
     <option name="stateVersion" value="1" />
   </component>
+  <component name="ProjectColorInfo">{
+  &quot;associatedIndex&quot;: 0
+}</component>
   <component name="ProjectId" id="2KRPkudTkTCug2qhTtESdpdDH6U" />
   <component name="ProjectViewState">
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
-  <component name="PropertiesComponent"><![CDATA[{
-  "keyToString": {
-    "RunOnceActivity.OpenProjectViewOnStart": "true",
-    "RunOnceActivity.ShowReadmeOnStart": "true",
-    "git-widget-placeholder": "master",
-    "jdk.selected.JAVA_MODULE": "11 (2)",
-    "last_opened_file_path": "/home/rezaur/Downloads/MicroserviceEssentials/settings.gradle",
-    "project.structure.last.edited": "Modules",
-    "project.structure.proportion": "0.0",
-    "project.structure.side.proportion": "0.0",
-    "settings.editor.selected.configurable": "reference.settingsdialog.project.gradle"
+  <component name="PropertiesComponent">{
+  &quot;keyToString&quot;: {
+    &quot;RunOnceActivity.OpenProjectViewOnStart&quot;: &quot;true&quot;,
+    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
+    &quot;android.gradle.sync.needed&quot;: &quot;true&quot;,
+    &quot;git-widget-placeholder&quot;: &quot;main&quot;,
+    &quot;jdk.selected.JAVA_MODULE&quot;: &quot;11 (2)&quot;,
+    &quot;last_opened_file_path&quot;: &quot;/home/shadril238/Desktop/J2EE-BJIT/JavaEE/Microservices/MicroserviceEssentials-1&quot;,
+    &quot;project.structure.last.edited&quot;: &quot;Modules&quot;,
+    &quot;project.structure.proportion&quot;: &quot;0.0&quot;,
+    &quot;project.structure.side.proportion&quot;: &quot;0.0&quot;,
+    &quot;settings.editor.selected.configurable&quot;: &quot;reference.settingsdialog.project.gradle&quot;
   }
-}]]></component>
+}</component>
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
       <recent name="$PROJECT_DIR$/ConfigProps/src/main/resources" />
