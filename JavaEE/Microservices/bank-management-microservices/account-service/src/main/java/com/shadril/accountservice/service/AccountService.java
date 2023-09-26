@@ -25,6 +25,6 @@ public class AccountService {
     }
 
     public List<Account> findByCustomer(Long customerId) {
-        return accountRepository.findAllByCustomerId(customerId).orElseThrow(()->new NullPointerException("Id not available"));
+        return accountRepository.findAllByCustomerId(customerId);
     }
 }

@@ -1,0 +1,21 @@
+server:
+  port: 8060
+
+eureka:
+  client:
+    serviceUrl:
+      defaultZone: http://localhost:8761/eureka/
+
+spring:
+  cloud:
+    gateway:
+      routes:
+        - id: customer-route
+          uri: lb://customer-service
+          predicates:
+            - Path=/customer/**
+
+        - id: account-route
+          uri: lb://account-service
+          predicates:
+            - Path=/account/**
