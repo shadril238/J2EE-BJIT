@@ -1,0 +1,17 @@
+spring:
+  cloud:
+    config:
+      server:
+        git:
+          default-label: main
+          password: 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
+          username: rahatibnhossain
+          uri: https://github.com/RahatBJIT/BookMicroServiceMid-Config-Server
+  application:
+    name: config-server
+server:
+  port: '8081'
+eureka:
+  client:
+    serviceUrl:
+      defaultZone: http://localhost:8082/eureka

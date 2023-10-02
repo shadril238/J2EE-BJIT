@@ -1,0 +1,56 @@
+eureka:
+  client:
+    serviceUrl:
+      defaultZone: http://localhost:8082/eureka
+server:
+  port: 8080
+spring:
+  cloud:
+    gateway:
+      routes[0]:
+        id: auth-server
+        uri: lb://auth-server
+        predicates:
+          - Path=/auth-server/**
+      routes[1]:
+        id: book-service
+        uri: lb://book-service
+        predicates:
+          - Path= /book-service/create, /book-service/update , /book-service/delete/**
+        filters:
+          - name: AuthenticationFilter
+            args:
+              role: ADMIN
+
+      routes[2]:
+        id: book-service
+        uri: lb://book-service
+        predicates:
+          - Path=/book-service/book/buy
+        filters:
+          - name: AuthenticationFilter
+            args:
+              role: USER
+      routes[3]:
+        id: book-service
+        uri: lb://book-service
+        predicates:
+          - Path=/book-service/book/all ,/book-service/book/id/**,
+        filters:
+          - name: AuthenticationFilter
+            args:
+              role: ANY_USER
+      routes[4]:
+        id: inventory-service
+        uri: lb://inventory-service
+        predicates:
+          - Path=/inventory-service/**
+        filters :
+          - name : InternalFilter
+
+
+
+application.name: api-gateway
+
+
+

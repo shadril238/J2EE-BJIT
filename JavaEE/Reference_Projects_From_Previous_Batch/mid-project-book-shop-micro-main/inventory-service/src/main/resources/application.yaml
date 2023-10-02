@@ -1,0 +1,20 @@
+spring:
+  datasource:
+    driver-class-name: com.mysql.cj.jdbc.Driver
+    username: root
+    url: ${DB-URL}
+    platform: mysql
+    password: root
+  jpa:
+    open-in-view: 'false'
+    show-sql: 'true'
+    hibernate:
+      ddl-auto: update
+  application:
+    name: inventory-service
+server:
+  port: '9094'
+eureka:
+  client:
+    serviceUrl:
+      defaultZone: http://localhost:8082/eureka

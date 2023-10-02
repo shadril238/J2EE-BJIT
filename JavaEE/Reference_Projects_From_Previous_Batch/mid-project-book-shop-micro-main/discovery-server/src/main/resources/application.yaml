@@ -1,0 +1,14 @@
+eureka:
+  instance:
+    hostname: localhost
+  client:
+    fetch-registry: 'false'
+    register-with-eureka: 'false'
+  server:
+    enableReplicatedRequestCompression: 'false'
+    renewalPercentThreshold: '0.85'
+spring:
+  application:
+    name: discovery-server
+server:
+  port: '8082'

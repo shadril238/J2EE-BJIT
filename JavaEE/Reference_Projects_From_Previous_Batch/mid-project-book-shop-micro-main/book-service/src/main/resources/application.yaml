@@ -1,0 +1,50 @@
+management:
+  endpoints:
+    web:
+      exposure:
+        include: '*'
+  health:
+    circuitbreakers:
+      enabled: 'true'
+  endpoint:
+    health:
+      show-details: always
+spring:
+  jpa:
+    properties:
+      hibernate:
+        dialect: org.hibernate.dialect.MySQL8Dialect
+    show-sql: 'true'
+    hibernate:
+      ddl-auto: update
+  application:
+    name: book-service
+  datasource:
+    url: ${DB-URL}
+resilience4j:
+  circuitbreaker:
+    instances:
+      book_inventory:
+        sliding-window-size: '5'
+        wait-duration-in-open-state: 5s
+        failure-rate-threshold: '50'
+        sliding-window-type: COUNT_BASED
+        register-health-indicator: 'true'
+        event-consumer-buffer-size: '10'
+        automatic-transition-from-open-to-half-open-enabled: 'true'
+        permitted-number-of-calls-in-half-open-state: '3'
+  retry:
+    instances:
+      book_inventory:
+        max-attempts: '3'
+        wait-duration: 5s
+  timelimiter:
+    instances:
+      book_inventory:
+        timeout-duration: 3s
+server:
+  port: '9093'
+eureka:
+  client:
+    serviceUrl:
+      defaultZone: http://localhost:8082/eureka

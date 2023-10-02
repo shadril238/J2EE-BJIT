@@ -1,0 +1,21 @@
+spring:
+  datasource:
+    url: ${DB-URL}
+  application:
+    name: auth-server
+  cloud:
+    config:
+      uri: http://localhost:8081
+management:
+  zipkin:
+    tracing:
+      endpoint: http://zipkin:9411
+  tracing:
+    sampling:
+      probability: '1.0'
+server:
+  port: '9091'
+eureka:
+  client:
+    serviceUrl:
+      defaultZone: http://localhost:8082/eureka

@@ -1,0 +1,76 @@
+interface Color {
+    void applyColor();
+}
+
+
+class RedColor implements Color {
+    @Override
+    public void applyColor() {
+        System.out.println("Applying red color");
+    }
+}
+
+
+class BlueColor implements Color {
+    @Override
+    public void applyColor() {
+        System.out.println("Applying blue color");
+    }
+}
+
+abstract class Shape {
+    protected Color color;
+
+    public Shape(Color color) {
+        this.color = color;
+    }
+
+    public abstract void draw();
+}
+
+class Circle extends Shape {
+    private int radius;
+
+    public Circle(Color color, int radius) {
+        super(color);
+        this.radius = radius;
+    }
+
+    @Override
+    public void draw() {
+        System.out.print("Drawing a ");
+        color.applyColor();
+        System.out.println("circle with radius " + radius);
+    }
+}
+
+class Rectangle extends Shape {
+    private int width;
+    private int height;
+
+    public Rectangle(Color color, int width, int height) {
+        super(color);
+        this.width = width;
+        this.height = height;
+    }
+
+    @Override
+    public void draw() {
+        System.out.print("Drawing a ");
+        color.applyColor();
+        System.out.println("rectangle with width " + width + " and height " + height);
+    }
+}
+
+public class BridgePatternExample {
+    public static void main(String[] args) {
+        Color redColor = new RedColor();
+        Color blueColor = new BlueColor();
+
+        Shape redCircle = new Circle(redColor, 5);
+        Shape blueRectangle = new Rectangle(blueColor, 4, 6);
+
+        redCircle.draw();
+        blueRectangle.draw();
+    }
+}
