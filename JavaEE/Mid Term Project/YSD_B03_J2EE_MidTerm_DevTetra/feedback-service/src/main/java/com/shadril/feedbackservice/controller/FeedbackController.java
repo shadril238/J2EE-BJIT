@@ -1,7 +1,6 @@
 package com.shadril.feedbackservice.controller;
 
 import com.shadril.feedbackservice.dto.FeedbackDto;
-import com.shadril.feedbackservice.dto.ProgressTrackDto;
 import com.shadril.feedbackservice.service.FeedbackService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.HttpStatus;
@@ -21,10 +20,5 @@ public class FeedbackController {
     public ResponseEntity<?> submitFeedback(@RequestBody FeedbackDto feedbackDto) {
         feedbackService.submitFeedback(feedbackDto);
         return new ResponseEntity<>("Feedback submitted successfully", HttpStatus.OK);
-    }
-
-    @GetMapping("/progress/track")
-    public ResponseEntity<ProgressTrackDto> getProgressTrack() {
-        return new ResponseEntity<>(feedbackService.getProgressTrack(), HttpStatus.OK);
     }
 }
