@@ -1,11 +1,17 @@
-<?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ExternalStorageConfigurationManager" enabled="true" />
   <component name="FrameworkDetectionExcludesConfiguration">
     <file type="web" url="file://$PROJECT_DIR$/api-gateway" />
     <file type="web" url="file://$PROJECT_DIR$/config-server" />
+    <file type="web" url="file://$PROJECT_DIR$/dashboard-service" />
+    <file type="web" url="file://$PROJECT_DIR$/feedback-service" />
+    <file type="web" url="file://$PROJECT_DIR$/mentalHealth-service" />
+    <file type="web" url="file://$PROJECT_DIR$/notification-service" />
     <file type="web" url="file://$PROJECT_DIR$/nutrition-service" />
+    <file type="web" url="file://$PROJECT_DIR$/recommendation-service" />
     <file type="web" url="file://$PROJECT_DIR$/service-discovery" />
+    <file type="web" url="file://$PROJECT_DIR$/social-service" />
+    <file type="web" url="file://$PROJECT_DIR$/user-service" />
   </component>
   <component name="ProjectRootManager" version="2" project-jdk-name="17" project-jdk-type="JavaSDK">
     <output url="file://$PROJECT_DIR$/out" />

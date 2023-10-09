@@ -3,7 +3,6 @@ package com.munira.nutritionservice.networkmanager;
 import com.munira.nutritionservice.dto.HealthDataDTO;
 import com.munira.nutritionservice.dto.UserDTO;
 import org.springframework.cloud.openfeign.FeignClient;
-import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.PathVariable;
 
@@ -12,6 +11,6 @@ public interface UserFiengClient {
     @GetMapping("/users/{email}")
     UserDTO userDetailsByEmail(@PathVariable String email);
 
-    @GetMapping("/users/healthdata/all")
+    @GetMapping("/users/healthdata")
     HealthDataDTO getAllHealthData ();
 }

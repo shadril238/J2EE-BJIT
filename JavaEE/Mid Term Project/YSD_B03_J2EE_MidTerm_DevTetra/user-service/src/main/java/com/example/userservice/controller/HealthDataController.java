@@ -7,10 +7,7 @@ import com.example.userservice.service.Implementation.HealthDataServiceImplement
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
-import org.springframework.web.bind.annotation.GetMapping;
-import org.springframework.web.bind.annotation.PostMapping;
-import org.springframework.web.bind.annotation.RequestBody;
-import org.springframework.web.bind.annotation.RestController;
+import org.springframework.web.bind.annotation.*;
 
 import java.util.List;
 
@@ -34,6 +31,16 @@ public class HealthDataController {
     public ResponseEntity<?> getHealthData () {
         try {
              HealthDataDto healthDataDto = healthDataServiceImplementation.getHealthData();
+            return new ResponseEntity<>(healthDataDto, HttpStatus.OK);
+        } catch (Exception e) {
+            return new ResponseEntity<>(e.getMessage(),HttpStatus.BAD_REQUEST);
+        }
+    }
+
+    @GetMapping("/users/healthdata/{userId}")
+    public ResponseEntity<?> getAllHealthDataById (@PathVariable Long userId) {
+        try {
+            List<HealthDataDto> healthDataDto = healthDataServiceImplementation.getAllHealthDataById(userId);
             return new ResponseEntity<>(healthDataDto, HttpStatus.OK);
         } catch (Exception e) {
             return new ResponseEntity<>(e.getMessage(),HttpStatus.BAD_REQUEST);

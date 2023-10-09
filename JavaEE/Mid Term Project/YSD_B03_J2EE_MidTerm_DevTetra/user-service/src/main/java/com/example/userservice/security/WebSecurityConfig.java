@@ -35,11 +35,9 @@ public class WebSecurityConfig {
                 .authorizeHttpRequests(auth->{
                     auth
                             .requestMatchers(HttpMethod.POST, AppConstants.SIGN_IN,AppConstants.SIGN_UP).permitAll()
-                            .requestMatchers(HttpMethod.GET,"/users/{email}").hasAuthority(AppConstants.ROLE_USER)
-                            .requestMatchers(HttpMethod.POST,"/users/healthdata").hasAuthority(AppConstants.ROLE_USER)
-                            .requestMatchers(HttpMethod.GET,"/users/healthdata").hasAuthority(AppConstants.ROLE_USER)
-                            .requestMatchers(HttpMethod.GET,"/users/healthdata/all").permitAll()
                             .anyRequest().authenticated();
+
+
                 })
                 .addFilter(new CustomAuthenticationFilter(authenticationManager))
                 .addFilterBefore(new CustomAuthorizationFilter(), UsernamePasswordAuthenticationFilter.class)

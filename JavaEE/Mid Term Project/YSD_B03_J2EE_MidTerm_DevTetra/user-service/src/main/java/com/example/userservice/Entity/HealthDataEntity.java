@@ -23,11 +23,12 @@ public class HealthDataEntity {
     @ManyToOne
     @JoinColumn(name = "userId")
     private UserEntity userEntity;
-
     private Double height;
     private Double weight;
     private Double sleepTime;
     private String bloodPressure;
+    private Double bmi;
+    private Double bmr;
     private LocalDateTime timestamp;
 
 

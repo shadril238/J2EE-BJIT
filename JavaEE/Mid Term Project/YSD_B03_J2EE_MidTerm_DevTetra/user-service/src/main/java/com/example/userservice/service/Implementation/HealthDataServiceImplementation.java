@@ -4,6 +4,7 @@ import com.example.userservice.Entity.HealthDataEntity;
 import com.example.userservice.Entity.UserEntity;
 import com.example.userservice.constants.AppConstants;
 import com.example.userservice.dto.HealthDataDto;
+import com.example.userservice.dto.UserDto;
 import com.example.userservice.repository.HealthDataRepository;
 import com.example.userservice.repository.UserRepository;
 import com.example.userservice.service.HealthDataService;
@@ -35,6 +36,27 @@ public class HealthDataServiceImplementation implements HealthDataService {
         healthDataEntity.setWeight(healthDataDto.getWeight());
         healthDataEntity.setSleepTime(healthDataDto.getSleepTime());
         healthDataEntity.setBloodPressure(healthDataDto.getBloodPressure());
+
+        Double height = healthDataDto.getHeight();
+        Double weight = healthDataDto.getWeight();
+        Integer age = getCurrentUser().getAge();
+        String gender = getCurrentUser().getGender();
+
+        healthDataEntity.setBmi(
+                Double.parseDouble(String.format("%.2f", weight / (height/100.0 * height/100.0)))
+        );
+
+        if ("male".equalsIgnoreCase(gender)) {
+            healthDataEntity.setBmr(
+                    Double.parseDouble(String.format("%.2f", 88.362 + (13.397 * weight) + (4.799 * height) - (5.677 * age)
+                    ))
+            );
+        } else if ("female".equalsIgnoreCase(gender)) {
+            healthDataEntity.setBmr(Double.parseDouble(String.format("%.2f", 447.593 + (9.247 * weight) + (3.098 * height) - (4.330 * age)))
+
+            );
+        }
+
         healthDataEntity.setTimestamp(LocalDateTime.now());
         healthDataRepository.save(healthDataEntity);
     }
@@ -67,5 +89,17 @@ public class HealthDataServiceImplementation implements HealthDataService {
                 .orElseThrow(() -> new Exception(AppConstants.TOKEN_INVALID));
     }
 
+
+    public List<HealthDataDto> getAllHealthDataById(Long userId) throws Exception{
+        UserEntity userEntity = userRepository.findByUserId(userId)
+                .orElseThrow(()->new Exception("User not found!"));
+        List<HealthDataEntity> healthDataEntity = healthDataRepository.findAllByUserEntity(userEntity);
+        List<HealthDataDto> healthDataDtos = new ArrayList<>();
+        for (HealthDataEntity healthDataEntity1: healthDataEntity) {
+            healthDataDtos.add(new ModelMapper().map(healthDataEntity1, HealthDataDto.class));
+
+        }
+        return healthDataDtos;
+    }
 
 }

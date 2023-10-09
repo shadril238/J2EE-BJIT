@@ -8,6 +8,8 @@ import com.example.userservice.service.UserService;
 import com.example.userservice.utils.JWTUtils;
 import jakarta.transaction.Transactional;
 import org.modelmapper.ModelMapper;
+import org.springframework.security.core.Authentication;
+import org.springframework.security.core.context.SecurityContextHolder;
 import org.springframework.security.core.userdetails.User;
 import org.springframework.security.core.userdetails.UserDetails;
 import org.springframework.security.core.userdetails.UserDetailsService;
@@ -71,4 +73,27 @@ public class UserServiceImplementation implements UserService, UserDetailsServic
     }
 
 
+    public UserDto getUserProfile() throws Exception {
+        UserEntity userEntity = getCurrentUser();
+        return new ModelMapper().map(userEntity, UserDto.class);
+    }
+
+    private UserEntity getCurrentUser() throws Exception {
+        Authentication authentication = SecurityContextHolder.getContext().getAuthentication();
+        return userRepository.findByEmail(authentication.getName())
+                .orElseThrow(() -> new Exception(AppConstants.TOKEN_INVALID));
+    }
+
+    public void editUserProfile(UserDto userDto) throws Exception {
+
+        UserEntity userEntity = userRepository.findByUserId(getCurrentUser().getUserId())
+                .orElseThrow(()->new Exception("User not found!"));
+
+        userEntity.setName(userDto.getName() != null ? userDto.getName() : userEntity.getName());
+        userEntity.setAge(userDto.getAge() != null ? userDto.getAge() : userEntity.getAge());
+        userEntity.setGender(userDto.getGender() != null ? userDto.getGender() : userEntity.getGender());
+        userEntity.setRole(userDto.getRole() != null ? userDto.getRole() : userEntity.getRole());
+
+        userRepository.save(userEntity);
+    }
 }

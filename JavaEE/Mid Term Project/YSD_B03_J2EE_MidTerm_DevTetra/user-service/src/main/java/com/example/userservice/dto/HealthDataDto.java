@@ -16,5 +16,7 @@ public class HealthDataDto {
     private Double weight;
     private Double sleepTime;
     private String bloodPressure;
+    private Double bmi;
+    private Double bmr;
     private LocalDateTime timestamp;
 }

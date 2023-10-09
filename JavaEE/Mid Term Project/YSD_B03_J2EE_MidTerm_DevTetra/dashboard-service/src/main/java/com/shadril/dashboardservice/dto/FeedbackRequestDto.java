@@ -1,4 +1,4 @@
-package com.shadril.feedbackservice.dto;
+package com.shadril.dashboardservice.dto;
 
 import lombok.AllArgsConstructor;
 import lombok.Builder;
@@ -11,7 +11,7 @@ import java.time.LocalDateTime;
 @NoArgsConstructor
 @AllArgsConstructor
 @Builder
-public class FeedbackDto {
+public class FeedbackRequestDto {
     private Long feedbackId;
     private Long userId;
     private Long recommendationId;

@@ -33,7 +33,11 @@ public class WebSecurityConfig {
                 .sessionManagement(session->session.sessionCreationPolicy(SessionCreationPolicy.STATELESS))
                 .authorizeHttpRequests(auth->{
                     auth
-                            .requestMatchers(HttpMethod.POST,"/feedback/**").hasAuthority(AppConstants.ROLE_USER)
+                            .requestMatchers(HttpMethod.GET,"/feedback/user/{userId}").hasAuthority(AppConstants.ROLE_ADMIN)
+                            .requestMatchers(HttpMethod.POST,"/feedback/submit").hasAuthority(AppConstants.ROLE_USER)
+                            .requestMatchers(HttpMethod.GET,"/feedback/all").authenticated()
+                            .requestMatchers(HttpMethod.GET,"/progress/track").hasAuthority(AppConstants.ROLE_USER)
+                            .requestMatchers(HttpMethod.GET,"/progress/insights").hasAuthority(AppConstants.ROLE_USER)
                             .anyRequest().authenticated();
                 })
                 .addFilterBefore(new CustomAuthorizationFilter(), UsernamePasswordAuthenticationFilter.class)

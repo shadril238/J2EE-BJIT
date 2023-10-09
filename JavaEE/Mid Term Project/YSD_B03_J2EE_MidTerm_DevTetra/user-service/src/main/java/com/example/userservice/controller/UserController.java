@@ -27,15 +27,15 @@ public class UserController {
     @Autowired
     private AuthenticationManager authenticationManager;
 
-//    @GetMapping("/users/{userId}")
-//    public ResponseEntity<?> userDetailsByUserId(@PathVariable Long userId) {
-//        try {
-//            UserDto user = userServiceImplementation.getUserByUserId(userId);
-//            return new ResponseEntity<>(user, HttpStatus.OK);
-//        } catch (Exception e) {
-//            return new ResponseEntity<>(e.getMessage(), HttpStatus.BAD_REQUEST);
-//        }
-//    }
+    @GetMapping("/users/userId/{userId}")
+    public ResponseEntity<?> userDetailsByUserId(@PathVariable Long userId) {
+        try {
+            UserDto user = userServiceImplementation.getUserByUserId(userId);
+            return new ResponseEntity<>(user, HttpStatus.OK);
+        } catch (Exception e) {
+            return new ResponseEntity<>(e.getMessage(), HttpStatus.BAD_REQUEST);
+        }
+    }
 
     @PostMapping("/users/register")
     public ResponseEntity<?> register (@RequestBody UserDto userDto) {
@@ -61,11 +61,9 @@ public class UserController {
             loginResponse.put(AppConstants.HEADER_STRING, AppConstants.TOKEN_PREFIX + accessToken);
             return ResponseEntity.status(HttpStatus.OK).body(loginResponse);
 
-        } catch (BadCredentialsException e) {
-            return new ResponseEntity<>("Wrong password!", HttpStatus.UNAUTHORIZED);
         }
         catch (Exception e) {
-            return new ResponseEntity<>("Wrong Email!", HttpStatus.UNAUTHORIZED);
+            return new ResponseEntity<>("Wrong Credintial!", HttpStatus.UNAUTHORIZED);
 
         }
     }
@@ -76,6 +74,26 @@ public class UserController {
         try {
             UserDto user = userServiceImplementation.getUser(email);
             return new ResponseEntity<>(user, HttpStatus.OK);
+        } catch (Exception e) {
+            return new ResponseEntity<>(e.getMessage(), HttpStatus.BAD_REQUEST);
+        }
+    }
+
+    @GetMapping("/users/profile")
+    public ResponseEntity<?> getUserProfile() {
+        try {
+            UserDto user = userServiceImplementation.getUserProfile();
+            return new ResponseEntity<>(user, HttpStatus.OK);
+        } catch (Exception e) {
+            return new ResponseEntity<>(e.getMessage(), HttpStatus.BAD_REQUEST);
+        }
+    }
+
+    @PutMapping("/users/profile")
+    public ResponseEntity<?> editUserProfile(@RequestBody UserDto userDto) {
+        try {
+            userServiceImplementation.editUserProfile(userDto);
+            return new ResponseEntity<>("User updated successfully!", HttpStatus.OK);
         } catch (Exception e) {
             return new ResponseEntity<>(e.getMessage(), HttpStatus.BAD_REQUEST);
         }

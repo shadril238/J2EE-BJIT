@@ -1,8 +1,6 @@
 package com.shadril.feedbackservice.constants;
 
 public class AppConstants {
-    public static final String FOOD_NOTFOUND = "Food does not exits!";
-
     public static final String TOKEN_SECRET = "MySecretMySecretMySecretMySecretMySecretMySecretMySecretMySecret";
     public static final long EXPIRATION_TIME = 864000000; //10 days
 

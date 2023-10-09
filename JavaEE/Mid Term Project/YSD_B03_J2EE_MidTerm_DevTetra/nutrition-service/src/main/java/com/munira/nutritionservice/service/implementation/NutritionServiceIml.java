@@ -1,6 +1,6 @@
 package com.munira.nutritionservice.service.implementation;
 
-import com.munira.nutritionservice.constants.AppConstants;
+
 import com.munira.nutritionservice.dto.NutritionDTO;
 import com.munira.nutritionservice.entity.NutritionEntity;
 import com.munira.nutritionservice.exception.FoodNotFoundException;
@@ -19,7 +19,7 @@ public class NutritionServiceIml implements NutritionService {
         NutritionEntity nutritionEntity = nutritionRepository
                 .findByFoodFoodName(foodName)
                 .orElseThrow(()->
-                        new FoodNotFoundException(AppConstants.FOOD_NOTFOUND))
+                        new FoodNotFoundException("Food does not exits!"))
                 ;
         return new ModelMapper().map(nutritionEntity, NutritionDTO.class);
     }
