@@ -12,6 +12,8 @@ import org.springframework.web.bind.annotation.PostMapping;
 import org.springframework.web.bind.annotation.RequestBody;
 import org.springframework.web.bind.annotation.RestController;
 
+import java.util.List;
+
 @RestController
 public class FeedbackController {
     @Autowired
@@ -23,8 +25,8 @@ public class FeedbackController {
         return new ResponseEntity<>("Feedback submitted successfully", HttpStatus.OK);
     }
 
-    @GetMapping("/progress/track")
-    public ResponseEntity<ProgressTrackDto> getProgressTrack() {
-        return new ResponseEntity<>(feedbackService.getProgressTrack(), HttpStatus.OK);
+    @GetMapping("/feedback/all")
+    public ResponseEntity<List<FeedbackDto>> getAllFeedback() {
+        return new ResponseEntity<>(feedbackService.getAllFeedback(), HttpStatus.OK);
     }
 }

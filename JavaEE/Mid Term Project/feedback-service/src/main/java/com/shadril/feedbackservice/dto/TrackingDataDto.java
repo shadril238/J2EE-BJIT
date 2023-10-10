@@ -5,14 +5,13 @@ import lombok.Builder;
 import lombok.Data;
 import lombok.NoArgsConstructor;
 
-import java.time.LocalDateTime;
+import java.util.List;
 
 @Data
 @AllArgsConstructor
 @NoArgsConstructor
 @Builder
-public class ProgressTrackDto {
-    private Long userId;
-    private TrackingDataDto trackingData;
+public class TrackingDataDto {
+    private List<HealthDataDto> healthData;
+    private List<MentalHealthDataDto> mentalHealthData;
 }
-

@@ -34,6 +34,8 @@ public class WebSecurityConfig {
                 .authorizeHttpRequests(auth->{
                     auth
                             .requestMatchers(HttpMethod.POST,"/feedback/**").hasAuthority(AppConstants.ROLE_USER)
+                            .requestMatchers(HttpMethod.GET,"/feedback/**").hasAuthority(AppConstants.ROLE_USER)
+                            .requestMatchers(HttpMethod.GET,"/progress/**").hasAuthority(AppConstants.ROLE_USER)
                             .anyRequest().authenticated();
                 })
                 .addFilterBefore(new CustomAuthorizationFilter(), UsernamePasswordAuthenticationFilter.class)
