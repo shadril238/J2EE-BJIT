@@ -1,0 +1,29 @@
+p {
+    font-size: 50px;
+    text-align: center;
+    display:flex;
+    justify-content: center;
+    align-items: center;
+  }
+  
+  button {
+    background-color: #007BFF;
+    color: #fff;
+    border: none;
+    padding: 10px 20px;
+    font-size: 18px;
+    margin: 10px;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s, transform 0.1s;
+  }
+  
+  button:hover {
+    background-color: #0056b3;
+  }
+  
+  button:active {
+    transform: scale(0.95);
+    transition: transform 0.1s;
+  }
+  
