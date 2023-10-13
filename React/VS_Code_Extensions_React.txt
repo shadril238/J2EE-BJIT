@@ -1,0 +1,16 @@
+** VS Code Extensions for React
+1. Auto Close Tag
+2. Auto Import - ES6, TS, JSX, TSX
+3. Auto Rename Tag
+4. ESLint
+5. npm Intellisense
+6. Path Intellisense
+7. Postman
+8. Prettier - Code formatter
+9. ReactJS Code Snippets
+10.Snipped
+11.Stylelint
+12.Tailwind CSS IntelliSense
+13. Thunder Client
+14. VSCode React Refactor
+15. vscode-icons 
