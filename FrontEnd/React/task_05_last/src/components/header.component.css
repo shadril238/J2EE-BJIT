@@ -1,0 +1,17 @@
+.header {
+    background-color: #333;
+    color: #fff;
+    padding: 20px;
+    text-align: center;
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    width: 100%;
+}
+  
+.header h1 {
+    font-size: 2rem;
+    margin: 0;
+}
+  
