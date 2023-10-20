@@ -5,7 +5,7 @@ const FooterComponent = () => {
     return (
       <footer className="bg-dark text-white">
         <div className="container text-center">
-          <p>Copyright &copy; Your Website</p>
+          <p>copyright &copy; shadril238</p>
         </div>
       </footer>
     );
