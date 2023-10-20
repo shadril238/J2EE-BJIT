@@ -66,6 +66,7 @@ public class UserController {
             Map<String, Object> loginResponse = new HashMap<>();
             loginResponse.put("userId", userDto.getId());
             loginResponse.put("email", userDto.getEmail());
+            loginResponse.put("role", userDto.getRole());
             loginResponse.put(AppConstants.HEADER_STRING, AppConstants.TOKEN_PREFIX + accessToken);
             return ResponseEntity.status(HttpStatus.OK).body(loginResponse);
 
