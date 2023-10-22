@@ -1,0 +1,29 @@
+.signup-container {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.signup-img-container {
+  width: 45%;
+  overflow: hidden;
+}
+
+.signup-img-container img {
+  width: 100%;
+  height: 100vh;
+  object-fit: cover;
+}
+
+.signup-content-container {
+  width: 50%;
+}
+
+.content-wrapper {
+  padding: 3rem;
+}
+
+.content-wrapper h2 {
+  padding-bottom: 1rem;
+  font-size: 2rem;
+}

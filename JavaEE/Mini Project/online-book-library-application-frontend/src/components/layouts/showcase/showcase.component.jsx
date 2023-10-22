@@ -1,6 +1,6 @@
 import "./showcase.component.css";
 import NavbarComponent from "../navbar/navbar.component";
-import SearchInputFormComponent from "../forms/searchinputform/searchInputForm.component";
+import SearchInputFormComponent from "../forms/search-input-form/searchInputForm.component";
 
 const ShowcaseComponent = () => {
   return (

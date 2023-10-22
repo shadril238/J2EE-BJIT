@@ -194,4 +194,9 @@ public class BookServiceImplementation implements BookService {
         return borrowBookRepository.findByUser(userFromId.get());
     }
 
+    @Override
+    public Optional<Book> getBookById(Long bookId) {
+        return bookRepository.findById(bookId);
+    }
+
 }

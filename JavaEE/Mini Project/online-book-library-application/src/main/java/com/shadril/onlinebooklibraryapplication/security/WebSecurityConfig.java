@@ -67,6 +67,7 @@ public class WebSecurityConfig {
                     auth
                             .requestMatchers(HttpMethod.POST, AppConstants.SIGN_IN,AppConstants.SIGN_UP).permitAll()
                             .requestMatchers(HttpMethod.GET,"/books/all").permitAll()
+                            .requestMatchers(HttpMethod.GET,"/books/{bookId}").permitAll()
                             .requestMatchers(HttpMethod.POST,"/books/create").permitAll()
                             .requestMatchers(HttpMethod.PUT,"/books/update").hasRole("ADMIN")
                             .requestMatchers(HttpMethod.DELETE,"/books/delete").hasRole("ADMIN")

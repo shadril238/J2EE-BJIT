@@ -2,7 +2,7 @@ import { useState, useEffect } from "react";
 import "./productListingAll.component.css";
 import ProductListingCardComponent from "../cards/productlistingcard/productListingCard.component";
 import axios from "axios";
-import axiosInstanceBookService from "../../../utils/axiosInstance";
+import axiosInstanceBookService from "../../../utils/axiosInstanceBookService";
 
 const ProductListingAllComponent = () => {
   const [bookList, setBookList] = useState([]);
@@ -29,7 +29,7 @@ const ProductListingAllComponent = () => {
         <div className="grid-container">
           {bookList.map((book) => {
             return (
-              <div className="grid-item">
+              <div className="grid-item" key={book?.id}>
                 <ProductListingCardComponent bookData={book} />
               </div>
             );

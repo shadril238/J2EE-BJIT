@@ -53,6 +53,11 @@ public class BookController {
         return new ResponseEntity<>(bookService.getAllBooks(), HttpStatus.OK);
     }
 
+    @GetMapping("/{bookId}")
+    public ResponseEntity<Book> getBookById(@PathVariable Long bookId)
+            throws BookNotFoundException {
+        return new ResponseEntity<>(bookService.getBookById(bookId).get(), HttpStatus.OK);
+    }
     @PostMapping("/{bookId}/borrow")
     public ResponseEntity<String> borrowBooks(@PathVariable Long bookId)
             throws UserNotFoundException, BookNotFoundException {

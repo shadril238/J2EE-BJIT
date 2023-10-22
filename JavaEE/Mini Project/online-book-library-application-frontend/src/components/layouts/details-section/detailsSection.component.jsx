@@ -1,31 +1,53 @@
-import React from "react";
+import React, { useEffect, useState } from "react";
 import "./detailsSection.component.css";
 import BookDetailImg from "../../../assets/showcase-bg.jpg";
+import { useParams } from "react-router-dom";
+import { axiosInstanceBookService } from "../../../utils/axiosInstanceBookService";
 
 const DetailsSectionComponent = () => {
+  const { id } = useParams();
+  const [bookDetails, setBookDetails] = useState({});
+  const [isLoading, setIsLoading] = useState(false);
+  // console.log(id);
+  useEffect(() => {
+    axiosInstanceBookService
+      .get(`/${id}`)
+      .then((resp) => {
+        const data = resp.data;
+        setBookDetails(data);
+        console.log(data);
+      })
+      .catch((error) => {
+        console.log(error);
+      })
+      .finally(() => {
+        setIsLoading(false);
+      });
+  }, []);
+
   return (
     <section className="detail-section-container">
       <div className="container">
         <div className="flex-container">
           <div className="book-img-container">
-            <img src={BookDetailImg} alt="Book" />
+            <img src={bookDetails?.imgUrl} alt="Book" />
           </div>
 
           <div className="book-detail-container">
-            <h2>BookName</h2>
-            <p className="text-primary">Author Name</p>
-            <p className="book-description">Book Description</p>
+            <h2>{bookDetails?.title}</h2>
+            <p className="text-primary">{bookDetails?.author}</p>
+            <p className="book-description">{bookDetails?.description}</p>
             <p>
-              <b>Language</b> : English
+              <b>Language</b> : {bookDetails?.language}
             </p>
             <p>
-              <b>Book Length</b> : 300 Pages
+              <b>Book Length</b> : {bookDetails?.pageLength}
             </p>
             <h3>
-              <b>Status</b> : Borrowed
+              <b>Status</b> : {bookDetails?.status}
             </h3>
 
-            <a href="#" className="shelf-button">
+            <a href="#" className="button-primary">
               Add to My Shelf
             </a>
           </div>

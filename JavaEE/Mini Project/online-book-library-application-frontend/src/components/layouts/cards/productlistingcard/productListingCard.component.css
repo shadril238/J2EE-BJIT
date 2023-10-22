@@ -1,20 +1,25 @@
 .product-listing-card {
   border: 1px solid #aaa;
-  width: fit-content;
-  padding-right: 2.8rem;
-  /* padding-left: 2.8rem; */
-  padding-top: 2rem;
-  padding-bottom: 2rem;
+  width: 100%;
+  padding: 2rem 1rem;
   border-radius: 10px;
 }
 
+.product-listing-img-container {
+  width: 100%;
+  height: 15rem;
+  text-align: center;
+}
+
 .product-listing-image {
-  width: 200px;
+  width: 100%;
+  height: 100%;
+  object-fit: contain;
 }
 
 .product-listing-details-container {
   padding-top: 2rem;
-  padding-left: 2rem;
+  min-height: 10rem;
 }
 
 .author-name {

@@ -8,7 +8,7 @@
 
 .logo {
   font-size: 1.5rem;
-  color: #fff;
+  color: var(--white-color);
   text-decoration: none;
   font-family: Chivo Mono;
   font-weight: 700;
@@ -18,15 +18,21 @@
   font-family: Chivo Mono;
 }
 
-.nav-links {
-  color: #fff;
+.nav-links,
+.nav-links-dark {
+  color: var(--white-color);
   text-decoration: none;
   font-size: 1.2rem;
   padding-left: 20px;
   transition: 0.2s ease-in;
 }
 
-.nav-links:hover {
+.nav-links-dark {
+  color: #333;
+}
+
+.nav-links:hover,
+.nav-links-dark:hover {
   color: var(--primary-color);
 }
 

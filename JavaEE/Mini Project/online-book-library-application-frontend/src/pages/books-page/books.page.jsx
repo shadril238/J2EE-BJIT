@@ -1,5 +1,5 @@
 import NavbarComponent from "../../components/layouts/navbar/navbar.component";
-import SearchInputFormComponent from "../../components/layouts/forms/searchinputform/searchInputForm.component";
+import SearchInputFormComponent from "../../components/layouts/forms/search-input-form/searchInputForm.component";
 import "./books.page.css";
 import FooterComponent from "../../components/layouts/footer/footer.component";
 import ProductListingAllComponent from "../../components/layouts/product-listing-all/productListingAll.component";
