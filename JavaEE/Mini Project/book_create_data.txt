@@ -1,0 +1,21 @@
+{
+    "title" : "Harry Potter and the Philosopher's Stone",
+    "description" : "Harry Potter has never even heard of Hogwarts when the letters start dropping on the doormat at number four, Privet Drive. Addressed in green ink on yellowish parchment !",
+    "imgUrl" : "https://m.media-amazon.com/images/I/5165He67NEL._SY346_.jpg",
+    "pageLength" : "345 pages",
+    "language" : "English",
+    "author" : "J.K. Rowling",
+    "status" : "AVAILABLE",
+    "isActive": true
+}
+
+{
+    "title" : "The Jungle Book",
+    "description" : "Join Mowgli the Man-cub as he embarks on a dangerous journey through the jungle to escape the man-eating tiger Shere Khan. In his attempt to reach the Man-village, Mowgli discovers a whole 			new way of life when he meets the lovable bear, Baloo.",
+    "imgUrl" : "https://m.media-amazon.com/images/I/51cCdjGzuVL._SX364_BO1,204,203,200_.jpg",
+    "pageLength" : "200 pages",
+    "language" : "English",
+    "author" : "Rudyard Kipling",
+    "status" : "AVAILABLE",
+    "isActive": true
+}
