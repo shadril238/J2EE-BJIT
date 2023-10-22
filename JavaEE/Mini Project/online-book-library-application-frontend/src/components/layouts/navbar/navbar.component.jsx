@@ -1,5 +1,6 @@
 import React from "react";
 import "./navbar.component.css";
+import { Link } from "react-router-dom";
 
 const NavbarComponent = ({ darkTheme }) => {
   // console.log(darkTheme);
@@ -17,12 +18,12 @@ const NavbarComponent = ({ darkTheme }) => {
         </a>
 
         <nav className="nav-links-container">
-          <a href="#" className="nav-links">
+          <Link to="/" className="nav-links">
             Home
-          </a>
-          <a href="#" className="nav-links">
+          </Link>
+          <Link to="/books" className="nav-links">
             Books
-          </a>
+          </Link>
         </nav>
       </div>
     </section>
