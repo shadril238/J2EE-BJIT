@@ -1,0 +1,10 @@
+.product-listing-container {
+  margin-top: 5%;
+  margin-bottom: 5%;
+}
+
+.listing-container {
+  padding-top: 4rem;
+  display: flex;
+  justify-content: space-between;
+}
