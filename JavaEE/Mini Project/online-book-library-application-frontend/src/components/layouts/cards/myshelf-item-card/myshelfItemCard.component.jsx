@@ -5,7 +5,7 @@ import { ShelfContext } from "../../../../App";
 
 const MyshelfItemCardComponent = () => {
   const { myShelfData, setMyShelfData } = useContext(ShelfContext);
-  console.log("My Shelf data from component :", myShelfData);
+  console.log("My Shelf data from MyshelfItemCardComponent :", myShelfData);
   return (
     <section className="myshelf-item">
       <div className="myshelf-item-img-container">
