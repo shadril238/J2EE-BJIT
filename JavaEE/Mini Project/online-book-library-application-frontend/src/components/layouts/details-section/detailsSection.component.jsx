@@ -11,7 +11,7 @@ const DetailsSectionComponent = () => {
   const [isLoading, setIsLoading] = useState(false);
 
   const user = useContext(UserContext);
-  // console.log("Current user - ", user);
+  // console.log("Current user : ", user);
   const { myShelfData, setMyShelfData } = useContext(ShelfContext);
 
   const navigate = useNavigate();

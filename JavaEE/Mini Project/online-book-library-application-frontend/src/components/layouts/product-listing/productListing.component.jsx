@@ -33,7 +33,11 @@ const ProductListingComponent = () => {
         <div className="listing-container">
           {bookList.slice(0, 4).map((book) => {
             return (
-              <ProductListingCardComponent key={book?.id} bookData={book} />
+              <ProductListingCardComponent
+                key={book?.id}
+                bookData={book}
+                buttonText={"Add To My Shelf"}
+              />
             );
           })}
         </div>

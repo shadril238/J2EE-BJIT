@@ -3,7 +3,7 @@ import "./productListingCard.component.css";
 import ProductImage from "../../../../assets/showcase-bg.jpg";
 import { Link } from "react-router-dom";
 
-const ProductListingCardComponent = ({ bookData }) => {
+const ProductListingCardComponent = ({ bookData, buttonText }) => {
   return (
     <div className="product-listing-card">
       <div className="product-listing-img-container">
@@ -20,14 +20,16 @@ const ProductListingCardComponent = ({ bookData }) => {
         <p className="status">{bookData?.status}</p>
       </div>
 
-      <div className="card-button-container">
-        <Link
-          to={`/book-details/${bookData?.id}`}
-          className="product-listing-button"
-        >
-          Add To My Shelf
-        </Link>
-      </div>
+      {buttonText && (
+        <div className="card-button-container">
+          <Link
+            to={`/book-details/${bookData?.id}`}
+            className="product-listing-button"
+          >
+            {buttonText}
+          </Link>
+        </div>
+      )}
     </div>
   );
 };

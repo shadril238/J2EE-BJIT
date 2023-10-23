@@ -56,6 +56,12 @@ const NavbarComponent = ({ darkTheme, darkText }) => {
               >
                 My Shelf
               </Link>
+              <Link
+                to="/borrowed-books"
+                className={`${darkText ? "nav-links-dark" : "nav-links"}`}
+              >
+                Borrowed Books
+              </Link>
             </>
           )}
 

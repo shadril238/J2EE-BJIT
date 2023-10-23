@@ -30,7 +30,10 @@ const ProductListingAllComponent = () => {
           {bookList.map((book) => {
             return (
               <div className="grid-item" key={book?.id}>
-                <ProductListingCardComponent bookData={book} />
+                <ProductListingCardComponent
+                  bookData={book}
+                  buttonText={"Add To My Shelf"}
+                />
               </div>
             );
           })}

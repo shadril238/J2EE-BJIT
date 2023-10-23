@@ -10,6 +10,8 @@ import Authenticate from "./components/authenticate";
 import MyShelfPage from "./pages/myshelf-page/myShelf.page";
 import NotFoundPage from "./pages/not-found-page/notFound.page";
 import axiosInstanceUserService from "./utils/axiosInstanceUserService";
+import BorrowedProductListingComponent from "./components/borrowed-product-listing/borrowedProductListing.component";
+import BorrowedBookPage from "./pages/borrowed-book-page/borrowedBook.page";
 
 export const UserContext = createContext({});
 export const ShelfContext = createContext({});
@@ -37,6 +39,7 @@ function App() {
             <Route path="/books" element={<BooksPage />} />
             <Route path="/book-details/:id" element={<BookdetailsPage />} />
             <Route path="/my-shelf" element={<MyShelfPage />} />
+            <Route path="/borrowed-books" element={<BorrowedBookPage />} />
             <Route path="*" element={<NotFoundPage />} />
           </Route>
 
