@@ -9,8 +9,15 @@ const MyShelfComponent = () => {
   return (
     <section className="myshelf-item-container">
       <div className="container">
-        <h2>My Shelf</h2>
-        <MyshelfItemCardComponent />
+        {myShelfData?.title ? (
+          <React.Fragment>
+            <h2>My Shelf</h2>
+            <MyshelfItemCardComponent />
+            <button className="button-primary">Borrow This Book</button>
+          </React.Fragment>
+        ) : (
+          <h1>Currently your shelf is Empty!</h1>
+        )}
       </div>
     </section>
   );

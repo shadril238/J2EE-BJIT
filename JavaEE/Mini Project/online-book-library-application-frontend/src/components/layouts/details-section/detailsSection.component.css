@@ -6,6 +6,7 @@
 .flex-container {
   display: flex;
   justify-content: space-between;
+  margin-bottom: 8.9rem;
 }
 
 .book-img-container,
