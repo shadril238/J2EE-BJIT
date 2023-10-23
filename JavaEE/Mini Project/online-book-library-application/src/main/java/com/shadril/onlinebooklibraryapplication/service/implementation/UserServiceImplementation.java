@@ -6,6 +6,7 @@ import com.shadril.onlinebooklibraryapplication.dto.UserDTO;
 import com.shadril.onlinebooklibraryapplication.entity.User;
 import com.shadril.onlinebooklibraryapplication.exception.EmailAlreadyExistsException;
 import com.shadril.onlinebooklibraryapplication.exception.UserNotFoundException;
+import com.shadril.onlinebooklibraryapplication.exception.UserNotValidException;
 import com.shadril.onlinebooklibraryapplication.repository.UserRepository;
 import com.shadril.onlinebooklibraryapplication.service.UserService;
 import com.shadril.onlinebooklibraryapplication.utils.JWTUtils;
@@ -13,6 +14,8 @@ import jakarta.transaction.Transactional;
 import org.modelmapper.ModelMapper;
 import org.springframework.beans.BeanUtils;
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.security.core.Authentication;
+import org.springframework.security.core.context.SecurityContextHolder;
 import org.springframework.security.core.userdetails.UserDetails;
 import org.springframework.security.core.userdetails.UserDetailsService;
 import org.springframework.security.core.userdetails.UsernameNotFoundException;
@@ -81,5 +84,21 @@ public class UserServiceImplementation implements UserService, UserDetailsServic
         if(userEntity==null) throw new UsernameNotFoundException("User Email does not exists!");
         return new org.springframework.security.core.userdetails.User(userEntity.getEmail(),userEntity.getPassword(),
                 true,true,true, true,new ArrayList<>());
+    }
+
+    @Override
+    public UserDTO getCurrUser() {
+        Authentication authentication = SecurityContextHolder.getContext().getAuthentication();
+        Optional<User> user = userRepository.findByEmail(authentication.getName());
+        Long currUserId = user.orElseThrow(() -> new UserNotFoundException("User not found")).getId();
+        String currUserRole = user.get().getRole();
+        Optional<User> userFromId = userRepository.findById(currUserId);
+        Long userId = userFromId.orElseThrow(() -> new UserNotFoundException("User not found")).getId();
+        if (currUserRole.equals("CUSTOMER") && !currUserId.equals(userId)) {
+            throw new UserNotValidException("Not a valid customer...");
+        }
+        ModelMapper modelMapper = new ModelMapper();
+        modelMapper.map(user, UserDTO.class);
+        return modelMapper.map(user, UserDTO.class);
     }
 }

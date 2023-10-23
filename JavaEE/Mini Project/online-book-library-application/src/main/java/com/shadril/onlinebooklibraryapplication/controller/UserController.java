@@ -5,6 +5,7 @@ import com.shadril.onlinebooklibraryapplication.dto.UserDTO;
 import com.shadril.onlinebooklibraryapplication.dto.UserLoginRequestModelDTO;
 import com.shadril.onlinebooklibraryapplication.entity.Book;
 import com.shadril.onlinebooklibraryapplication.entity.BorrowBook;
+import com.shadril.onlinebooklibraryapplication.entity.User;
 import com.shadril.onlinebooklibraryapplication.exception.UserNotFoundException;
 import com.shadril.onlinebooklibraryapplication.service.BookService;
 import com.shadril.onlinebooklibraryapplication.service.UserService;
@@ -98,5 +99,12 @@ public class UserController {
     public ResponseEntity<List<BorrowBook>> borrowingHistory(@PathVariable Long userId)
             throws UserNotFoundException{
         return new ResponseEntity<>(bookService.borrowHistory(userId), HttpStatus.OK);
+    }
+
+    @GetMapping("/user")
+    public ResponseEntity<?> getCurrentUser()
+            throws UserNotFoundException {
+        UserDTO user = userService.getCurrUser();
+        return new ResponseEntity<>(user, HttpStatus.OK);
     }
 }

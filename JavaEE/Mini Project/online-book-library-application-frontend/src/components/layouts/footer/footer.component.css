@@ -1,6 +1,7 @@
 .footer-container {
   background-color: #222;
-  padding: 5rem 0;
+  padding: 1.5rem 0;
+  margin-top: 17.5rem;
 }
 
 .footer-container h2 {
@@ -9,8 +10,8 @@
 
 .footer-container p {
   color: var(--white-color);
-  padding-top: 2rem;
-  font-size: 0.8rem;
+  padding-top: 1rem;
+  font-size: 1.8rem;
   text-align: center;
 }
 

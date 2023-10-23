@@ -8,18 +8,19 @@
 
 .myshelf-item-img {
   width: 6rem;
+  height: 9rem;
 }
 
 .myshelf-item-content-container {
   padding-left: 2rem;
-  padding-top: 10px;
+  padding-top: 0px;
 }
 
 .myshelf-item-content-container p {
-  padding-top: 5px;
+  padding-top: 3.5px;
 }
 
 .myshelf-item-status {
-  padding-top: 1.8rem;
+  padding-top: 0.5rem;
   color: var(--primary-color-bright);
 }

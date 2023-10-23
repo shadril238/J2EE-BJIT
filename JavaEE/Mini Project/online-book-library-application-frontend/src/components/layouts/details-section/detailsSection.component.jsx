@@ -1,22 +1,28 @@
 import React, { useEffect, useState, useContext } from "react";
 import "./detailsSection.component.css";
 import BookDetailImg from "../../../assets/showcase-bg.jpg";
-import { useParams } from "react-router-dom";
+import { useNavigate, useParams } from "react-router-dom";
 import { axiosInstanceBookService } from "../../../utils/axiosInstanceBookService";
+import { ShelfContext, UserContext } from "../../../App";
 
 const DetailsSectionComponent = () => {
   const { id } = useParams();
-  const [bookDetails, setBookDetails] = useState({});
+  const [bookDetails, setBookDetails] = useState();
   const [isLoading, setIsLoading] = useState(false);
-  const [shelfItems, setShelfItems] = useState({});
-  // console.log(id);
+
+  const user = useContext(UserContext);
+  // console.log("Current user - ", user);
+  const { myShelfData, setMyShelfData } = useContext(ShelfContext);
+
+  const navigate = useNavigate();
+
   useEffect(() => {
     axiosInstanceBookService
       .get(`/${id}`)
       .then((resp) => {
         const data = resp.data;
         setBookDetails(data);
-        console.log(data);
+        // console.log(bookDetails);
       })
       .catch((error) => {
         console.log(error);
@@ -27,15 +33,20 @@ const DetailsSectionComponent = () => {
   }, []);
 
   const handleAddToMyShelf = () => {
-    console.log("Adding book to My Shelf");
-    setShelfItems(bookDetails);
-    alert(`The Book ${bookDetails?.title} is added to the My Shelf`);
+    if (user) {
+      console.log("Adding book to My Shelf");
+      setMyShelfData(bookDetails);
+      console.log("My Shelf data : ", myShelfData);
+      alert(`The Book ${bookDetails?.title} is added to the My Shelf`);
+      navigate("/my-shelf");
+    } else {
+      // for security purpose
+      localStorage.removeItem("token");
+      localStorage.removeItem("role");
+      navigate("/login");
+      alert("Please Login or Sign up first...");
+    }
   };
-
-  // useEffect(() => {
-  //   console.log(shelfItems);
-  // }, [shelfItems]);
-
   return (
     <section className="detail-section-container">
       <div className="container">

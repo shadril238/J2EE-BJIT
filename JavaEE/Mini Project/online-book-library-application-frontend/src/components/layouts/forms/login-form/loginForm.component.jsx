@@ -1,9 +1,7 @@
-import React, { useStatem, createContext } from "react";
+import { useState } from "react";
 import { useNavigate } from "react-router-dom";
 import "./loginForm.component.css";
 import axiosInstanceUserService from "../../../../utils/axiosInstanceUserService";
-
-const UserContext = createContext({});
 
 const LoginFormComponent = () => {
   const navigate = useNavigate();

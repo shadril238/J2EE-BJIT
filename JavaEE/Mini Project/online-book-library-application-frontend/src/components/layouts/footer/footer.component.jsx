@@ -4,7 +4,7 @@ const FooterComponent = () => {
   return (
     <section className="footer-container">
       <div className="container">
-        <h2>If you have any queries feel free to ask here.</h2>
+        {/* <h2>If you have any queries feel free to ask here.</h2>
 
         <form className="footer-form">
           <div className="form-group">
@@ -49,7 +49,7 @@ const FooterComponent = () => {
               Submit
             </a>
           </div>
-        </form>
+        </form> */}
 
         <p>&copy; 2023 BookLibrary. All Rights Reserved.</p>
       </div>
