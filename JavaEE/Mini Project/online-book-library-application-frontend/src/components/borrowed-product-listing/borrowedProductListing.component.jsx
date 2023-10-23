@@ -5,14 +5,22 @@ import axios from "axios";
 import axiosInstanceBookService from "../../utils/axiosInstanceBookService";
 import { UserContext } from "../../App";
 import axiosInstanceUsersService from "../../utils/axiosInstanceUsersService";
+import axiosInstanceUserService from "../../utils/axiosInstanceUserService";
 
 const BorrowedProductListingComponent = () => {
   const [bookList, setBookList] = useState([]);
   const [isLoading, setIsLoading] = useState(false);
+  const [userData, setUserData] = useState({});
 
-  const user = useContext(UserContext);
+  useEffect(() => {
+    axiosInstanceUserService.get("").then((resp) => {
+      const data = resp.data;
+      console.log(data);
+      setUserData(data);
+    });
+  }, []);
 
-  const currentUserId = user.id;
+  const currentUserId = userData.id;
   console.log("Current user id : ", currentUserId);
 
   useEffect(() => {
@@ -28,7 +36,7 @@ const BorrowedProductListingComponent = () => {
       .finally(() => {
         setIsLoading(false);
       });
-  }, []);
+  }, [userData]);
 
   return (
     <section className="product-listing-all-container">
