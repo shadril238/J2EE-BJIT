@@ -1,9 +1,11 @@
 import React from "react";
 import "./navbar.component.css";
-import { Link } from "react-router-dom";
+import { Link, Navigate, useNavigate } from "react-router-dom";
 
 const NavbarComponent = ({ darkTheme, darkText }) => {
-  // console.log(darkTheme);
+  const navigate = useNavigate();
+  const token = localStorage.getItem("token");
+  const role = localStorage.getItem("role");
 
   return (
     <section
@@ -16,32 +18,77 @@ const NavbarComponent = ({ darkTheme, darkText }) => {
           Book
           <span className="text-primary">Library</span>
         </a>
-
         <nav className="nav-links-container">
-          <Link
-            to="/"
-            className={`${darkText ? "nav-links-dark" : "nav-links"}`}
-          >
-            Home
-          </Link>
-          <Link
-            to="/books"
-            className={`${darkText ? "nav-links-dark" : "nav-links"}`}
-          >
-            Books
-          </Link>
-          <Link
-            to="/signup"
-            className={`${darkText ? "nav-links-dark" : "nav-links"}`}
-          >
-            Sign up
-          </Link>
-          <Link
-            to="/login"
-            className={`${darkText ? "nav-links-dark" : "nav-links"}`}
-          >
-            Login
-          </Link>
+          {!token && (
+            <>
+              <Link
+                to="/signup"
+                className={`${darkText ? "nav-links-dark" : "nav-links"}`}
+              >
+                Sign up
+              </Link>
+              <Link
+                to="/login"
+                className={`${darkText ? "nav-links-dark" : "nav-links"}`}
+              >
+                Login
+              </Link>
+            </>
+          )}
+
+          {token && role === "CUSTOMER" && (
+            <>
+              <Link
+                to="/"
+                className={`${darkText ? "nav-links-dark" : "nav-links"}`}
+              >
+                Home
+              </Link>
+              <Link
+                to="/books"
+                className={`${darkText ? "nav-links-dark" : "nav-links"}`}
+              >
+                Books
+              </Link>
+              <Link
+                to="/my-shelf"
+                className={`${darkText ? "nav-links-dark" : "nav-links"}`}
+              >
+                My Shelf
+              </Link>
+            </>
+          )}
+
+          {token && role === "ADMIN" && (
+            <>
+              <Link
+                to="/"
+                className={`${darkText ? "nav-links-dark" : "nav-links"}`}
+              >
+                Home
+              </Link>
+              <Link
+                to="/books"
+                className={`${darkText ? "nav-links-dark" : "nav-links"}`}
+              >
+                Books
+              </Link>
+            </>
+          )}
+
+          {token && (
+            <Link
+              to="/login"
+              onClick={() => {
+                localStorage.removeItem("token");
+                localStorage.removeItem("role");
+                navigate("/login");
+              }}
+              className={`${darkText ? "nav-links-dark" : "nav-links"}`}
+            >
+              Logout
+            </Link>
+          )}
         </nav>
       </div>
     </section>

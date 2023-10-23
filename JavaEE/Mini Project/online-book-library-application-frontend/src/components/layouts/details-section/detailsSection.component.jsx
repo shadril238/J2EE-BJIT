@@ -1,4 +1,4 @@
-import React, { useEffect, useState } from "react";
+import React, { useEffect, useState, useContext } from "react";
 import "./detailsSection.component.css";
 import BookDetailImg from "../../../assets/showcase-bg.jpg";
 import { useParams } from "react-router-dom";
@@ -8,6 +8,7 @@ const DetailsSectionComponent = () => {
   const { id } = useParams();
   const [bookDetails, setBookDetails] = useState({});
   const [isLoading, setIsLoading] = useState(false);
+  const [shelfItems, setShelfItems] = useState({});
   // console.log(id);
   useEffect(() => {
     axiosInstanceBookService
@@ -24,6 +25,16 @@ const DetailsSectionComponent = () => {
         setIsLoading(false);
       });
   }, []);
+
+  const handleAddToMyShelf = () => {
+    console.log("Adding book to My Shelf");
+    setShelfItems(bookDetails);
+    alert(`The Book ${bookDetails?.title} is added to the My Shelf`);
+  };
+
+  // useEffect(() => {
+  //   console.log(shelfItems);
+  // }, [shelfItems]);
 
   return (
     <section className="detail-section-container">
@@ -47,7 +58,7 @@ const DetailsSectionComponent = () => {
               <b>Status</b> : {bookDetails?.status}
             </h3>
 
-            <a href="#" className="button-primary">
+            <a onClick={handleAddToMyShelf} className="button-primary">
               Add to My Shelf
             </a>
           </div>
