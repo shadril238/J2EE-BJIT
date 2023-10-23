@@ -125,12 +125,12 @@ public class BookServiceImplementation implements BookService {
             throw new BookNotFoundException("Book is not currently borrowed");
         }
 
-        Optional<BorrowBook> borrowRecord = borrowBookRepository.findByBookAndUser(bookFromId.get(), userFromId.get());
+        List<BorrowBook> borrowRecord = borrowBookRepository.findNotReturnedBooksForUser(userFromId.get());
         if (borrowRecord.isEmpty()) {
             throw new BookNotFoundException("No matching borrow record found");
         }
 
-        BorrowBook borrowBook = borrowRecord.get();
+        BorrowBook borrowBook = borrowRecord.stream().filter(b -> b.getBook().getId().equals(bookId)).findFirst().orElseThrow(() -> new BookNotFoundException("No matching borrow record found"));
         bookFromId.get().setStatus("AVAILABLE");
         bookRepository.save(bookFromId.get());
 

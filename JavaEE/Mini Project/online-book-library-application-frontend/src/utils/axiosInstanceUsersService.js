@@ -1,4 +1,5 @@
 import axios from "axios";
+
 export const axiosInstanceUsersService = axios.create({
   baseURL: "http://localhost:8095/users",
   timeout: 3000,

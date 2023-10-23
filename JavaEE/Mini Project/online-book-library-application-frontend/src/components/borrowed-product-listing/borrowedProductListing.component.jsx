@@ -45,7 +45,10 @@ const BorrowedProductListingComponent = () => {
           {bookList.map((book) => {
             return (
               <div className="grid-item" key={book?.id}>
-                <ProductListingCardComponent bookData={book} />
+                <ProductListingCardComponent
+                  bookData={book}
+                  buttonText={"Return This Book"}
+                />
               </div>
             );
           })}
