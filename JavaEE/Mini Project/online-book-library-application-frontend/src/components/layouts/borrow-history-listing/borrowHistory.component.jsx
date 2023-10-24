@@ -41,7 +41,7 @@ const BorrowHistoryComponent = () => {
       <div className="container">
         <div className="grid-container">
           {borrowBookList.map((borrowList) => {
-            console.log("data", borrowList);
+            // console.log("data", borrowList);
 
             return (
               <div className="grid-item" key={borrowList?.id}>
