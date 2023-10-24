@@ -1,4 +1,4 @@
-import BorrowedProductListingComponent from "../../components/borrowed-product-listing/borrowedProductListing.component";
+import BorrowedProductListingComponent from "../../components/layouts/borrowed-product-listing/borrowedProductListing.component";
 import FooterComponent from "../../components/layouts/footer/footer.component";
 import NavbarComponent from "../../components/layouts/navbar/navbar.component";
 

@@ -1,8 +1,8 @@
 import { useState, useEffect, useContext } from "react";
 import "./borrowedProductListing.component.css";
-import ProductListingCardComponent from "../layouts/cards/productlistingcard/productListingCard.component";
-import axiosInstanceUsersService from "../../utils/axiosInstanceUsersService";
-import axiosInstanceUserService from "../../utils/axiosInstanceUserService";
+import axiosInstanceUsersService from "../../../utils/axiosInstanceUsersService";
+import axiosInstanceUserService from "../../../utils/axiosInstanceUserService";
+import ProductListingCardComponent from "../cards/productlistingcard/productListingCard.component";
 
 const BorrowedProductListingComponent = () => {
   const [bookList, setBookList] = useState([]);
