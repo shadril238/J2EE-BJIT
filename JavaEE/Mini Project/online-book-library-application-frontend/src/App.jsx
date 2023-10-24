@@ -35,6 +35,11 @@ function App() {
           <Route path="/signup" element={<SignUpPage />} />
           <Route path="/login" element={<LoginPage />} />
 
+          <Route element={<Authenticate requiredRole="ADMIN" />}>
+            <Route path="/admin" element={<BooksPage />} />
+            <Route path="*" element={<NotFoundPage />} />
+          </Route>
+
           <Route element={<Authenticate requiredRole="CUSTOMER" />}>
             <Route path="/" element={<HomePage />} />
             <Route path="/books" element={<BooksPage />} />
@@ -44,13 +49,6 @@ function App() {
             <Route path="/borrowed-books" element={<BorrowedBookPage />} />
             <Route path="/borrow-history" element={<BorrowHistoryPage />} />
             <Route path="*" element={<NotFoundPage />} />
-          </Route>
-
-          <Route element={<Authenticate requiredRole="ADMIN" />}>
-            <Route path="*" element={<NotFoundPage />} />
-            {/* <Route path="/" element={<HomePage />} />
-          <Route path="/books" element={<BooksPage />} /> */}
-            {/* <Route path="/book-details/:id" element={<BookdetailsPage />} /> */}
           </Route>
         </Routes>
       </ShelfContext.Provider>
