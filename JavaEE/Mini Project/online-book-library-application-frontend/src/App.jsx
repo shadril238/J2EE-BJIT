@@ -13,6 +13,7 @@ import axiosInstanceUserService from "./utils/axiosInstanceUserService";
 import BorrowedBookPage from "./pages/borrowed-book-page/borrowedBook.page";
 import SearchPage from "./pages/search-page/search.page";
 import BorrowHistoryPage from "./pages/borrow-history-page/borrowHistory.page";
+import AdminBooksPage from "./pages/admin-books-page/adminBooks.page";
 
 export const UserContext = createContext({});
 export const ShelfContext = createContext({});
@@ -36,7 +37,7 @@ function App() {
           <Route path="/login" element={<LoginPage />} />
 
           <Route element={<Authenticate requiredRole="ADMIN" />}>
-            <Route path="/admin" element={<BooksPage />} />
+            <Route path="/admin" element={<AdminBooksPage />} />
             <Route path="*" element={<NotFoundPage />} />
           </Route>
 
