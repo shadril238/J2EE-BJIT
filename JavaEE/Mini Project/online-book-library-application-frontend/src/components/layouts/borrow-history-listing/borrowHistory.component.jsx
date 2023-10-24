@@ -39,6 +39,7 @@ const BorrowHistoryComponent = () => {
   return (
     <section className="product-listing-all-container">
       <div className="container">
+        <h2>My Borrow History</h2>
         <div className="grid-container">
           {borrowBookList.map((borrowList) => {
             // console.log("data", borrowList);
