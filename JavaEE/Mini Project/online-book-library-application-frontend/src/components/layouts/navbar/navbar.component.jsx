@@ -62,6 +62,12 @@ const NavbarComponent = ({ darkTheme, darkText }) => {
               >
                 Borrowed Books
               </Link>
+              <Link
+                to="/borrow-history"
+                className={`${darkText ? "nav-links-dark" : "nav-links"}`}
+              >
+                Borrow History
+              </Link>
             </>
           )}
 

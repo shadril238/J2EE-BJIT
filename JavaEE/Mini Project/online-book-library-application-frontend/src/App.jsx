@@ -12,6 +12,7 @@ import NotFoundPage from "./pages/not-found-page/notFound.page";
 import axiosInstanceUserService from "./utils/axiosInstanceUserService";
 import BorrowedProductListingComponent from "./components/borrowed-product-listing/borrowedProductListing.component";
 import BorrowedBookPage from "./pages/borrowed-book-page/borrowedBook.page";
+import BorrowHistoryPage from "./pages/borrow-history-page/borrowHistory.page";
 
 export const UserContext = createContext({});
 export const ShelfContext = createContext({});
@@ -40,7 +41,7 @@ function App() {
             <Route path="/book-details/:id" element={<BookdetailsPage />} />
             <Route path="/my-shelf" element={<MyShelfPage />} />
             <Route path="/borrowed-books" element={<BorrowedBookPage />} />
-            {/* <Route path="/return-book/:id" element={<ReturnBookComponent />} /> */}
+            <Route path="/borrow-history" element={<BorrowHistoryPage />} />
             <Route path="*" element={<NotFoundPage />} />
           </Route>
 

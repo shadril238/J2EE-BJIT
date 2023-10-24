@@ -1,0 +1,56 @@
+.product-listing-card {
+  border: 1px solid #aaa;
+  width: 100%;
+  padding: 2rem 1rem;
+  border-radius: 10px;
+}
+
+.product-listing-img-container {
+  width: 100%;
+  height: 15rem;
+  text-align: center;
+}
+
+.product-listing-image {
+  width: 100%;
+  height: 100%;
+  object-fit: contain;
+}
+
+.product-listing-details-container {
+  padding-top: 2rem;
+  min-height: 10rem;
+}
+
+.author-name {
+  font-size: 0.8rem;
+  padding: 0.5rem 0;
+}
+
+.status {
+  font-size: 1.5rem;
+  font-weight: bold;
+  color: var(--primary-color-bright);
+}
+
+.product-listing-button {
+  display: inline-block;
+  background-color: var(--primary-color-bright);
+  width: 100%;
+  padding: 1rem 0;
+  text-align: center;
+  color: #fff;
+  font-family: Chivo Mono;
+  text-decoration: none;
+  margin-top: 2rem;
+  transition: 0.2s ease-in;
+}
+
+.product-listing-button:hover {
+  background-color: #000;
+}
+
+.date {
+  font-size: 1rem;
+  padding: 0.2rem 0;
+}

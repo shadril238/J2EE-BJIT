@@ -1,9 +1,6 @@
 import { useState, useEffect, useContext } from "react";
 import "./borrowedProductListing.component.css";
 import ProductListingCardComponent from "../layouts/cards/productlistingcard/productListingCard.component";
-import axios from "axios";
-import axiosInstanceBookService from "../../utils/axiosInstanceBookService";
-import { UserContext } from "../../App";
 import axiosInstanceUsersService from "../../utils/axiosInstanceUsersService";
 import axiosInstanceUserService from "../../utils/axiosInstanceUserService";
 
