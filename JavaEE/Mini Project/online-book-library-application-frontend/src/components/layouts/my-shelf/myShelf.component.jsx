@@ -27,6 +27,23 @@ const MyShelfComponent = () => {
       });
   };
 
+  const handleReserveBook = (e) => {
+    e.preventDefault();
+    const bookId = myShelfData?.id;
+    console.log(`Reserve Book id : ${bookId}`);
+
+    axiosInstanceBookService
+      .get(`/${bookId}/reserve`)
+      .then((resp) => {
+        const data = resp.data;
+        console.log("Reserve book response : ", data);
+        setMyShelfData({});
+      })
+      .catch((error) => {
+        console.log("Error ", error.response.data);
+      });
+  };
+
   return (
     <section className="myshelf-item-container">
       <div className="container">
@@ -34,9 +51,16 @@ const MyShelfComponent = () => {
           <React.Fragment>
             <h2>My Shelf</h2>
             <MyshelfItemCardComponent />
-            <button className="button-primary" onClick={handleBorrowBook}>
-              Borrow This Book
-            </button>
+            {myShelfData?.status === "AVAILABLE" && (
+              <button className="button-primary" onClick={handleBorrowBook}>
+                Borrow This Book
+              </button>
+            )}
+            {myShelfData?.status === "BORROWED" && (
+              <button className="button-primary" onClick={handleReserveBook}>
+                Reserve This Book
+              </button>
+            )}
           </React.Fragment>
         ) : (
           <h1>Currently your shelf is Empty!</h1>

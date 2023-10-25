@@ -99,13 +99,13 @@ public class BookController {
         return new ResponseEntity<>("Success", HttpStatus.OK);
     }
 
-    @PostMapping("/{bookId}/reserve")
+    @GetMapping("/{bookId}/reserve")
     public ResponseEntity<String> reserveBook(@PathVariable Long bookId){
         reserveBookService.reserveBook(bookId);
         return new ResponseEntity<>("Success", HttpStatus.OK);
     }
 
-    @PostMapping("/{bookId}/cancel-reservation")
+    @GetMapping("/{bookId}/cancel-reservation")
     public ResponseEntity<String> cancelReservation(@PathVariable Long bookId){
         reserveBookService.cancelReserveBook(bookId);
         return new ResponseEntity<>("Success", HttpStatus.OK);

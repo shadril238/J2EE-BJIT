@@ -1,7 +1,7 @@
 import React, { useEffect, useState, useContext } from "react";
 import "./detailsSection.component.css";
 import BookDetailImg from "../../../assets/showcase-bg.jpg";
-import { useNavigate, useParams } from "react-router-dom";
+import { Link, useNavigate, useParams } from "react-router-dom";
 import { axiosInstanceBookService } from "../../../utils/axiosInstanceBookService";
 import { ShelfContext, UserContext } from "../../../App";
 
@@ -80,9 +80,9 @@ const DetailsSectionComponent = () => {
               <b>Status</b> : {bookDetails?.status}
             </h3>
 
-            <a onClick={handleAddToMyShelf} className="button-primary">
+            <Link onClick={handleAddToMyShelf} className="button-shelf">
               Add to My Shelf
-            </a>
+            </Link>
           </div>
         </div>
       </div>
