@@ -105,7 +105,10 @@ const DetailsSectionComponent = () => {
               </div>
               <div className="reviews-container-review">
                 <h4>Book Rating : {review?.rating}</h4>
-                <p>Review Description : {review?.review}</p>
+                <p>
+                  <b>Comment : </b>
+                  {review?.review}
+                </p>
               </div>
             </div>
           );

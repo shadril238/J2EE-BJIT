@@ -18,9 +18,18 @@ const BorrowHistoryListingCardComponent = ({ borrowList, buttonText }) => {
       <div className="product-listing-details-container">
         <h3>{borrowList?.book?.title}</h3>
         <p className="author-name">{borrowList?.book?.author}</p>
-        <p className="date">Borrow Date : {borrowList?.borrowDate}</p>
-        <p className="date">Due Date : {borrowList?.dueDate}</p>
-        <p className="date">Return Date : {borrowList?.returnDate}</p>
+        <p className="date">
+          <b>Borrow Date : </b>
+          {borrowList?.borrowDate}
+        </p>
+        <p className="date">
+          <b>Due Date : </b>
+          {borrowList?.dueDate}
+        </p>
+        <p className="date">
+          <b>Return Date : </b>
+          {borrowList?.returnDate}
+        </p>
       </div>
 
       {buttonText === "Make a Review" && (
