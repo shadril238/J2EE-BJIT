@@ -20,6 +20,7 @@ import AdminUpdateBookPage from "./pages/admin-update-book-page/adminUpdateBook.
 import CreateReviewPage from "./pages/create-review-page/createReview.page";
 import UserProfilePage from "./pages/user-profile-page/userProfile.page";
 import AdminProfilePage from "./pages/admin-profile-page/adminProfile.page";
+import AdminUsersPage from "./pages/admin-users-page/adminUsers.page";
 
 export const UserContext = createContext({});
 export const ShelfContext = createContext({});
@@ -45,6 +46,7 @@ function App() {
           <Route element={<Authenticate requiredRole="ADMIN" />}>
             <Route path="/admin" element={<AdminBooksPage />} />
             <Route path="/admin/books" element={<AdminBooksPage />} />
+            <Route path="/admin/users" element={<AdminUsersPage />} />
             <Route path="/admin/book/add" element={<AdminAddBookPage />} />
             <Route
               path="/admin/book-details/:id"

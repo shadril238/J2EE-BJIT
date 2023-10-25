@@ -35,6 +35,11 @@ public class UserController {
     @Autowired
     private BookService bookService;
 
+    @GetMapping("/users")
+    public ResponseEntity<List<User>> getAllUsers() {
+        List<User> userList = userService.getAllUsers();
+        return new ResponseEntity<>(userList, HttpStatus.OK);
+    }
     @GetMapping("/users/{userId}")
     public ResponseEntity<?> userDetailsByUserId(@PathVariable Long userId) {
         try {

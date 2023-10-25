@@ -24,6 +24,7 @@ import org.springframework.stereotype.Service;
 
 
 import java.util.ArrayList;
+import java.util.List;
 import java.util.Optional;
 
 @Service
@@ -100,5 +101,12 @@ public class UserServiceImplementation implements UserService, UserDetailsServic
         ModelMapper modelMapper = new ModelMapper();
         modelMapper.map(user, UserDTO.class);
         return modelMapper.map(user, UserDTO.class);
+    }
+
+    @Override
+    public List<User> getAllUsers() {
+        List<User> userList = userRepository.findAll();
+        if(userList.isEmpty()) throw new UserNotFoundException("No users found!");
+        return userList;
     }
 }

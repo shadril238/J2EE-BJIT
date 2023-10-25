@@ -1,17 +1,20 @@
-import React, { useEffect, useState } from "react";
-import { useContext } from "react";
+import { useEffect, useState } from "react";
 import "./adminProfile.component.css";
 import UserImg from "../../../assets/user_img.png";
-import { UserContext } from "../../../App";
 import { useNavigate } from "react-router-dom";
+import axiosInstanceUserService from "../../../utils/axiosInstanceUserService";
 
 const AdminProfileComponent = () => {
-  const admin = useContext(UserContext);
   const navigate = useNavigate();
   const [userData, setUserData] = useState({});
+
   useEffect(() => {
-    setUserData(admin);
-  }, [admin]);
+    axiosInstanceUserService.get("").then((resp) => {
+      const data = resp.data;
+      console.log("Current user data ", data);
+      setUserData(data);
+    });
+  }, []);
 
   return (
     <section className="profile-main-container">

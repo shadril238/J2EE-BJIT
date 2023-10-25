@@ -1,16 +1,16 @@
-import "./adminBooks.page.css";
+import React from "react";
 import NavbarComponent from "../../components/layouts/navbar/navbar.component";
 import FooterComponent from "../../components/layouts/footer/footer.component";
-import AdminBooksComponent from "../../components/layouts/admin-books/adminBooks.component";
+import AdminUsersComponent from "../../components/layouts/admin-users/adminUsers.component";
 
-const AdminBooksPage = () => {
+const AdminUsersPage = () => {
   return (
     <section>
       <NavbarComponent darkTheme={true} />
-      <AdminBooksComponent />
+      <AdminUsersComponent />
       <FooterComponent />
     </section>
   );
 };
 
-export default AdminBooksPage;
+export default AdminUsersPage;

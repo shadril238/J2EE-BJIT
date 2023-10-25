@@ -1,0 +1,19 @@
+.user-listing-all-container {
+  margin-top: 20rem;
+}
+.container .button-primary {
+  margin-bottom: 3rem;
+  padding: 1.6rem 5rem;
+  margin-top: -50rem;
+}
+
+.user-listing-all-heading {
+  text-align: center;
+  padding-bottom: 5rem;
+  font-size: 3rem;
+}
+
+.user-listing-all-heading .user {
+  font-size: 3.3rem;
+  color: var(--primary-color-bright);
+}
