@@ -32,7 +32,7 @@ const ProductListingAllComponent = () => {
               <div className="grid-item" key={book?.id}>
                 <ProductListingCardComponent
                   bookData={book}
-                  buttonText={"Add To My Shelf"}
+                  buttonText={"View This Book"}
                 />
               </div>
             );

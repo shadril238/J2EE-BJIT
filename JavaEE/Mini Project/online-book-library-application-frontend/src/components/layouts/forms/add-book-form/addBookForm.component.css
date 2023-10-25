@@ -1,0 +1,28 @@
+/* .add-book-main-container {
+  border: 0.2rem;
+  border-style: solid;
+  border-radius: 3rem;
+} */
+
+.add-book-container {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: justify;
+  margin-top: 2rem;
+  margin-bottom: 2rem;
+  margin-left: 2rem;
+  margin-right: 2rem;
+  padding-left: 16%;
+  padding-right: 16%;
+}
+
+.header-add-book {
+  margin-top: 2rem;
+  margin-bottom: 2rem;
+  margin-left: 2rem;
+  margin-right: 2rem;
+  font-size: 3rem;
+  font-weight: bold;
+  text-align: center;
+}

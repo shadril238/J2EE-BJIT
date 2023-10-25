@@ -24,7 +24,7 @@ const AdminItemListingCardComponent = ({ bookData }) => {
           // to={`/book-details/${borrowList.book?.id}`}
           className="product-listing-button-details"
         >
-          Delatls
+          Details
         </Link>
         <Link
           // to={`/book-details/${borrowList.book?.id}`}

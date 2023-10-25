@@ -63,7 +63,7 @@ const DetailsSectionComponent = () => {
               <b>Language</b> : {bookDetails?.language}
             </p>
             <p>
-              <b>Book Length</b> : {bookDetails?.pageLength}
+              <b>Book Page Length</b> : {bookDetails?.pageLength}
             </p>
             <h3>
               <b>Status</b> : {bookDetails?.status}

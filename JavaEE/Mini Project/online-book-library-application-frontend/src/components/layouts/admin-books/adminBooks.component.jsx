@@ -31,7 +31,7 @@ const AdminBooksComponent = () => {
         Library...
       </h1>
       <div className="container">
-        <Link to="/book/add" className="button-primary">
+        <Link to="/admin/book/add" className="button-primary">
           Add Book
         </Link>
         <div className="grid-container">

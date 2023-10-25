@@ -14,6 +14,7 @@ import BorrowedBookPage from "./pages/borrowed-book-page/borrowedBook.page";
 import SearchPage from "./pages/search-page/search.page";
 import BorrowHistoryPage from "./pages/borrow-history-page/borrowHistory.page";
 import AdminBooksPage from "./pages/admin-books-page/adminBooks.page";
+import AdminAddBookPage from "./pages/admin-add-book-page/adminAddBook.page";
 
 export const UserContext = createContext({});
 export const ShelfContext = createContext({});
@@ -38,6 +39,8 @@ function App() {
 
           <Route element={<Authenticate requiredRole="ADMIN" />}>
             <Route path="/admin" element={<AdminBooksPage />} />
+            <Route path="/admin/books" element={<AdminBooksPage />} />
+            <Route path="/admin/book/add" element={<AdminAddBookPage />} />
             <Route path="*" element={<NotFoundPage />} />
           </Route>
 

@@ -74,10 +74,16 @@ const NavbarComponent = ({ darkTheme, darkText }) => {
           {token && role === "ADMIN" && (
             <>
               <Link
-                to="/admin"
+                to="/admin/books"
                 className={`${darkText ? "nav-links-dark" : "nav-links"}`}
               >
                 Books
+              </Link>
+              <Link
+                to="/admin/book/add"
+                className={`${darkText ? "nav-links-dark" : "nav-links"}`}
+              >
+                Add Book
               </Link>
             </>
           )}

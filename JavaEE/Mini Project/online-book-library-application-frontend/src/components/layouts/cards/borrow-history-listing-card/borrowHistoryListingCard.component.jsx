@@ -20,7 +20,11 @@ const BorrowHistoryListingCardComponent = ({ borrowList, buttonText }) => {
         <p className="author-name">{borrowList?.book?.author}</p>
         <p className="date">Borrow Date : {borrowList?.borrowDate}</p>
         <p className="date">Due Date : {borrowList?.dueDate}</p>
-        <p className="date">Return Date : {borrowList?.returnDate}</p>
+        <p className="date">
+          {borrowList?.returnDate == ""
+            ? ""
+            : ("Return Date : ", borrowList?.returnDate)}
+        </p>
       </div>
 
       {buttonText === "Make a Review" && (

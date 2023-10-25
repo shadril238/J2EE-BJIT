@@ -40,7 +40,7 @@ const ProductListingCardComponent = ({ bookData, buttonText }) => {
         <p className="status">{bookData?.status}</p>
       </div>
 
-      {buttonText === "Add To My Shelf" && (
+      {buttonText === "View This Book" && (
         <div className="card-button-container">
           <Link
             to={`/book-details/${bookData?.id}`}
