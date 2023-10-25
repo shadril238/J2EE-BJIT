@@ -1,8 +1,30 @@
-import React from "react";
+import React, { useEffect } from "react";
 import { Link } from "react-router-dom";
 import "./adminItemListingCard.component.css";
+import axiosInstanceBookService from "../../../../utils/axiosInstanceBookService";
+import { useNavigate } from "react-router-dom";
 
 const AdminItemListingCardComponent = ({ bookData }) => {
+  const navigate = useNavigate();
+
+  const handleRemoveBook = () => {
+    // console.log(bookData?.id);
+    const deleteData = {
+      id: bookData?.id,
+    };
+
+    axiosInstanceBookService
+      .post("/delete", deleteData)
+      .then((resp) => {
+        // console.log(resp.data);
+        // navigate(window.location.pathname, { replace: true });
+        navigate(0);
+      })
+      .catch((error) => {
+        console.log(error);
+      });
+  };
+
   return (
     <div className="product-listing-card">
       <div className="product-listing-img-container">
@@ -27,7 +49,7 @@ const AdminItemListingCardComponent = ({ bookData }) => {
           Details
         </Link>
         <Link
-          // to={`/book-details/${borrowList.book?.id}`}
+          onClick={handleRemoveBook}
           className="product-listing-button-remove"
         >
           Remove
