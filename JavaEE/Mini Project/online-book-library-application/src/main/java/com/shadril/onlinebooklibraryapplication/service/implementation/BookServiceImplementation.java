@@ -65,8 +65,8 @@ public class BookServiceImplementation implements BookService {
             throws BookNotFoundException{
         Optional<Book> existingBook = bookRepository.findById(book.getId());
         if(existingBook.isPresent() && existingBook.get().getIsActive().equals(true) && existingBook.get().getStatus().equals("AVAILABLE")) {
-            book.setIsActive(false);
-            bookRepository.save(book);
+            existingBook.get().setIsActive(false);
+            bookRepository.save(existingBook.get());
         }
         else {
             throw new BookNotFoundException("The book you requested not found.");
