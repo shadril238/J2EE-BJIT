@@ -31,9 +31,12 @@ const MyShelfComponent = () => {
     e.preventDefault();
     const bookId = myShelfData?.id;
     console.log(`Reserve Book id : ${bookId}`);
+    const reserveData = {
+      id: bookId,
+    };
 
     axiosInstanceBookService
-      .get(`/${bookId}/reserve`)
+      .post(`/${bookId}/reserve`, reserveData)
       .then((resp) => {
         const data = resp.data;
         console.log("Reserve book response : ", data);
