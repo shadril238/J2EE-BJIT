@@ -36,7 +36,7 @@ const ProductListingComponent = () => {
               <ProductListingCardComponent
                 key={book?.id}
                 bookData={book}
-                buttonText={"Add To My Shelf"}
+                buttonText={"View This Book"}
               />
             );
           })}

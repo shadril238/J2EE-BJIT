@@ -1,6 +1,6 @@
 {
-    "title" : "Harry Potter and the Philosopher's Stone",
-    "description" : "Harry Potter has never even heard of Hogwarts when the letters start dropping on the doormat at number four, Privet Drive. Addressed in green ink on yellowish parchment !",
+    "title" : "Harry Potter ",
+    "description" : "Harry Potter has never even heard of Hogwarts when the letters start dropping on the doormat at number four, Privet Drive. ",
     "imgUrl" : "https://m.media-amazon.com/images/I/5165He67NEL._SY346_.jpg",
     "pageLength" : "345 pages",
     "language" : "English",
