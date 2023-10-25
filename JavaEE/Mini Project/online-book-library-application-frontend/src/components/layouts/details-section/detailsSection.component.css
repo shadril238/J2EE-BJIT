@@ -42,7 +42,7 @@
 }
 
 .reviews-container {
-  margin-top: 2rem;
+  margin-top: 1rem;
   margin-bottom: 2rem;
   margin-left: 5rem;
   margin-right: 5rem;
@@ -52,7 +52,7 @@
 }
 
 .reviews-container-header {
-  margin-left: 22rem;
+  margin-left: 10rem;
   font-size: 2.5rem;
 }
 
@@ -60,13 +60,16 @@
   margin-top: 3rem;
   display: flex;
   justify-content: space-between;
-  margin-left: 22rem;
+  margin-left: 5rem;
+  margin-right: 2rem;
   font-size: 1.5rem;
+  color: blue;
 }
 
 .reviews-container-review {
-  margin-top: 1rem;
-  margin-left: 22rem;
+  /* margin-top: 1rem; */
+  margin-left: 5rem;
+  margin-right: 5rem;
   font-size: 1.5rem;
-  margin-bottom: 1rem;
+  margin-bottom: 2rem;
 }

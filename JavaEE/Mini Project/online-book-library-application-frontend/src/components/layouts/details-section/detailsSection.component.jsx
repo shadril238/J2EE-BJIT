@@ -86,17 +86,17 @@ const DetailsSectionComponent = () => {
           </div>
         </div>
       </div>
-
+      <h2 className="reviews-container-header">
+        <u>Reviews</u>
+      </h2>
       <div className="reviews-container">
-        <h2 className="reviews-container-header">
-          <u>Reviews</u>
-        </h2>
         {bookReviews?.map((review) => {
           console.log("Review ", review?.user?.firstName);
           return (
             <div key={review?.id}>
               <div className="reviews-container-user">
                 <h3>
+                  User :{" "}
                   {review?.user?.firstName + " " + review?.user?.lastName}
                 </h3>
                 <p>
