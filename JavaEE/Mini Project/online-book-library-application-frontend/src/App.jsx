@@ -15,6 +15,8 @@ import SearchPage from "./pages/search-page/search.page";
 import BorrowHistoryPage from "./pages/borrow-history-page/borrowHistory.page";
 import AdminBooksPage from "./pages/admin-books-page/adminBooks.page";
 import AdminAddBookPage from "./pages/admin-add-book-page/adminAddBook.page";
+import AdminBookDetailsPage from "./pages/admin-book-details-page/adminBookDetails.page";
+import AdminUpdateBookPage from "./pages/admin-update-book-page/adminUpdateBook.page";
 
 export const UserContext = createContext({});
 export const ShelfContext = createContext({});
@@ -41,6 +43,14 @@ function App() {
             <Route path="/admin" element={<AdminBooksPage />} />
             <Route path="/admin/books" element={<AdminBooksPage />} />
             <Route path="/admin/book/add" element={<AdminAddBookPage />} />
+            <Route
+              path="/admin/book-details/:id"
+              element={<AdminBookDetailsPage />}
+            />
+            <Route
+              path="/admin/book/update/:id"
+              element={<AdminUpdateBookPage />}
+            />
             <Route path="*" element={<NotFoundPage />} />
           </Route>
 
