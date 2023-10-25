@@ -26,7 +26,7 @@ public class ReviewBook {
     @JoinColumn(name = "user_id")
     private User user;
 
-    private Long rating;
+    private Double rating;
 
     private String review;
 

@@ -96,7 +96,7 @@ const DetailsSectionComponent = () => {
             <div key={review?.id}>
               <div className="reviews-container-user">
                 <h3>
-                  User :{" "}
+                  {/* User :{" "} */}
                   {review?.user?.firstName + " " + review?.user?.lastName}
                 </h3>
                 <p>
