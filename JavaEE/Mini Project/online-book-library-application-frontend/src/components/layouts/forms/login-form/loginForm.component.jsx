@@ -24,7 +24,7 @@ const LoginFormComponent = () => {
       localStorage.setItem("token", data?.Authorization);
       // Set the role to the local storage
       localStorage.setItem("role", data?.role);
-      navigate("/");
+      data?.role == "CUSTOMER" ? navigate("/") : navigate("/admin");
     });
   };
 

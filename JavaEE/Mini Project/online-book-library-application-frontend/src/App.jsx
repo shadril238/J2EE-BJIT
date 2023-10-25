@@ -17,6 +17,7 @@ import AdminBooksPage from "./pages/admin-books-page/adminBooks.page";
 import AdminAddBookPage from "./pages/admin-add-book-page/adminAddBook.page";
 import AdminBookDetailsPage from "./pages/admin-book-details-page/adminBookDetails.page";
 import AdminUpdateBookPage from "./pages/admin-update-book-page/adminUpdateBook.page";
+import CreateReviewPage from "./pages/create-review-page/createReview.page";
 
 export const UserContext = createContext({});
 export const ShelfContext = createContext({});
@@ -59,6 +60,7 @@ function App() {
             <Route path="/books" element={<BooksPage />} />
             <Route path="/search" element={<SearchPage />} />
             <Route path="/book-details/:id" element={<BookdetailsPage />} />
+            <Route path="/review/create/:id" element={<CreateReviewPage />} />
             <Route path="/my-shelf" element={<MyShelfPage />} />
             <Route path="/borrowed-books" element={<BorrowedBookPage />} />
             <Route path="/borrow-history" element={<BorrowHistoryPage />} />

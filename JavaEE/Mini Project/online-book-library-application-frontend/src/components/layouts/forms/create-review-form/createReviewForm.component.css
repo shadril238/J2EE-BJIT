@@ -1,0 +1,27 @@
+.create-review-main-container {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: justify;
+  margin-top: 2rem;
+  margin-bottom: 2rem;
+  margin-left: 2rem;
+  margin-right: 2rem;
+  padding-left: 16%;
+  padding-right: 16%;
+}
+
+.header-create-review {
+  margin-top: 2rem;
+  margin-bottom: 2rem;
+  margin-left: 2rem;
+  margin-right: 2rem;
+  font-size: 3.5rem;
+  font-weight: bold;
+  text-align: center;
+}
+
+.create-review-container {
+  margin-top: 3rem;
+  margin-bottom: 11rem;
+}
