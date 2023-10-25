@@ -8,6 +8,7 @@ import { ShelfContext, UserContext } from "../../../App";
 const DetailsSectionComponent = () => {
   const { id } = useParams();
   const [bookDetails, setBookDetails] = useState();
+  const [bookReviews, setBookReviews] = useState();
   const [isLoading, setIsLoading] = useState(false);
 
   const user = useContext(UserContext);
@@ -31,6 +32,16 @@ const DetailsSectionComponent = () => {
         setIsLoading(false);
       });
   }, []);
+
+  useEffect(() => {
+    axiosInstanceBookService.get(`/${id}/reviews`).then((resp) => {
+      const data = resp.data;
+      console.log("book reviews : ", data);
+      setBookReviews(data);
+    });
+  }, []);
+
+  // console.log(`Book Reviews : ${bookReviews}`);
 
   const handleAddToMyShelf = () => {
     if (user) {
@@ -74,6 +85,31 @@ const DetailsSectionComponent = () => {
             </a>
           </div>
         </div>
+      </div>
+
+      <div className="reviews-container">
+        <h2 className="reviews-container-header">
+          <u>Reviews</u>
+        </h2>
+        {bookReviews?.map((review) => {
+          console.log("Review ", review?.user?.firstName);
+          return (
+            <div key={review?.id}>
+              <div className="reviews-container-user">
+                <h3>
+                  {review?.user?.firstName + " " + review?.user?.lastName}
+                </h3>
+                <p>
+                  <i>Created at : {review?.date}</i>
+                </p>
+              </div>
+              <div className="reviews-container-review">
+                <h4>Book Rating : {review?.rating}</h4>
+                <p>Review Description : {review?.review}</p>
+              </div>
+            </div>
+          );
+        })}
       </div>
     </section>
   );
