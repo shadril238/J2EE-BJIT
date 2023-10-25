@@ -68,6 +68,13 @@ const NavbarComponent = ({ darkTheme, darkText }) => {
               >
                 Borrow History
               </Link>
+
+              <Link
+                to="/profile"
+                className={`${darkText ? "nav-links-dark" : "nav-links"}`}
+              >
+                Profile
+              </Link>
             </>
           )}
 
@@ -84,6 +91,12 @@ const NavbarComponent = ({ darkTheme, darkText }) => {
                 className={`${darkText ? "nav-links-dark" : "nav-links"}`}
               >
                 Add Book
+              </Link>
+              <Link
+                to="/admin/profile"
+                className={`${darkText ? "nav-links-dark" : "nav-links"}`}
+              >
+                Profile
               </Link>
             </>
           )}

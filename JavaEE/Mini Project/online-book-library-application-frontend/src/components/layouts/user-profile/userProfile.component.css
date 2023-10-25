@@ -1,0 +1,83 @@
+/* CSS */
+@import url("https://fonts.googleapis.com/css?family=Josefin+Sans&display=swap");
+
+.profile-main-container {
+  margin-left: 20rem;
+  margin-top: 5rem;
+  padding: 0;
+  box-sizing: border-box;
+  list-style: none;
+  font-family: "Josefin Sans", sans-serif;
+  /* display: flex; */
+  align-items: center;
+  /* justify-content: center; */
+  height: 72.7vh;
+}
+
+.user-profile-container {
+  margin-top: 0rem;
+  width: 80rem;
+  display: flex;
+  box-shadow: 0 1px 20px 0 rgba(69, 90, 100, 0.08);
+}
+
+.user-profile-container .left-container {
+  width: 50%;
+  background: linear-gradient(to right, #ffbd94, #feb486);
+  padding: 60px 50px;
+  border-top-left-radius: 5px;
+  border-bottom-left-radius: 5px;
+  text-align: center;
+  color: #333;
+}
+
+.user-profile-container .left-container img {
+  border-radius: 50%;
+  margin-bottom: 30px;
+  width: 200px;
+  height: 200px;
+}
+
+.user-profile-container .left-container h4 {
+  font-size: 30px;
+}
+
+.user-profile-container .left-container p {
+  font-size: 22px;
+}
+
+.user-profile-container .right-container {
+  width: 50%;
+  background: #eee;
+  padding: 60px 50px;
+  border-top-right-radius: 5px;
+  border-bottom-right-radius: 5px;
+}
+
+.user-profile-container .right-container .user-profile-details h3 {
+  margin-bottom: 30px;
+  font-size: 30px;
+}
+
+.user-profile-container .right-container .user-profile-details-data .data h4 {
+  font-size: 24px;
+  margin-bottom: 20px;
+}
+
+.user-profile-container .right-container .user-profile-details-data .data p {
+  font-size: 22px;
+  margin-bottom: 20px;
+}
+
+.profile-main-container .button-primary {
+  background: #ff914d;
+  border: none;
+  outline: none;
+  color: #fff;
+  padding: 10px 20px;
+  border-radius: 5px;
+  font-size: 18px;
+  cursor: pointer;
+  margin-top: 20px;
+  text-align: center;
+}
