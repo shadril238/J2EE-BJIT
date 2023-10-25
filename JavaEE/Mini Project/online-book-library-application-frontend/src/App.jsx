@@ -21,6 +21,9 @@ import CreateReviewPage from "./pages/create-review-page/createReview.page";
 import UserProfilePage from "./pages/user-profile-page/userProfile.page";
 import AdminProfilePage from "./pages/admin-profile-page/adminProfile.page";
 import AdminUsersPage from "./pages/admin-users-page/adminUsers.page";
+import AdminUsersDetailsPage from "./pages/admin-users-page/adminUsersDetails.page";
+import UpdateProfileComponent from "./components/layouts/update-profile/updateProfile.component";
+import UpdateProfilePage from "./pages/update-profile-page/updateProfile.page";
 
 export const UserContext = createContext({});
 export const ShelfContext = createContext({});
@@ -56,7 +59,15 @@ function App() {
               path="/admin/book/update/:id"
               element={<AdminUpdateBookPage />}
             />
+            <Route
+              path="/admin/users/profile/:id"
+              element={<AdminUsersDetailsPage />}
+            />
             <Route path="/admin/profile" element={<AdminProfilePage />} />
+            <Route
+              path="/admin/user-profile/edit/:id"
+              element={<UpdateProfilePage />}
+            />
             <Route path="*" element={<NotFoundPage />} />
           </Route>
 
@@ -67,6 +78,10 @@ function App() {
             <Route path="/book-details/:id" element={<BookdetailsPage />} />
             <Route path="/review/create/:id" element={<CreateReviewPage />} />
             <Route path="/my-shelf" element={<MyShelfPage />} />
+            <Route
+              path="/user-profile/edit/:id"
+              element={<UpdateProfilePage />}
+            />
             <Route path="/borrowed-books" element={<BorrowedBookPage />} />
             <Route path="/borrow-history" element={<BorrowHistoryPage />} />
             <Route path="/profile" element={<UserProfilePage />} />

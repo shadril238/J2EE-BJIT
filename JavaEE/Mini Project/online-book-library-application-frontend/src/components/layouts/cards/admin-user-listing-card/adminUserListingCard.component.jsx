@@ -23,6 +23,11 @@ const AdminUserListingCardComponent = ({ userData }) => {
   //       console.log(error);
   //     });
   // };
+  const handleUserDetails = (e) => {
+    e.preventDefault();
+    navigate(`/admin/users/profile/${userData?.id}`);
+  };
+
   return (
     <div>
       <div className="user-listing-card">
@@ -48,10 +53,10 @@ const AdminUserListingCardComponent = ({ userData }) => {
             Borrows
           </Link>
           <Link
-            // onClick={handleRemoveBook}
+            onClick={handleUserDetails}
             className="user-listing-button-remove"
           >
-            Remove
+            Details
           </Link>
         </div>
       </div>

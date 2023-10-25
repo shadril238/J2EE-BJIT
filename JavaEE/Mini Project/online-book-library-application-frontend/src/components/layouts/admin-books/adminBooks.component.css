@@ -1,7 +1,9 @@
 .container .button-primary {
   margin-bottom: 3rem;
-  padding: 1.6rem 5rem;
+  padding: 1rem 1.6rem;
   margin-top: -50rem;
+  font-weight: bold;
+  font-size: large;
 }
 
 .product-listing-all-heading {

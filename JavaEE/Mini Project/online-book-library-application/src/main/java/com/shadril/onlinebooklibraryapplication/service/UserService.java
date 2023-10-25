@@ -12,4 +12,6 @@ public interface UserService {
     UserDTO getCurrUser();
 
     List<User> getAllUsers();
+
+    UserDTO updateUser(Long userId, UserDTO userDto);
 }

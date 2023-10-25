@@ -1,0 +1,22 @@
+.update-form-container {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: justify;
+  margin-top: 2rem;
+  margin-bottom: 2rem;
+  margin-left: 2rem;
+  margin-right: 2rem;
+  padding-left: 16%;
+  padding-right: 16%;
+}
+
+.header-update-form {
+  margin-top: 2rem;
+  margin-bottom: 2rem;
+  margin-left: 2rem;
+  margin-right: 2rem;
+  font-size: 2.5rem;
+  font-weight: bold;
+  text-align: center;
+}

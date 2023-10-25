@@ -1,7 +1,7 @@
 import React, { useEffect, useState } from "react";
 import "./userProfile.component.css";
 import UserImg from "../../../assets/user_img.png";
-import { useNavigate } from "react-router-dom";
+import { useNavigate, Link } from "react-router-dom";
 import axiosInstanceUserService from "../../../utils/axiosInstanceUserService";
 
 const UserProfileComponent = () => {
@@ -39,9 +39,16 @@ const UserProfileComponent = () => {
           </div>
         </div>
       </div>
-      <a href="/user-profile/edit" className="button-primary">
+      <Link
+        to={`/user-profile/edit/${userData?.id}`}
+        className="button-primary"
+        id="edit"
+      >
         Update Profile
-      </a>
+      </Link>
+      {/* <a href="/user-profile/edit" className="button-primary" id="delete">
+        Delete Profile
+      </a> */}
     </section>
   );
 };

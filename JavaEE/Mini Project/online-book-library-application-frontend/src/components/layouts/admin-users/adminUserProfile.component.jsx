@@ -1,21 +1,20 @@
-import { useEffect, useState } from "react";
-import "./adminProfile.component.css";
+import { useState, useEffect } from "react";
+import "./adminUserProfile.component.css";
 import UserImg from "../../../assets/user_img.png";
-import { useNavigate, Link } from "react-router-dom";
-import axiosInstanceUserService from "../../../utils/axiosInstanceUserService";
+import axiosInstanceUsersService from "../../../utils/axiosInstanceUsersService";
+import { useParams, Link } from "react-router-dom";
 
-const AdminProfileComponent = () => {
-  const navigate = useNavigate();
+const AdminUserProfileComponent = () => {
+  const { id } = useParams();
+  console.log("User Id ", id);
   const [userData, setUserData] = useState({});
-
   useEffect(() => {
-    axiosInstanceUserService.get("").then((resp) => {
+    axiosInstanceUsersService.get(`/${id}`).then((resp) => {
       const data = resp.data;
       console.log("Current user data ", data);
       setUserData(data);
     });
   }, []);
-
   return (
     <section className="profile-main-container">
       <div className="user-profile-container">
@@ -47,8 +46,11 @@ const AdminProfileComponent = () => {
       >
         Update Profile
       </Link>
+      <a href="/user-profile/edit" className="button-primary" id="delete">
+        Delete Profile
+      </a>
     </section>
   );
 };
 
-export default AdminProfileComponent;
+export default AdminUserProfileComponent;

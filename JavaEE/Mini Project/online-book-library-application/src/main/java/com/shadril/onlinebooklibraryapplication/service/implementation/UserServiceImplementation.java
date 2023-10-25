@@ -109,4 +109,20 @@ public class UserServiceImplementation implements UserService, UserDetailsServic
         if(userList.isEmpty()) throw new UserNotFoundException("No users found!");
         return userList;
     }
+
+    @Override
+    public UserDTO updateUser(Long userId, UserDTO userDto) {
+        Optional<User> userEntity = userRepository.findById(userId);
+        if (userEntity.isEmpty()) throw new UserNotFoundException("User Id does not exists!");
+        userEntity.get().setFirstName(userDto.getFirstName());
+        userEntity.get().setLastName(userDto.getLastName());
+        userEntity.get().setAddress(userDto.getAddress());
+//        userEntity.get().setEmail(userDto.getEmail());
+//        userEntity.get().setPassword(bCryptPasswordEncoder.encode(userDto.getPassword()));
+        userEntity.get().setRole(userDto.getRole());
+        User updatedUserDetails = userRepository.save(userEntity.get());
+        UserDTO returnValue = new UserDTO();
+        BeanUtils.copyProperties(updatedUserDetails,returnValue);
+        return returnValue;
+    }
 }

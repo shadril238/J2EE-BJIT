@@ -40,6 +40,7 @@
   display: inline-block;
   background-color: #333;
   width: 100%;
+  border-radius: 3.5px;
   padding: 1rem 0;
   text-align: center;
   color: #fff;
@@ -52,6 +53,7 @@
 
 .user-listing-button-remove {
   display: inline-block;
+  border-radius: 3.5px;
   background-color: var(--primary-color-bright);
   width: 100%;
   padding: 1rem 0;
