@@ -26,7 +26,7 @@ const AddBookFormComponent = () => {
       status: bookStatus,
       imgUrl: bookImgUrl,
       language: bookLanguage,
-      pages: bookPages,
+      pageLength: bookPages,
       isActive: isActive,
     };
 
