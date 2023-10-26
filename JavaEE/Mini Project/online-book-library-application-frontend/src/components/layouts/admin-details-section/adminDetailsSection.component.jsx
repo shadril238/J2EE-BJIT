@@ -55,7 +55,7 @@ const AdminDetailsSectionComponent = () => {
 
             <Link
               to={`/admin/book/update/${bookDetails?.id}`}
-              className="button-primary"
+              className="button-primary-details"
             >
               Update Book Details
             </Link>

@@ -5,7 +5,7 @@ import UpdateProfileFormComponent from "../forms/update-profile-form/updateProfi
 const UpdateProfileComponent = () => {
   return (
     <section>
-      <h3>Update Profile</h3>
+      {/* <h3>Update Profile</h3> */}
       <UpdateProfileFormComponent />
     </section>
   );
