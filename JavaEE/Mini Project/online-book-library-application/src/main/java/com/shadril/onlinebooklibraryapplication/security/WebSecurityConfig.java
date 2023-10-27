@@ -30,6 +30,7 @@ public class WebSecurityConfig {
         config.setAllowCredentials(true);
         //config.addAllowedOrigin("*");
         config.addAllowedOrigin("http://localhost:5173");
+//        config.addAllowedOrigin("https://shadril238-book-lib.netlify.app");
         //config.addAllowedHeader("Authorization");
         config.setAllowedHeaders(Arrays.asList(
                 "Authorization",
