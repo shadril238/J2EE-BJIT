@@ -1,0 +1,38 @@
+server:
+  port: 8081
+  servlet:
+    context-path: /user-service
+
+spring:
+  jpa:
+    open-in-view: false
+    show-sql: true
+    database-platform: org.hibernate.dialect.H2Dialect
+  h2:
+    console:
+      enabled: true
+      path: /h2-console
+  datasource:
+    url: jdbc:h2:mem:user-service-db
+    driver-class-name: org.h2.Driver
+    username: root
+    password: root
+  security:
+    oauth2:
+      resourceserver:
+        jwt:
+          jwk-set-uri: http://localhost:8080/realms/e-learning-platform/protocol/openid-connect/certs
+          issuer-uri: http://localhost:8080/realms/e-learning-platform
+
+connection:
+  timeout: 3000
+
+keycloak:
+  server-url: http://localhost:8080
+  realm-name: e-learning-platform
+  admin-cli-client-id: admin-cli
+  admin-cli-client-secret: kZFl70mCKkM40ZumjFdJMlXFJEGSUJ4t
+
+service:
+  content-delivery-service:
+    base-url: http://localhost:8082/content-delivery-service
